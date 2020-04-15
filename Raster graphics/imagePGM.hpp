@@ -21,6 +21,38 @@ class ImagePGM: public Image {
     friend class FileInterpr;
     
 public:
+    ImagePGM() {
+        
+    }
+    ImagePGM(const String& name): Image(name) {
+        std::ifstream img(name.get() , std::ios::binary);
+        
+        String sType;
+        img >> sType;
+        
+        size_t width, hight;
+        img >> width >> hight;
+        pixels(width, hight);
+        img >> maxValForCalor;
+        
+        if (sType == "P2"){
+            for (size_t y = 0; y < pixels.getHight(); ++y) {
+                for (size_t x = 0; x < pixels.getWidth(); ++x) {
+                    img >> pixels[y][x];
+                }
+            }
+            
+        } else if (sType == "P5"){
+            char buff;
+            img.read((char*)&buff, sizeof(char));
+            for (size_t y = 0; y < pixels.getHight(); ++y) {
+                for (size_t x = 0; x < pixels.getWidth(); ++x) {
+                    img.read((char*)&pixels[y][x], sizeof(char));
+                }
+            }
+        }
+        img.close();
+    }
     
     void grayscale() override {
         

@@ -29,15 +29,16 @@ bool Session::add(const String &name) {
         case imgType::invalid:
             return false;
         case imgType::PPM:
-            comtainer.add(FileInterpr::readPPM(name));
+            
+            comtainer.add(new ImagePPM(name));
 //            PPM_Comtainer.add(FileInterpr::readPPM(name));
             break;
         case imgType::PGM:
-            comtainer.add(FileInterpr::readPGM(name));
+            comtainer.add(new ImagePGM(name));
 //            PGM_Comtainer.add(FileInterpr::readPGM(name));
             break;
         case imgType::PBM:
-            comtainer.add(FileInterpr::readPBM(name));
+            comtainer.add(new ImagePBM(name));
 //            PBM_Comtainer.add(FileInterpr::readPBM(name));
             break;
     }

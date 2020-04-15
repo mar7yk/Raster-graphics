@@ -20,6 +20,48 @@ class ImagePBM: public Image {
     friend class FileInterpr;
     
 public:
+    ImagePBM() {
+        
+    }
+    
+    ImagePBM(const String& name): Image(name) {
+        std::ifstream img(name.get() , std::ios::binary);
+        
+        String sType;
+        img >> sType;
+        
+        size_t width, hight;
+        img >> width >> hight;
+        pixels(width, hight);
+        
+        if (sType == "P1"){
+            for (size_t y = 0; y < pixels.getHight(); ++y) {
+                for (size_t x = 0; x < pixels.getWidth(); ++x) {
+                    img >> pixels[y][x];
+                }
+            }
+            
+        } else if (sType == "P4"){
+            char buff;
+            img.read((char*)&buff, sizeof(char));
+            for (size_t y = 0; y < pixels.getHight(); ++y) {
+                size_t x = 0;
+                while (x < pixels.getWidth()) {
+                    unsigned byte;
+                    img.read((char*)&byte, sizeof(char));
+                    for (int i = 7; i >= 0; --i) {
+                        unsigned char p = byte/(1<<(i));
+                        pixels[y][x] = p%2;
+                        if (x == pixels.getWidth()) {
+                            break;
+                        } else {
+                            ++x;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     void grayscale() override {
         

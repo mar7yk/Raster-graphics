@@ -65,26 +65,33 @@ public:
 class ImageContainer {
     size_t size;
     size_t capacity;
-    Image **images;
+     Image ** images;
     
     void resize(const size_t newCapacity) {
         delete [] images;
         capacity = newCapacity;
-        images = new(std::nothrow) Image*[capacity];
+        images = new Image*[capacity];
     }
     
 public:
     ImageContainer(): size(0), capacity(8) {
-        images = new(std::nothrow) Image*[capacity];
+        images = new Image*[capacity];
     }
     ImageContainer(const ImageContainer& other) = delete;
     ImageContainer& operator=(const ImageContainer& other) = delete;
     ~ImageContainer() {
-        //TODO: TO ASK WHY NOT
-//        for (size_t i = 0; i < size; ++i) {
-//            delete images[i];
-//        }
+        for (size_t i = 0; i < size; ++i) {
+            delete images[i];
+        }
         delete [] images;
+    }
+    
+    void add(Image*const img) {
+        if(size == capacity) {
+            resize(2*size);
+        }
+        images[size] = img;
+        ++size;
     }
     
     void add(const ImagePPM& img) {
@@ -110,6 +117,7 @@ public:
         images[size] = new ImagePBM(img);
         ++size;
     }
+    
     Image*& operator[](const size_t n){
         return images[n];
     }

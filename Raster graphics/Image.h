@@ -20,10 +20,16 @@ protected:
     String f_name;
 public:
     Image(): f_name(""){
+
+    }
+    Image(const String& name): f_name(name) {
         
     }
     
-//    virtual void read() = 0;
+    virtual ~Image(){
+        
+    }
+    
     virtual void grayscale() = 0;
     virtual void monochrome() = 0;
     virtual void negative() = 0;

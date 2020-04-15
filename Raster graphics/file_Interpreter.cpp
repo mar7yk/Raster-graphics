@@ -9,7 +9,7 @@
 #include "file_Interpreter.hpp"
 
 
-ImagePPM FileInterpr::ridePPM(const String& name) {
+ImagePPM FileInterpr::readPPM(const String& name) {
     ImagePPM newImg;
     
     std::ifstream img(name.get() , std::ios::binary);
@@ -53,7 +53,7 @@ ImagePPM FileInterpr::ridePPM(const String& name) {
     return newImg;
 }
 
-ImagePGM FileInterpr::ridePGM(const String& name) {
+ImagePGM FileInterpr::readPGM(const String& name) {
     ImagePGM newImg;
     
     std::ifstream img(name.get() , std::ios::binary);
@@ -89,7 +89,7 @@ ImagePGM FileInterpr::ridePGM(const String& name) {
     return newImg;
 }
 
-ImagePBM FileInterpr::ridePBM(const String& name) {
+ImagePBM FileInterpr::readPBM(const String& name) {
     ImagePBM newImg;
     
     std::ifstream img(name.get() , std::ios::binary);
@@ -196,7 +196,7 @@ void FileInterpr::writePBMas(const ImagePBM& img, const String& name) {
     oimg.close();
 }
 
-imgType FileInterpr::rideType(const String& name) {
+imgType FileInterpr::readType(const String& name) {
     std::ifstream img(name.get() , std::ios::binary);
     
     String sType;

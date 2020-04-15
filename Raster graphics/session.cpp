@@ -23,22 +23,22 @@ bool Session::addCommand(const command command) {
 
 bool Session::add(const String &name) {
     
-    imgType type = FileInterpr::rideType(name);
+    imgType type = FileInterpr::readType(name);
     
     switch (type) {
         case imgType::invalid:
             return false;
         case imgType::PPM:
-            comtainer.add(FileInterpr::ridePPM(name));
-            PPM_Comtainer.add(FileInterpr::ridePPM(name));
+            comtainer.add(FileInterpr::readPPM(name));
+            PPM_Comtainer.add(FileInterpr::readPPM(name));
             break;
         case imgType::PGM:
-            comtainer.add(FileInterpr::ridePGM(name));
-            PGM_Comtainer.add(FileInterpr::ridePGM(name));
+            comtainer.add(FileInterpr::readPGM(name));
+            PGM_Comtainer.add(FileInterpr::readPGM(name));
             break;
         case imgType::PBM:
-            comtainer.add(FileInterpr::ridePBM(name));
-            PBM_Comtainer.add(FileInterpr::ridePBM(name));
+            comtainer.add(FileInterpr::readPBM(name));
+            PBM_Comtainer.add(FileInterpr::readPBM(name));
             break;
     }
     return true;

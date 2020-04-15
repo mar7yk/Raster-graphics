@@ -19,11 +19,11 @@
 
 class FileInterpr {
 public:
-    static imgType rideType(const String& name);
+    static imgType readType(const String& name);
     
-    static ImagePPM ridePPM(const String& name);
-    static ImagePGM ridePGM(const String& name);
-    static ImagePBM ridePBM(const String& name);
+    static ImagePPM readPPM(const String& name);
+    static ImagePGM readPGM(const String& name);
+    static ImagePBM readPBM(const String& name);
     
     static void writePPM(const ImagePPM& img);
     static void writePPMas(const ImagePPM& img, const String& name);

@@ -25,7 +25,6 @@ public:
     static ImagePGM ridePGM(const String& name);
     static ImagePBM ridePBM(const String& name);
     
-//    static void writeAs(Image* img, const String& name);
     static void writePPM(const ImagePPM& img);
     static void writePPMas(const ImagePPM& img, const String& name);
     static void writePGM(const ImagePGM& img);

@@ -129,11 +129,6 @@ ImagePBM FileInterpr::ridePBM(const String& name) {
                 }
             }
         }
-//        img.read((char*)&newImg.pixels[0][0], sizeof(char));
-//
-//        if(img.eof()){
-//            
-//        }
     }
     img.close();
     
@@ -212,10 +207,3 @@ imgType FileInterpr::rideType(const String& name) {
     if(sType == "P1" || sType == "P4") return imgType::PBM;
     return imgType::invalid;
 }
-
-//void FileInterpr::writeAs(Image *img, const String &name) {
-//    ImagePPM* a = dynamic_cast<ImagePPM*>(img);
-//    ImagePPM b = *a;
-//}
-
-

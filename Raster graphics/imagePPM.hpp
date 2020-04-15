@@ -10,9 +10,9 @@
 #define imagePPM_hpp
 
 #include <stdio.h>
-
-#include "Image.hpp"
 #include <fstream>
+
+#include "Image.h"
 
 class ImagePPM: public Image {
     unsigned maxValForCalor;

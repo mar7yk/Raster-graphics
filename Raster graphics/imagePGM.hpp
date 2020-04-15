@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <fstream>
 
-#include "Image.hpp"
+#include "Image.h"
 
 class ImagePGM: public Image {
     unsigned maxValForCalor;

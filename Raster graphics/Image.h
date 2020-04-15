@@ -1,5 +1,5 @@
 //
-//  Image.hpp
+//  Image.h
 //  dev
 //
 //  Created by Marty Kostov on 10.04.20.

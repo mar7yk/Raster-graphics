@@ -42,7 +42,6 @@ public:
     
     char* get() const;
     friend std::istream& operator>>(std::istream& input, String& word);
-    friend std::istream& getline(std::istream& input, String& word);
     friend std::istream& getline(std::istream& input, String& word, unsigned maxLenght);
     friend std::ostream& operator<<(std::ostream& input, String& word);
     friend String strtok(const String& str, const String& sep){

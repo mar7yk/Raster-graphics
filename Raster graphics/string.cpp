@@ -176,13 +176,6 @@ std::istream& operator>>(std::istream& input, String& word) {
     return String::getfromStream(input, word, 0);
 }
 
-std::istream& getline(std::istream& input, String& word) {
-    char buff[1000];
-    input.getline(buff, 999);
-    word = buff;
-    return input;
-}
-
 std::istream& getline(std::istream& input, String& word, unsigned maxLenght) {
     char buff[maxLenght + 1];
     input.getline(buff, maxLenght);

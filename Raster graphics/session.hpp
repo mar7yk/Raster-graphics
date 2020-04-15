@@ -21,9 +21,9 @@ class Session {
     const size_t ID;
     InstrContainer instructions;
     ImageContainer comtainer;
-    ImgContainer<ImagePPM> PPM_Comtainer;
-    ImgContainer<ImagePGM> PGM_Comtainer;
-    ImgContainer<ImagePBM> PBM_Comtainer;
+//    ImgContainer<ImagePPM> PPM_Comtainer;
+//    ImgContainer<ImagePGM> PGM_Comtainer;
+//    ImgContainer<ImagePBM> PBM_Comtainer;
     
     static size_t nextID;
     

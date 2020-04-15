@@ -30,15 +30,15 @@ bool Session::add(const String &name) {
             return false;
         case imgType::PPM:
             comtainer.add(FileInterpr::readPPM(name));
-            PPM_Comtainer.add(FileInterpr::readPPM(name));
+//            PPM_Comtainer.add(FileInterpr::readPPM(name));
             break;
         case imgType::PGM:
             comtainer.add(FileInterpr::readPGM(name));
-            PGM_Comtainer.add(FileInterpr::readPGM(name));
+//            PGM_Comtainer.add(FileInterpr::readPGM(name));
             break;
         case imgType::PBM:
             comtainer.add(FileInterpr::readPBM(name));
-            PBM_Comtainer.add(FileInterpr::readPBM(name));
+//            PBM_Comtainer.add(FileInterpr::readPBM(name));
             break;
     }
     return true;

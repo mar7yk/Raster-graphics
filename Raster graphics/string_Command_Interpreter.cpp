@@ -28,11 +28,9 @@ bool StrCommandInterpr::execut(const String& newCommand) {
             _close();
             break;
         case command::save:
-            //TODO: session save
             _save();
             break;
         case command::saveAs:
-            //TODO: session saveAs
             _saveAs();
             break;
         case command::help:

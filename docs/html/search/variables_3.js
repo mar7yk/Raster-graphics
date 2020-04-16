@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['elements_302',['elements',['../class_pixel_matrix.html#aae3d2a249226b4034b44ad4967ba0828',1,'PixelMatrix']]]
+  ['lenght_240',['lenght',['../class_string.html#a0bfc8aea244f3285e2b90d806fc82a87',1,'String']]]
 ];

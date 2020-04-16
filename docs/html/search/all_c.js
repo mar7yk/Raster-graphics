@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['n_91',['n',['../class_instr_container.html#a3db2e37f578a7d59d1fd23ff6ffacf0e',1,'InstrContainer::n()'],['../class_session_container.html#a40eb731c932e450684dabecd07e67797',1,'SessionContainer::n()']]],
-  ['negative_92',['negative',['../class_image.html#aff53edc2799e9be84ebe3c565c4f0697',1,'Image::negative()'],['../class_image_p_b_m.html#a964b2686ad93294c18eb6b66fbfd0f82',1,'ImagePBM::negative()'],['../class_image_p_g_m.html#a88a169d1db9f91a1ef485caaabaa59b2',1,'ImagePGM::negative()'],['../class_image_p_p_m.html#a02d3760af67bcb666c9ed0f3a6ef8fae',1,'ImagePPM::negative()'],['../command_8h.html#a9e0992eae3950adccaf4847fbff4231da228d6a97a9838dc800e58b3c74ba7b11',1,'negative():&#160;command.h'],['../instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3a228d6a97a9838dc800e58b3c74ba7b11',1,'negative():&#160;instruction.h']]],
-  ['next_93',['next',['../struct_instr_container_1_1inst.html#aa3c8b4e5273c2e6d876f6a9132a7e974',1,'InstrContainer::inst::next()'],['../struct_session_container_1_1_element.html#a492921ff81be0d7c3c0099208877896d',1,'SessionContainer::Element::next()']]],
-  ['nextid_94',['nextID',['../class_session.html#a5be752a9dc09f777cf134f192e8adea1',1,'Session']]]
+  ['operator_21_3d_64',['operator!=',['../class_string.html#ae78b95bd3eb92f98cbca720266661a79',1,'String']]],
+  ['operator_28_29_65',['operator()',['../class_pixel_matrix.html#a3c53bb3941a31ad48e69eeb2ef2f2db0',1,'PixelMatrix']]],
+  ['operator_2b_66',['operator+',['../class_string.html#a6e063c56a22d7a2d2295030a67beb373',1,'String']]],
+  ['operator_3c_67',['operator&lt;',['../class_string.html#ab72b23ee7dda1cb075cce5b6b27e083a',1,'String']]],
+  ['operator_3c_3c_68',['operator&lt;&lt;',['../class_string.html#ab32621876d90487d744116e3056b074c',1,'String::operator&lt;&lt;()'],['../string_8cpp.html#a4714eceafce9736c501fbd833a4adf73',1,'operator&lt;&lt;():&#160;string.cpp']]],
+  ['operator_3d_69',['operator=',['../class_image_container.html#a8febf543bf5110f8abd8098793c778d6',1,'ImageContainer::operator=()'],['../class_instr_container.html#afb23900367167bf0f549f12b474d45d6',1,'InstrContainer::operator=()'],['../class_pixel_matrix.html#af83b506d6e5063e55641579aca86ea1c',1,'PixelMatrix::operator=()'],['../class_session_container.html#aa297347707192f22e3fa638415f5fe61',1,'SessionContainer::operator=()'],['../class_string.html#ac86762e58f690b9000fa7eb03dc3b36c',1,'String::operator=(const char *str)'],['../class_string.html#a734f34a0b7a42bcad30c368d6e8c5469',1,'String::operator=(const String &amp;other)']]],
+  ['operator_3d_3d_70',['operator==',['../class_string.html#a3833f844a743166a7b9ad3d762aa3e5d',1,'String']]],
+  ['operator_3e_71',['operator&gt;',['../class_string.html#a50d0915591f7c91fae7bb856b31061c3',1,'String']]],
+  ['operator_3e_3e_72',['operator&gt;&gt;',['../class_string.html#a1a0290783b72b24a8e31648b058e5a31',1,'String::operator&gt;&gt;()'],['../string_8cpp.html#a1a0290783b72b24a8e31648b058e5a31',1,'operator&gt;&gt;():&#160;string.cpp']]],
+  ['operator_5b_5d_73',['operator[]',['../class_img_container.html#a537cf2bb54d16dd50fca229d3b62e1a0',1,'ImgContainer::operator[]()'],['../class_image_container.html#a29e9a3002585c0f674b8b747c0247beb',1,'ImageContainer::operator[]()'],['../class_pixel_matrix.html#a8c33ef8df2a910328e798ff706e9e0e8',1,'PixelMatrix::operator[]()'],['../class_string.html#a2406fbb589df92f627f3f819e33e691a',1,'String::operator[]()']]]
 ];

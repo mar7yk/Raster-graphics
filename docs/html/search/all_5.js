@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['element_27',['Element',['../struct_session_container_1_1_element.html',1,'SessionContainer']]],
-  ['elements_28',['elements',['../class_pixel_matrix.html#aae3d2a249226b4034b44ad4967ba0828',1,'PixelMatrix']]],
-  ['empty_29',['empty',['../class_instr_container.html#a38dbd3fc94f8d494e56debeebe63f541',1,'InstrContainer::empty()'],['../class_session_container.html#ad66ce93fc3a5e2d91fb69fc235b572d6',1,'SessionContainer::empty()']]],
-  ['execut_30',['execut',['../class_str_command_interpr.html#a8e351f5e615ea603eda2b8841f59657e',1,'StrCommandInterpr']]],
-  ['exit_31',['exit',['../command_8h.html#a9e0992eae3950adccaf4847fbff4231daf24f62eeb789199b9b2e467df3b1876b',1,'command.h']]]
+  ['pixel_5frgb_20',['pixel_RGB',['../structpixel___r_g_b.html',1,'']]],
+  ['pixelmatrix_21',['PixelMatrix',['../class_pixel_matrix.html',1,'']]],
+  ['pixelmatrix_3c_20bool_20_3e_22',['PixelMatrix&lt; bool &gt;',['../class_pixel_matrix.html',1,'']]],
+  ['pixelmatrix_3c_20pixel_5frgb_20_3e_23',['PixelMatrix&lt; pixel_RGB &gt;',['../class_pixel_matrix.html',1,'']]],
+  ['pixelmatrix_3c_20unsigned_20char_20_3e_24',['PixelMatrix&lt; unsigned char &gt;',['../class_pixel_matrix.html',1,'']]]
 ];

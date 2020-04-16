@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['f_5fname_32',['f_name',['../class_image.html#a2d5275b6e0ceb56502a8d36afa243993',1,'Image']]],
-  ['file_5finterpreter_2ecpp_33',['file_Interpreter.cpp',['../file___interpreter_8cpp.html',1,'']]],
-  ['file_5finterpreter_2ehpp_34',['file_Interpreter.hpp',['../file___interpreter_8hpp.html',1,'']]],
-  ['fileinterpr_35',['FileInterpr',['../class_file_interpr.html',1,'FileInterpr'],['../class_image_p_b_m.html#a1e9b25e1ba0826ddbcc9cfc25672a151',1,'ImagePBM::FileInterpr()'],['../class_image_p_g_m.html#a1e9b25e1ba0826ddbcc9cfc25672a151',1,'ImagePGM::FileInterpr()'],['../class_image_p_p_m.html#a1e9b25e1ba0826ddbcc9cfc25672a151',1,'ImagePPM::FileInterpr()']]],
-  ['front_36',['front',['../class_instr_container.html#ae842816280e4bce18e418770b80cb34f',1,'InstrContainer']]]
+  ['session_25',['Session',['../class_session.html',1,'']]],
+  ['sessioncontainer_26',['SessionContainer',['../class_session_container.html',1,'']]],
+  ['strcommandinterpr_27',['StrCommandInterpr',['../class_str_command_interpr.html',1,'']]],
+  ['string_28',['String',['../class_string.html',1,'']]],
+  ['stringtonum_29',['stringToNum',['../class_str_command_interpr.html#a66f372cd6269f99ce13065a878fe4ffb',1,'StrCommandInterpr']]]
 ];

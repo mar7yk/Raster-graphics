@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('instruction_8h_source.html',''); initR
 <div class="title">instruction.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="instruction_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  instruction.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  dev</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -106,29 +106,22 @@ $(document).ready(function(){initNavTree('instruction_8h_source.html',''); initR
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef instructions_h</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define instructions_h</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3">   12</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3">instruction</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="command_8h.html#a9e0992eae3950adccaf4847fbff4231dafedb2d84cafe20862cb4399751a8a7e3">invalid</a> = -1,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3a276be00a5232f6cd17555f7d2af1418d">grayscale</a> = 0,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3a4e680f2c69e04d0cb666ae4a1a69d078">monochrome</a>,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3a228d6a97a9838dc800e58b3c74ba7b11">negative</a>,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3aff847a507bfa1640b79ae9587aaef4aa">rotateLeft</a>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3aa12752e3b10c18d296e6cf086b244529">rotateRight</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">enum class</span> instruction {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    invalid = -1,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    grayscale = 0,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    monochrome,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    negative,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    rotateLeft,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    rotateRight,</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* instruction_h */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="ainstruction_8h_html_a8d53f52811787ac7b91d1fd31f23c5e3aa12752e3b10c18d296e6cf086b244529"><div class="ttname"><a href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3aa12752e3b10c18d296e6cf086b244529">instruction::rotateRight</a></div><div class="ttdeci">@ rotateRight</div></div>
-<div class="ttc" id="ainstruction_8h_html_a8d53f52811787ac7b91d1fd31f23c5e3aff847a507bfa1640b79ae9587aaef4aa"><div class="ttname"><a href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3aff847a507bfa1640b79ae9587aaef4aa">instruction::rotateLeft</a></div><div class="ttdeci">@ rotateLeft</div></div>
-<div class="ttc" id="ainstruction_8h_html_a8d53f52811787ac7b91d1fd31f23c5e3a276be00a5232f6cd17555f7d2af1418d"><div class="ttname"><a href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3a276be00a5232f6cd17555f7d2af1418d">instruction::grayscale</a></div><div class="ttdeci">@ grayscale</div></div>
-<div class="ttc" id="ainstruction_8h_html_a8d53f52811787ac7b91d1fd31f23c5e3a228d6a97a9838dc800e58b3c74ba7b11"><div class="ttname"><a href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3a228d6a97a9838dc800e58b3c74ba7b11">instruction::negative</a></div><div class="ttdeci">@ negative</div></div>
-<div class="ttc" id="ainstruction_8h_html_a8d53f52811787ac7b91d1fd31f23c5e3a4e680f2c69e04d0cb666ae4a1a69d078"><div class="ttname"><a href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3a4e680f2c69e04d0cb666ae4a1a69d078">instruction::monochrome</a></div><div class="ttdeci">@ monochrome</div></div>
-<div class="ttc" id="acommand_8h_html_a9e0992eae3950adccaf4847fbff4231dafedb2d84cafe20862cb4399751a8a7e3"><div class="ttname"><a href="command_8h.html#a9e0992eae3950adccaf4847fbff4231dafedb2d84cafe20862cb4399751a8a7e3">command::invalid</a></div><div class="ttdeci">@ invalid</div></div>
-<div class="ttc" id="ainstruction_8h_html_a8d53f52811787ac7b91d1fd31f23c5e3"><div class="ttname"><a href="instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3">instruction</a></div><div class="ttdeci">instruction</div><div class="ttdef"><b>Definition:</b> instruction.h:12</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b0c4738bbbada850ce14ad88657f7466.html">Raster graphics</a></li><li class="navelem"><a class="el" href="instruction_8h.html">instruction.h</a></li>
+    <li class="navelem"><a class="el" href="dir_b0c4738bbbada850ce14ad88657f7466.html">Raster graphics</a></li><li class="navelem"><b>instruction.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

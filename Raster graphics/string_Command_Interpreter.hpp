@@ -19,18 +19,14 @@
 #include "sessionContainer.hpp"
 
 
-/// Служи за комъникация между комзолата и SessionContainer
+/// Служи за комуникация между конзолата и SessionContainer
 class StrCommandInterpr {
     SessionContainer sessions;
     
-    /// Преонразъва string команда в command
-    /// @param sCommad референцуя на string
-    /// @return comand
+    /// Преобразува string команда в enum command
     command getCommand(const String& sCommad);
     
-    /// Преонразъва позитивно число от string в size_t
-    /// @param sID референцуя на string
-    /// @return size_t
+    /// Преобразъва позитивно число от string в size_t
     size_t stringToNum(const String& sID);
     
     /// Изпълнява зареждане на сесия
@@ -41,18 +37,17 @@ class StrCommandInterpr {
     void _close();
     /// Сменя текущата сесия с друга
     void _switch();
-    /// Изпринтва списук с наличните команди
+    /// Показва списък с наличните команди
     void _help();
     /// Запазва първата снимка в текущата сесия под ново име
     void _saveAs();
-    /// Запазва всицики промени в текущата сесия
+    /// Запазва всички промени в текущата сесия
     void _save();
-    /// Показва информазия за текущата сесия
+    /// Показва информация за текущата сесия
     void _sessionInfo();
     
 public:
-    /// Извулнява команда по зададен стринг
-    /// @param commad референцуя на string
+    /// Изпълнява команда по подаден стринг
     bool execut(const String& commad);
 };
 

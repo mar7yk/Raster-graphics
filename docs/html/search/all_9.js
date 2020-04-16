@@ -1,30 +1,5 @@
 var searchData=
 [
-  ['id_53',['ID',['../class_session.html#a599e926a8969dbac494bf1eb6ef351d0',1,'Session']]],
-  ['image_54',['Image',['../class_image.html',1,'Image'],['../class_image.html#a58edd1c45b4faeb5f789b0d036d02313',1,'Image::Image()'],['../class_image.html#ab474f1bc7796cb87394ab005a91e16f7',1,'Image::Image(const String &amp;name)']]],
-  ['image_2eh_55',['Image.h',['../_image_8h.html',1,'']]],
-  ['imagecontainer_56',['ImageContainer',['../class_image_container.html',1,'ImageContainer'],['../class_image_container.html#a128f9bb06c5aa597fe76d1c98f4837df',1,'ImageContainer::ImageContainer()'],['../class_image_container.html#a34d7c95ac3d55689704af00b1046194c',1,'ImageContainer::ImageContainer(const ImageContainer &amp;other)=delete']]],
-  ['imagepbm_57',['ImagePBM',['../class_image_p_b_m.html',1,'ImagePBM'],['../class_image_p_b_m.html#a87aa712899761d3e63655139fd9aa6fb',1,'ImagePBM::ImagePBM()'],['../class_image_p_b_m.html#a9ec0b7b00cb6431153ff0f28c64756da',1,'ImagePBM::ImagePBM(const String &amp;name)']]],
-  ['imagepbm_2ecpp_58',['imagePBM.cpp',['../image_p_b_m_8cpp.html',1,'']]],
-  ['imagepbm_2ehpp_59',['imagePBM.hpp',['../image_p_b_m_8hpp.html',1,'']]],
-  ['imagepgm_60',['ImagePGM',['../class_image_p_g_m.html',1,'ImagePGM'],['../class_image_p_g_m.html#a639f92a63ddabb64bed8d00a39ff71d5',1,'ImagePGM::ImagePGM()'],['../class_image_p_g_m.html#a106a423a23ac5ffa482be58a558eede5',1,'ImagePGM::ImagePGM(const String &amp;name)']]],
-  ['imagepgm_2ecpp_61',['imagePGM.cpp',['../image_p_g_m_8cpp.html',1,'']]],
-  ['imagepgm_2ehpp_62',['imagePGM.hpp',['../image_p_g_m_8hpp.html',1,'']]],
-  ['imageppm_63',['ImagePPM',['../class_image_p_p_m.html',1,'ImagePPM'],['../class_image_p_p_m.html#a6775c5c781e6266207c48b6f6bac4a71',1,'ImagePPM::ImagePPM()'],['../class_image_p_p_m.html#a7d5a6d84257e3b710867ab48ce7026af',1,'ImagePPM::ImagePPM(const String &amp;name)']]],
-  ['imageppm_2ecpp_64',['imagePPM.cpp',['../image_p_p_m_8cpp.html',1,'']]],
-  ['imageppm_2ehpp_65',['imagePPM.hpp',['../image_p_p_m_8hpp.html',1,'']]],
-  ['images_66',['images',['../class_img_container.html#a713fb8b70abe0336927c5b7ed9be7879',1,'ImgContainer::images()'],['../class_image_container.html#a2019525179fde4844e4af01f76fd86f8',1,'ImageContainer::images()']]],
-  ['imgcontainer_67',['ImgContainer',['../class_img_container.html',1,'ImgContainer&lt; imgType &gt;'],['../class_img_container.html#a5981ead5b7ab92fbf22000cdbde3a74e',1,'ImgContainer::ImgContainer()']]],
-  ['imgcontainer_2eh_68',['imgContainer.h',['../img_container_8h.html',1,'']]],
-  ['imgtype_69',['imgType',['../img_type_8h.html#adb4c1ae26a06806160ade1c8ff45819a',1,'imgType.h']]],
-  ['imgtype_2eh_70',['imgType.h',['../img_type_8h.html',1,'']]],
-  ['init_71',['init',['../class_pixel_matrix.html#a71b8a38b4720487481143fa404240e1a',1,'PixelMatrix']]],
-  ['inst_72',['inst',['../struct_instr_container_1_1inst.html',1,'InstrContainer']]],
-  ['instrcontainer_73',['InstrContainer',['../class_instr_container.html',1,'InstrContainer'],['../class_instr_container.html#a6573e6fd68e2a5bc1e7b09b78b9e8421',1,'InstrContainer::InstrContainer()'],['../class_instr_container.html#a286276269ac9137e9eb1780953962eb0',1,'InstrContainer::InstrContainer(const InstrContainer &amp;other)']]],
-  ['instruction_74',['instruction',['../instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3',1,'instruction.h']]],
-  ['instruction_2eh_75',['instruction.h',['../instruction_8h.html',1,'']]],
-  ['instructions_76',['instructions',['../class_session.html#af75eb42d39f7cb15ff702eac79f000a0',1,'Session']]],
-  ['instructionscontainer_2ecpp_77',['instructionsContainer.cpp',['../instructions_container_8cpp.html',1,'']]],
-  ['instructionscontainer_2ehpp_78',['instructionsContainer.hpp',['../instructions_container_8hpp.html',1,'']]],
-  ['invalid_79',['invalid',['../command_8h.html#a9e0992eae3950adccaf4847fbff4231dafedb2d84cafe20862cb4399751a8a7e3',1,'invalid():&#160;command.h'],['../img_type_8h.html#adb4c1ae26a06806160ade1c8ff45819aafedb2d84cafe20862cb4399751a8a7e3',1,'invalid():&#160;imgType.h'],['../instruction_8h.html#a8d53f52811787ac7b91d1fd31f23c5e3afedb2d84cafe20862cb4399751a8a7e3',1,'invalid():&#160;instruction.h']]]
+  ['lenght_53',['lenght',['../class_string.html#a0bfc8aea244f3285e2b90d806fc82a87',1,'String']]],
+  ['load_54',['load',['../command_8h.html#a9e0992eae3950adccaf4847fbff4231daec4d1eb36b22d19728e9d1d23ca84d1c',1,'command.h']]]
 ];

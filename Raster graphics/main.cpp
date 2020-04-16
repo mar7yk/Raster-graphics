@@ -11,7 +11,7 @@
 #include "string_Command_Interpreter.hpp"
 
 int main() {
-    
+    //com
     StrCommandInterpr interpr;
     String command;
 

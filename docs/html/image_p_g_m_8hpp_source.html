@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('image_p_g_m_8hpp_source.html',''); ini
 <div class="title">imagePGM.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<a href="image_p_g_m_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  imagePGM.hpp</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  dev</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -109,20 +109,20 @@ $(document).ready(function(){initNavTree('image_p_g_m_8hpp_source.html',''); ini
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Image.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_image_8h.html">Image.h</a>&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_image_p_g_m.html">ImagePGM</a>: <span class="keyword">public</span> <a class="code" href="class_image.html">Image</a> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">unsigned</span> maxValForCalor;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_pixel_matrix.html">MatrixPGM</a> pixels;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_file_interpr.html">FileInterpr</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#a1e9b25e1ba0826ddbcc9cfc25672a151">   21</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_file_interpr.html">FileInterpr</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_image_p_g_m.html">ImagePGM</a>() {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#a639f92a63ddabb64bed8d00a39ff71d5">   24</a></span>&#160;    <a class="code" href="class_image_p_g_m.html#a639f92a63ddabb64bed8d00a39ff71d5">ImagePGM</a>() {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_image_p_g_m.html">ImagePGM</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name): <a class="code" href="class_image.html">Image</a>(name) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::ifstream img(name.get() , std::ios::binary);</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#a106a423a23ac5ffa482be58a558eede5">   27</a></span>&#160;    <a class="code" href="class_image_p_g_m.html#a106a423a23ac5ffa482be58a558eede5">ImagePGM</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name): <a class="code" href="class_image.html">Image</a>(name) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::ifstream img(name.<a class="code" href="class_string.html#a5d05517bcc8df58bc5eff312e3926b61">get</a>() , std::ios::binary);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_string.html">String</a> sType;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        img &gt;&gt; sType;</div>
@@ -133,8 +133,8 @@ $(document).ready(function(){initNavTree('image_p_g_m_8hpp_source.html',''); ini
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        img &gt;&gt; maxValForCalor;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> (sType == <span class="stringliteral">&quot;P2&quot;</span>){</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.getHight(); ++y) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.getWidth(); ++x) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>(); ++y) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>(); ++x) {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    img &gt;&gt; pixels[y][x];</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
@@ -142,8 +142,8 @@ $(document).ready(function(){initNavTree('image_p_g_m_8hpp_source.html',''); ini
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sType == <span class="stringliteral">&quot;P5&quot;</span>){</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordtype">char</span> buff;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            img.read((<span class="keywordtype">char</span>*)&amp;buff, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.getHight(); ++y) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.getWidth(); ++x) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>(); ++y) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>(); ++x) {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    img.read((<span class="keywordtype">char</span>*)&amp;pixels[y][x], <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
@@ -151,13 +151,13 @@ $(document).ready(function(){initNavTree('image_p_g_m_8hpp_source.html',''); ini
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        img.close();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> grayscale()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#a4fb1cde4db93b8997ec3b63fba39635d">   57</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_p_g_m.html#a4fb1cde4db93b8997ec3b63fba39635d">grayscale</a>()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> monochrome()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.getHight(); ++y) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.getWidth(); ++x) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#a7a497a7b8dda0e19f1274f6a80f277a9">   61</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_p_g_m.html#a7a497a7b8dda0e19f1274f6a80f277a9">monochrome</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>(); ++y) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>(); ++x) {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>&amp; p = pixels[y][x];</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                p &gt; maxValForCalor / 3 ? p = 255 : p = 0;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//p = 15 * (unsigned char)(p &gt; maxValForCalor / 2);</span></div>
@@ -165,50 +165,50 @@ $(document).ready(function(){initNavTree('image_p_g_m_8hpp_source.html',''); ini
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        maxValForCalor = 15;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> negative()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.getHight(); ++y) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.getWidth(); ++x) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#a88a169d1db9f91a1ef485caaabaa59b2">   71</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_p_g_m.html#a88a169d1db9f91a1ef485caaabaa59b2">negative</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>(); ++y) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>(); ++x) {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                pixels[y][x] = maxValForCalor - pixels[y][x];</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> rotateLeft()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#af7195c113b1cd263ae79328e5e1a65a4">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_p_g_m.html#af7195c113b1cd263ae79328e5e1a65a4">rotateLeft</a>()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="class_pixel_matrix.html">MatrixPGM</a> temp = pixels;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">size_t</span> w = pixels.getHight();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">size_t</span> h = pixels.getWidth();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">size_t</span> w = pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">size_t</span> h = pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        pixels(w, h);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.getHight(); ++y) {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.getWidth(); ++x) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>(); ++y) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>(); ++x) {</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                pixels[y][x] = temp[x][h - 1 - y];</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> rotateRight()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#a3b7fcc2fe5a1f030ccd918453c5b9340">   89</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_p_g_m.html#a3b7fcc2fe5a1f030ccd918453c5b9340">rotateRight</a>()<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="class_pixel_matrix.html">MatrixPGM</a> temp = pixels;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">size_t</span> w = pixels.getHight();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">size_t</span> h = pixels.getWidth();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">size_t</span> w = pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">size_t</span> h = pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>();</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        pixels(w, h);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.getHight(); ++y) {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.getWidth(); ++x) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>(); ++y) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>(); ++x) {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                pixels[y][x] = temp[w - 1 - x][y];</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> saveAs(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name)<span class="keyword"> override</span>{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        f_name = name;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        save();</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#ad63aeda489b04a6ce612ba38c257a4ad">  100</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_p_g_m.html#ad63aeda489b04a6ce612ba38c257a4ad">saveAs</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; name)<span class="keyword"> override</span>{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="class_image.html#a2d5275b6e0ceb56502a8d36afa243993">f_name</a> = name;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="class_image_p_g_m.html#a9a25b462b19ef8ac90167167e227ca08">save</a>();</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> save()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        std::ofstream oimg(f_name.get(), std::ios::binary);</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_image_p_g_m.html#a9a25b462b19ef8ac90167167e227ca08">  106</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_p_g_m.html#a9a25b462b19ef8ac90167167e227ca08">save</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        std::ofstream oimg(<a class="code" href="class_image.html#a2d5275b6e0ceb56502a8d36afa243993">f_name</a>.<a class="code" href="class_string.html#a5d05517bcc8df58bc5eff312e3926b61">get</a>(), std::ios::binary);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        oimg &lt;&lt; <span class="stringliteral">&quot;P5&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        oimg &lt;&lt; pixels.getWidth() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pixels.getHight() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        oimg &lt;&lt; pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        oimg &lt;&lt; maxValForCalor &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.getWidth(); ++y) {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.getHight(); ++x) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> y = 0; y &lt; pixels.<a class="code" href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">getWidth</a>(); ++y) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> x = 0; x &lt; pixels.<a class="code" href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">getHight</a>(); ++x) {</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                oimg.write((<span class="keywordtype">char</span>*)&amp;pixels[y][x], <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            }</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
@@ -221,13 +221,27 @@ $(document).ready(function(){initNavTree('image_p_g_m_8hpp_source.html',''); ini
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_image_p_g_m_html"><div class="ttname"><a href="class_image_p_g_m.html">ImagePGM</a></div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:17</div></div>
 <div class="ttc" id="aclass_file_interpr_html"><div class="ttname"><a href="class_file_interpr.html">FileInterpr</a></div><div class="ttdef"><b>Definition:</b> file_Interpreter.hpp:20</div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_a3b7fcc2fe5a1f030ccd918453c5b9340"><div class="ttname"><a href="class_image_p_g_m.html#a3b7fcc2fe5a1f030ccd918453c5b9340">ImagePGM::rotateRight</a></div><div class="ttdeci">void rotateRight() override</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:89</div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_af7195c113b1cd263ae79328e5e1a65a4"><div class="ttname"><a href="class_image_p_g_m.html#af7195c113b1cd263ae79328e5e1a65a4">ImagePGM::rotateLeft</a></div><div class="ttdeci">void rotateLeft() override</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:78</div></div>
+<div class="ttc" id="aclass_image_html_a2d5275b6e0ceb56502a8d36afa243993"><div class="ttname"><a href="class_image.html#a2d5275b6e0ceb56502a8d36afa243993">Image::f_name</a></div><div class="ttdeci">String f_name</div><div class="ttdef"><b>Definition:</b> Image.h:20</div></div>
+<div class="ttc" id="a_image_8h_html"><div class="ttname"><a href="_image_8h.html">Image.h</a></div></div>
+<div class="ttc" id="aclass_pixel_matrix_html_ab269198ed7affb629063d50a0d198797"><div class="ttname"><a href="class_pixel_matrix.html#ab269198ed7affb629063d50a0d198797">PixelMatrix::getHight</a></div><div class="ttdeci">size_t getHight() const</div><div class="ttdef"><b>Definition:</b> matrix.h:85</div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_a4fb1cde4db93b8997ec3b63fba39635d"><div class="ttname"><a href="class_image_p_g_m.html#a4fb1cde4db93b8997ec3b63fba39635d">ImagePGM::grayscale</a></div><div class="ttdeci">void grayscale() override</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:57</div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_a88a169d1db9f91a1ef485caaabaa59b2"><div class="ttname"><a href="class_image_p_g_m.html#a88a169d1db9f91a1ef485caaabaa59b2">ImagePGM::negative</a></div><div class="ttdeci">void negative() override</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:71</div></div>
 <div class="ttc" id="aclass_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> Image.h:18</div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_a639f92a63ddabb64bed8d00a39ff71d5"><div class="ttname"><a href="class_image_p_g_m.html#a639f92a63ddabb64bed8d00a39ff71d5">ImagePGM::ImagePGM</a></div><div class="ttdeci">ImagePGM()</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:24</div></div>
 <div class="ttc" id="aclass_string_html"><div class="ttname"><a href="class_string.html">String</a></div><div class="ttdef"><b>Definition:</b> string.hpp:16</div></div>
 <div class="ttc" id="aclass_pixel_matrix_html"><div class="ttname"><a href="class_pixel_matrix.html">PixelMatrix&lt; unsigned char &gt;</a></div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_a106a423a23ac5ffa482be58a558eede5"><div class="ttname"><a href="class_image_p_g_m.html#a106a423a23ac5ffa482be58a558eede5">ImagePGM::ImagePGM</a></div><div class="ttdeci">ImagePGM(const String &amp;name)</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:27</div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_a9a25b462b19ef8ac90167167e227ca08"><div class="ttname"><a href="class_image_p_g_m.html#a9a25b462b19ef8ac90167167e227ca08">ImagePGM::save</a></div><div class="ttdeci">void save() override</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:106</div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_ad63aeda489b04a6ce612ba38c257a4ad"><div class="ttname"><a href="class_image_p_g_m.html#ad63aeda489b04a6ce612ba38c257a4ad">ImagePGM::saveAs</a></div><div class="ttdeci">void saveAs(const String &amp;name) override</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:100</div></div>
+<div class="ttc" id="aclass_pixel_matrix_html_ac7fed9a9e738fd87a641f1c97d142403"><div class="ttname"><a href="class_pixel_matrix.html#ac7fed9a9e738fd87a641f1c97d142403">PixelMatrix::getWidth</a></div><div class="ttdeci">size_t getWidth() const</div><div class="ttdef"><b>Definition:</b> matrix.h:81</div></div>
+<div class="ttc" id="aclass_string_html_a5d05517bcc8df58bc5eff312e3926b61"><div class="ttname"><a href="class_string.html#a5d05517bcc8df58bc5eff312e3926b61">String::get</a></div><div class="ttdeci">char * get() const</div><div class="ttdef"><b>Definition:</b> string.cpp:105</div></div>
+<div class="ttc" id="aclass_image_p_g_m_html_a7a497a7b8dda0e19f1274f6a80f277a9"><div class="ttname"><a href="class_image_p_g_m.html#a7a497a7b8dda0e19f1274f6a80f277a9">ImagePGM::monochrome</a></div><div class="ttdeci">void monochrome() override</div><div class="ttdef"><b>Definition:</b> imagePGM.hpp:61</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b0c4738bbbada850ce14ad88657f7466.html">Raster graphics</a></li><li class="navelem"><b>imagePGM.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_b0c4738bbbada850ce14ad88657f7466.html">Raster graphics</a></li><li class="navelem"><a class="el" href="image_p_g_m_8hpp.html">imagePGM.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

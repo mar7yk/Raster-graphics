@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('instructions_container_8hpp_source.htm
 <div class="title">instructionsContainer.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<a href="instructions_container_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  instructionsContainer.hpp</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  dev</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -108,11 +108,11 @@ $(document).ready(function(){initNavTree('instructions_container_8hpp_source.htm
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;command.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="command_8h.html">command.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_instr_container.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_instr_container.html">InstrContainer</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">struct </span>inst {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        command data;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="command_8h.html#a9e0992eae3950adccaf4847fbff4231d">command</a> data;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        inst *next;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
@@ -122,27 +122,37 @@ $(document).ready(function(){initNavTree('instructions_container_8hpp_source.htm
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> clear();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_instr_container.html">InstrContainer</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_instr_container.html">InstrContainer</a>(<span class="keyword">const</span> <a class="code" href="class_instr_container.html">InstrContainer</a>&amp; other);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ~<a class="code" href="class_instr_container.html">InstrContainer</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_instr_container.html#a6573e6fd68e2a5bc1e7b09b78b9e8421">InstrContainer</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_instr_container.html#a6573e6fd68e2a5bc1e7b09b78b9e8421">InstrContainer</a>(<span class="keyword">const</span> <a class="code" href="class_instr_container.html">InstrContainer</a>&amp; other);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_instr_container.html#a725bccacf730f924863100c19ecfd583">~InstrContainer</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_instr_container.html">InstrContainer</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_instr_container.html">InstrContainer</a>&amp; other);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_instr_container.html">InstrContainer</a>&amp; <a class="code" href="class_instr_container.html#afb23900367167bf0f549f12b474d45d6">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_instr_container.html">InstrContainer</a>&amp; other);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> push(<span class="keyword">const</span> command newImg);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> pop();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    command&amp; front() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> undo();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> empty() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_instr_container.html#ada0f381be6a18d849dab5bb9739a74b0">push</a>(<span class="keyword">const</span> <a class="code" href="command_8h.html#a9e0992eae3950adccaf4847fbff4231d">command</a> newImg);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_instr_container.html#a428c2343acb4e57ab3d61e24f6f9b52f">pop</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="command_8h.html#a9e0992eae3950adccaf4847fbff4231d">command</a>&amp; <a class="code" href="class_instr_container.html#ae842816280e4bce18e418770b80cb34f">front</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_instr_container.html#a09a4d0a7eb0c3caa8cd22d63f5010133">undo</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_instr_container.html#a38dbd3fc94f8d494e56debeebe63f541">empty</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* instructionsContainer_hpp */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_instr_container_html_a38dbd3fc94f8d494e56debeebe63f541"><div class="ttname"><a href="class_instr_container.html#a38dbd3fc94f8d494e56debeebe63f541">InstrContainer::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> instructionsContainer.cpp:51</div></div>
+<div class="ttc" id="aclass_instr_container_html_a6573e6fd68e2a5bc1e7b09b78b9e8421"><div class="ttname"><a href="class_instr_container.html#a6573e6fd68e2a5bc1e7b09b78b9e8421">InstrContainer::InstrContainer</a></div><div class="ttdeci">InstrContainer()</div><div class="ttdef"><b>Definition:</b> instructionsContainer.cpp:12</div></div>
 <div class="ttc" id="aclass_instr_container_html"><div class="ttname"><a href="class_instr_container.html">InstrContainer</a></div><div class="ttdef"><b>Definition:</b> instructionsContainer.hpp:16</div></div>
+<div class="ttc" id="acommand_8h_html_a9e0992eae3950adccaf4847fbff4231d"><div class="ttname"><a href="command_8h.html#a9e0992eae3950adccaf4847fbff4231d">command</a></div><div class="ttdeci">command</div><div class="ttdef"><b>Definition:</b> command.h:12</div></div>
+<div class="ttc" id="aclass_instr_container_html_ada0f381be6a18d849dab5bb9739a74b0"><div class="ttname"><a href="class_instr_container.html#ada0f381be6a18d849dab5bb9739a74b0">InstrContainer::push</a></div><div class="ttdeci">void push(const command newImg)</div><div class="ttdef"><b>Definition:</b> instructionsContainer.cpp:16</div></div>
+<div class="ttc" id="acommand_8h_html"><div class="ttname"><a href="command_8h.html">command.h</a></div></div>
+<div class="ttc" id="aclass_instr_container_html_a428c2343acb4e57ab3d61e24f6f9b52f"><div class="ttname"><a href="class_instr_container.html#a428c2343acb4e57ab3d61e24f6f9b52f">InstrContainer::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> instructionsContainer.cpp:27</div></div>
+<div class="ttc" id="aclass_instr_container_html_afb23900367167bf0f549f12b474d45d6"><div class="ttname"><a href="class_instr_container.html#afb23900367167bf0f549f12b474d45d6">InstrContainer::operator=</a></div><div class="ttdeci">InstrContainer &amp; operator=(const InstrContainer &amp;other)</div><div class="ttdef"><b>Definition:</b> instructionsContainer.cpp:59</div></div>
+<div class="ttc" id="aclass_instr_container_html_ae842816280e4bce18e418770b80cb34f"><div class="ttname"><a href="class_instr_container.html#ae842816280e4bce18e418770b80cb34f">InstrContainer::front</a></div><div class="ttdeci">command &amp; front() const</div><div class="ttdef"><b>Definition:</b> instructionsContainer.cpp:33</div></div>
+<div class="ttc" id="aclass_instr_container_html_a725bccacf730f924863100c19ecfd583"><div class="ttname"><a href="class_instr_container.html#a725bccacf730f924863100c19ecfd583">InstrContainer::~InstrContainer</a></div><div class="ttdeci">~InstrContainer()</div><div class="ttdef"><b>Definition:</b> instructionsContainer.cpp:55</div></div>
+<div class="ttc" id="aclass_instr_container_html_a09a4d0a7eb0c3caa8cd22d63f5010133"><div class="ttname"><a href="class_instr_container.html#a09a4d0a7eb0c3caa8cd22d63f5010133">InstrContainer::undo</a></div><div class="ttdeci">void undo()</div><div class="ttdef"><b>Definition:</b> instructionsContainer.cpp:37</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b0c4738bbbada850ce14ad88657f7466.html">Raster graphics</a></li><li class="navelem"><b>instructionsContainer.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_b0c4738bbbada850ce14ad88657f7466.html">Raster graphics</a></li><li class="navelem"><a class="el" href="instructions_container_8hpp.html">instructionsContainer.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

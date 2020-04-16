@@ -9,7 +9,6 @@
 #include "string_Command_Interpreter.hpp"
 
 
-
 bool StrCommandInterpr::execut(const String& newCommand) {
     bool toContinue = true;
     String sCommand = strtok(newCommand, " ");

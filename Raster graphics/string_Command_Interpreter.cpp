@@ -39,8 +39,9 @@ bool StrCommandInterpr::execut(const String& newCommand) {
             _help();
             break;
         case command::exit:
-            std::cout << "Exiting the program...";
+            std::cout << "Exiting the program..." << std::endl;
             toContinue = false;
+            break;
         case command::grayscale:
         case command::monochrome:
         case command::negative:

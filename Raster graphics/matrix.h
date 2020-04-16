@@ -24,6 +24,11 @@ class PixelMatrix {
     }
     
     void set() {
+        if(hight == 0 || width == 0){
+            elements = new pixel*;
+            *elements = new pixel;
+            return;
+        }
         elements = new pixel*[hight];
         *elements = new pixel[width*hight];
         for (size_t i = 1; i < hight; ++i)
@@ -39,8 +44,7 @@ class PixelMatrix {
     }
 public:
     PixelMatrix(): width(0), hight(0) {
-        elements = new pixel*;
-        *elements = new pixel;
+        set();
     }
     
     PixelMatrix(size_t x, size_t y): width(x), hight(y) {

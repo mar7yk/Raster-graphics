@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['session_138',['Session',['../class_session.html',1,'']]],
-  ['sessioncontainer_139',['SessionContainer',['../class_session_container.html',1,'']]],
-  ['strcommandinterpr_140',['StrCommandInterpr',['../class_str_command_interpr.html',1,'']]],
-  ['string_141',['String',['../class_string.html',1,'']]]
+  ['pixel_5frgb_174',['pixel_RGB',['../structpixel___r_g_b.html',1,'']]],
+  ['pixelmatrix_175',['PixelMatrix',['../class_pixel_matrix.html',1,'']]],
+  ['pixelmatrix_3c_20bool_20_3e_176',['PixelMatrix&lt; bool &gt;',['../class_pixel_matrix.html',1,'']]],
+  ['pixelmatrix_3c_20pixel_5frgb_20_3e_177',['PixelMatrix&lt; pixel_RGB &gt;',['../class_pixel_matrix.html',1,'']]],
+  ['pixelmatrix_3c_20unsigned_20char_20_3e_178',['PixelMatrix&lt; unsigned char &gt;',['../class_pixel_matrix.html',1,'']]]
 ];

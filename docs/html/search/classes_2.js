@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['pixel_5frgb_133',['pixel_RGB',['../structpixel___r_g_b.html',1,'']]],
-  ['pixelmatrix_134',['PixelMatrix',['../class_pixel_matrix.html',1,'']]],
-  ['pixelmatrix_3c_20bool_20_3e_135',['PixelMatrix&lt; bool &gt;',['../class_pixel_matrix.html',1,'']]],
-  ['pixelmatrix_3c_20pixel_5frgb_20_3e_136',['PixelMatrix&lt; pixel_RGB &gt;',['../class_pixel_matrix.html',1,'']]],
-  ['pixelmatrix_3c_20unsigned_20char_20_3e_137',['PixelMatrix&lt; unsigned char &gt;',['../class_pixel_matrix.html',1,'']]]
+  ['image_166',['Image',['../class_image.html',1,'']]],
+  ['imagecontainer_167',['ImageContainer',['../class_image_container.html',1,'']]],
+  ['imagepbm_168',['ImagePBM',['../class_image_p_b_m.html',1,'']]],
+  ['imagepgm_169',['ImagePGM',['../class_image_p_g_m.html',1,'']]],
+  ['imageppm_170',['ImagePPM',['../class_image_p_p_m.html',1,'']]],
+  ['imgcontainer_171',['ImgContainer',['../class_img_container.html',1,'']]],
+  ['inst_172',['inst',['../struct_instr_container_1_1inst.html',1,'InstrContainer']]],
+  ['instrcontainer_173',['InstrContainer',['../class_instr_container.html',1,'']]]
 ];

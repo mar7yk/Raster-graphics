@@ -76,6 +76,16 @@ void InstrContainer::clear() {
     }
 }
 
+InstrContainer::InstrContainer(const InstrContainer &other) {
+    h = n = nullptr;
+    inst *temp = other.h;
+    while (temp) {
+        push(temp->data);
+        temp = temp->next;
+    }
+}
+
+
 
 
 

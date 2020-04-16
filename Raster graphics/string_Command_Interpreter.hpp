@@ -32,6 +32,7 @@ class StrCommandInterpr {
     void _help();
     void _saveAs();
     void _save();
+    void _sessionInfo();
     
 public:
     bool execut(const String& commad);

@@ -26,6 +26,7 @@ class InstrContainer {
     
 public:
     InstrContainer();
+    InstrContainer(const InstrContainer& other);
     ~InstrContainer();
     
     InstrContainer& operator=(const InstrContainer& other);

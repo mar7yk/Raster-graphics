@@ -65,7 +65,7 @@ public:
 class ImageContainer {
     size_t size;
     size_t capacity;
-     Image ** images;
+    Image ** images;
     
     void resize(const size_t newCapacity) {
         delete [] images;

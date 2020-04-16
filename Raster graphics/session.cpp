@@ -77,6 +77,53 @@ bool Session::save() {
     return true;
 }
 
+String Session::getNamesOfImgs() {
+    String mames;
+    for (size_t i = 0; i < comtainer.getSize(); ++i) {
+        mames = mames + comtainer[i]->getName() + " ";
+    }
+    return mames;
+}
+
+String Session::getNamesOfInstr() {
+    String mames;
+    InstrContainer temp = instructions;
+    while (true) {
+        command c = temp.front();
+        temp.pop();
+        switch (c) {
+            case command::grayscale:
+                mames = mames + "grayscale";
+                break;
+            case command::monochrome:
+                mames = mames + "monochrome";
+                break;
+            case command::negative:
+                mames = mames + "negative";
+                break;
+            case command::rotateLeft:
+                mames = mames + "rotate left";
+                break;
+            case command::rotateRight:
+                mames = mames + "rotate right";
+                break;
+
+            default:
+                break;
+        }
+        if(temp.empty()){
+            break;
+        } else {
+            mames = mames + ", ";
+        }
+    }
+    
+    
+    return mames;
+}
+
+
+
 
 
 

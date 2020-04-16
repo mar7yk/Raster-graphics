@@ -45,6 +45,10 @@ public:
     bool add(const String& name);
     
     bool undo();
+    
+    String getNamesOfImgs();
+    
+    String getNamesOfInstr();
 };
 
 #endif /* session_hpp */

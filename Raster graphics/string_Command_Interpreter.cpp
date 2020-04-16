@@ -39,6 +39,7 @@ bool StrCommandInterpr::execut(const String& newCommand) {
             _help();
             break;
         case command::exit:
+            std::cout << "Exiting the program...";
             toContinue = false;
         case command::grayscale:
         case command::monochrome:
@@ -53,14 +54,13 @@ bool StrCommandInterpr::execut(const String& newCommand) {
         case command::switchSessin:
             _switch();
         case command::sessionInfo:
-            std::cout <<"Name of images in the session: " << "UN" << std::endl;
-            std::cout <<"Pending transformations: " << "UN" << std::endl;
+            _sessionInfo();
             break;
         case command::collageVertical:
-            
+            std::cout <<"Coming soon!!!" << std::endl;
             break;
         case command::collageHorizontal:
-            
+            std::cout <<"Coming soon!!!" << std::endl;
             break;
     }
     std::cout << std::endl;
@@ -107,6 +107,14 @@ void StrCommandInterpr::_saveAs() {
 void StrCommandInterpr::_save() {
     sessions.current().save();
     std::cout << "All changes was saved" << std::endl;
+}
+
+void StrCommandInterpr::_sessionInfo() {
+    String imgNames = sessions.current().getNamesOfImgs();
+    String instNames = sessions.current().getNamesOfInstr();
+    
+    std::cout << "Name of images in the session: " << imgNames << std::endl;
+    std::cout <<"Pending transformations: " << instNames << std::endl;
 }
 
 command StrCommandInterpr::getCommand(const String& sCommad) {

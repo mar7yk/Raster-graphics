@@ -30,6 +30,10 @@ public:
         
     }
     
+    virtual String getName() {
+        return f_name;
+    }
+    
     virtual void grayscale() = 0;
     virtual void monochrome() = 0;
     virtual void negative() = 0;

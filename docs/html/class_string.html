@@ -94,6 +94,9 @@ $(document).ready(function(){initNavTree('class_string.html',''); initResizable(
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_string-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -138,6 +141,25 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a0bfc8aea244f3285e2b90d806fc82a87"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a0bfc8aea244f3285e2b90d806fc82a87">lenght</a></td></tr>
 <tr class="separator:a0bfc8aea244f3285e2b90d806fc82a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a14c4348a0138c3e8227e7406e33e8bc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a14c4348a0138c3e8227e7406e33e8bc3">setVal</a> (const char *str)</td></tr>
+<tr class="separator:a14c4348a0138c3e8227e7406e33e8bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603a8da5a69ea6dfc86070c7107f48ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a603a8da5a69ea6dfc86070c7107f48ec">copyFrom</a> (const <a class="el" href="class_string.html">String</a> &amp;other)</td></tr>
+<tr class="separator:a603a8da5a69ea6dfc86070c7107f48ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a63fe4c7be65bfc5f72e1d60ac45c557d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a63fe4c7be65bfc5f72e1d60ac45c557d">changeSize</a> (<a class="el" href="class_string.html">String</a> &amp;word, size_t x)</td></tr>
+<tr class="separator:a63fe4c7be65bfc5f72e1d60ac45c557d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eec716a41d7a1ffdadab952d01a6ffd"><td class="memItemLeft" align="right" valign="top">static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#a4eec716a41d7a1ffdadab952d01a6ffd">getfromStream</a> (std::istream &amp;input, <a class="el" href="class_string.html">String</a> &amp;word, size_t startFrom)</td></tr>
+<tr class="separator:a4eec716a41d7a1ffdadab952d01a6ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af7f7c03caa6a42b9b758df72b271e3e9"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string.html#af7f7c03caa6a42b9b758df72b271e3e9">string</a></td></tr>
+<tr class="separator:af7f7c03caa6a42b9b758df72b271e3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -222,6 +244,68 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a63fe4c7be65bfc5f72e1d60ac45c557d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63fe4c7be65bfc5f72e1d60ac45c557d">&#9670;&nbsp;</a></span>changeSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void String::changeSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a603a8da5a69ea6dfc86070c7107f48ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603a8da5a69ea6dfc86070c7107f48ec">&#9670;&nbsp;</a></span>copyFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void String::copyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5d05517bcc8df58bc5eff312e3926b61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d05517bcc8df58bc5eff312e3926b61">&#9670;&nbsp;</a></span>get()</h2>
 
@@ -235,6 +319,48 @@ Friends</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4eec716a41d7a1ffdadab952d01a6ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eec716a41d7a1ffdadab952d01a6ffd">&#9670;&nbsp;</a></span>getfromStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream &amp; String::getfromStream </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>startFrom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -379,6 +505,32 @@ Friends</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14c4348a0138c3e8227e7406e33e8bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c4348a0138c3e8227e7406e33e8bc3">&#9670;&nbsp;</a></span>setVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void String::setVal </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -563,6 +715,28 @@ Friends</h2></td></tr>
           <td class="memname">size_t String::lenght</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7f7c03caa6a42b9b758df72b271e3e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7f7c03caa6a42b9b758df72b271e3e9">&#9670;&nbsp;</a></span>string</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* String::string</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

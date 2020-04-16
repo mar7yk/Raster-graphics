@@ -9,5 +9,6 @@ var class_image_p_b_m =
     [ "rotateRight", "class_image_p_b_m.html#aa5be40d564b4af3ce929be3765e64d4f", null ],
     [ "save", "class_image_p_b_m.html#a922a456c44df053d3d79846f59d2f313", null ],
     [ "saveAs", "class_image_p_b_m.html#af9e5cc03576ed2efc554653ea4543acf", null ],
-    [ "FileInterpr", "class_image_p_b_m.html#a1e9b25e1ba0826ddbcc9cfc25672a151", null ]
+    [ "FileInterpr", "class_image_p_b_m.html#a1e9b25e1ba0826ddbcc9cfc25672a151", null ],
+    [ "pixels", "class_image_p_b_m.html#ade823cdfeced6ce95a9529c5a4e8ff7a", null ]
 ];

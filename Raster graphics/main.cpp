@@ -20,8 +20,6 @@ int main() {
         getline(std::cin, command, 1000);
 
     } while (interpr.execut(command));
-        
-    
     
     return 0;
 }

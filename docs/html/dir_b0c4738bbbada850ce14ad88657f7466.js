@@ -28,7 +28,8 @@ var dir_b0c4738bbbada850ce14ad88657f7466 =
     [ "instruction.h", "instruction_8h.html", "instruction_8h" ],
     [ "instructionsContainer.cpp", "instructions_container_8cpp.html", null ],
     [ "instructionsContainer.hpp", "instructions_container_8hpp.html", [
-      [ "InstrContainer", "class_instr_container.html", "class_instr_container" ]
+      [ "InstrContainer", "class_instr_container.html", "class_instr_container" ],
+      [ "inst", "struct_instr_container_1_1inst.html", "struct_instr_container_1_1inst" ]
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "matrix.h", "matrix_8h.html", "matrix_8h" ],
@@ -41,7 +42,8 @@ var dir_b0c4738bbbada850ce14ad88657f7466 =
     ] ],
     [ "sessionContainer.cpp", "session_container_8cpp.html", null ],
     [ "sessionContainer.hpp", "session_container_8hpp.html", [
-      [ "SessionContainer", "class_session_container.html", "class_session_container" ]
+      [ "SessionContainer", "class_session_container.html", "class_session_container" ],
+      [ "Element", "struct_session_container_1_1_element.html", "struct_session_container_1_1_element" ]
     ] ],
     [ "string.cpp", "string_8cpp.html", "string_8cpp" ],
     [ "string.hpp", "string_8hpp.html", [

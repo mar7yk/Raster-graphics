@@ -93,6 +93,8 @@ $(document).ready(function(){initNavTree('class_session.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_session-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Session Class Reference</div>  </div>
@@ -121,6 +123,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4bdb9e9bd3554fbfeb3b186900434b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e60ec471673dba663c4dd22592baf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#ac5e60ec471673dba663c4dd22592baf1">getNamesOfInstr</a> ()</td></tr>
 <tr class="separator:ac5e60ec471673dba663c4dd22592baf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a599e926a8969dbac494bf1eb6ef351d0"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#a599e926a8969dbac494bf1eb6ef351d0">ID</a></td></tr>
+<tr class="separator:a599e926a8969dbac494bf1eb6ef351d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af75eb42d39f7cb15ff702eac79f000a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_instr_container.html">InstrContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#af75eb42d39f7cb15ff702eac79f000a0">instructions</a></td></tr>
+<tr class="separator:af75eb42d39f7cb15ff702eac79f000a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d32155a81aa008d9985da79bd2b763f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_image_container.html">ImageContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#a6d32155a81aa008d9985da79bd2b763f">comtainer</a></td></tr>
+<tr class="separator:a6d32155a81aa008d9985da79bd2b763f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a5be752a9dc09f777cf134f192e8adea1"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#a5be752a9dc09f777cf134f192e8adea1">nextID</a> = 1</td></tr>
+<tr class="separator:a5be752a9dc09f777cf134f192e8adea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad92ef09b872c9227e38a6efdd4d8a837"></a>
@@ -292,6 +308,95 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6d32155a81aa008d9985da79bd2b763f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d32155a81aa008d9985da79bd2b763f">&#9670;&nbsp;</a></span>comtainer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_image_container.html">ImageContainer</a> Session::comtainer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a599e926a8969dbac494bf1eb6ef351d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599e926a8969dbac494bf1eb6ef351d0">&#9670;&nbsp;</a></span>ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t Session::ID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af75eb42d39f7cb15ff702eac79f000a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af75eb42d39f7cb15ff702eac79f000a0">&#9670;&nbsp;</a></span>instructions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_instr_container.html">InstrContainer</a> Session::instructions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5be752a9dc09f777cf134f192e8adea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be752a9dc09f777cf134f192e8adea1">&#9670;&nbsp;</a></span>nextID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Session::nextID = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

@@ -93,6 +93,8 @@ $(document).ready(function(){initNavTree('class_image_container.html',''); initR
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_image_container-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ImageContainer Class Reference</div>  </div>
@@ -131,6 +133,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa73a54919870b6dfa234c0a48509a13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa19246f6e8f6f292961deb63803efc7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_container.html#aa19246f6e8f6f292961deb63803efc7f">save</a> ()</td></tr>
 <tr class="separator:aa19246f6e8f6f292961deb63803efc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af087639f906c6fa1f09c0f5bd378c254"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_container.html#af087639f906c6fa1f09c0f5bd378c254">resize</a> (const size_t newCapacity)</td></tr>
+<tr class="separator:af087639f906c6fa1f09c0f5bd378c254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acabf3bd0d40e0f123cc099623c8fd913"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_container.html#acabf3bd0d40e0f123cc099623c8fd913">size</a></td></tr>
+<tr class="separator:acabf3bd0d40e0f123cc099623c8fd913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8393e9c119be8bf2ecbb70a0379e97cf"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_container.html#a8393e9c119be8bf2ecbb70a0379e97cf">capacity</a></td></tr>
+<tr class="separator:a8393e9c119be8bf2ecbb70a0379e97cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2019525179fde4844e4af01f76fd86f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_image.html">Image</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_container.html#a2019525179fde4844e4af01f76fd86f8">images</a></td></tr>
+<tr class="separator:a2019525179fde4844e4af01f76fd86f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a128f9bb06c5aa597fe76d1c98f4837df"></a>
@@ -443,6 +459,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af087639f906c6fa1f09c0f5bd378c254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af087639f906c6fa1f09c0f5bd378c254">&#9670;&nbsp;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ImageContainer::resize </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>newCapacity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa19246f6e8f6f292961deb63803efc7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa19246f6e8f6f292961deb63803efc7f">&#9670;&nbsp;</a></span>save()</h2>
 
@@ -488,6 +530,73 @@ Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8393e9c119be8bf2ecbb70a0379e97cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8393e9c119be8bf2ecbb70a0379e97cf">&#9670;&nbsp;</a></span>capacity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ImageContainer::capacity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2019525179fde4844e4af01f76fd86f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2019525179fde4844e4af01f76fd86f8">&#9670;&nbsp;</a></span>images</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_image.html">Image</a>** ImageContainer::images</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acabf3bd0d40e0f123cc099623c8fd913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acabf3bd0d40e0f123cc099623c8fd913">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ImageContainer::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

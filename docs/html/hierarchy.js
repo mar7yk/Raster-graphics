@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "SessionContainer::Element", "struct_session_container_1_1_element.html", null ],
     [ "FileInterpr", "class_file_interpr.html", null ],
     [ "Image", "class_image.html", [
       [ "ImagePBM", "class_image_p_b_m.html", null ],
@@ -8,6 +9,7 @@ var hierarchy =
     ] ],
     [ "ImageContainer", "class_image_container.html", null ],
     [ "ImgContainer< imgType >", "class_img_container.html", null ],
+    [ "InstrContainer::inst", "struct_instr_container_1_1inst.html", null ],
     [ "InstrContainer", "class_instr_container.html", null ],
     [ "pixel_RGB", "structpixel___r_g_b.html", null ],
     [ "PixelMatrix< pixel >", "class_pixel_matrix.html", null ],

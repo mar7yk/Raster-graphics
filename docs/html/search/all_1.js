@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['b_2',['b',['../structpixel___r_g_b.html#aa12b96aab8ced4feaa7557a8add573c0',1,'pixel_RGB']]]
+  ['add_8',['add',['../class_img_container.html#af13ceac828bd2b214cbe7dd265d592fc',1,'ImgContainer::add()'],['../class_image_container.html#a1181edee188981e60a643ffd1caad2cb',1,'ImageContainer::add(Image *const img)'],['../class_image_container.html#a36909f566875043fecaab3a5d04bda1a',1,'ImageContainer::add(const ImagePPM &amp;img)'],['../class_image_container.html#a5740dbf9f9f1645333a618df38e29853',1,'ImageContainer::add(const ImagePGM &amp;img)'],['../class_image_container.html#a0f8ebd19f5d5b82e51c24aaed7122a6c',1,'ImageContainer::add(const ImagePBM &amp;img)'],['../class_session.html#abfce2ca63d02f6b9779d93cba6e845be',1,'Session::add()'],['../command_8h.html#a9e0992eae3950adccaf4847fbff4231da34ec78fcc91ffb1e54cd85e4a0924332',1,'add():&#160;command.h']]],
+  ['addcommand_9',['addCommand',['../class_session.html#a1121fd0c591830a941219b635003de18',1,'Session']]]
 ];

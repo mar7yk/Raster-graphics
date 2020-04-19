@@ -21,6 +21,7 @@ class String {
     static void changeSize(String& word, size_t x);
     
     static std::istream& getfromStream(std::istream& input, String& word, size_t startFrom);
+    static std::istream& getfromStreamTo(std::istream& input, String& word, size_t startFrom, char to);
     
 public:
     size_t lenght;
@@ -32,6 +33,9 @@ public:
     String& operator=(const String& other);
     String(const String& other);
     String operator+(const String& other);
+    String& operator+=(const String& other);
+    String operator+(const char other);
+    String& operator+=(const char other);
     bool operator<(const String& other) const;
     bool operator>(const String& other) const;
     bool operator==(const String& other) const;
@@ -42,8 +46,9 @@ public:
     
     char* get() const;
     friend std::istream& operator>>(std::istream& input, String& word);
+    friend std::istream& getline(std::istream& input, String& word);
     friend std::istream& getline(std::istream& input, String& word, unsigned maxLenght);
-    friend std::ostream& operator<<(std::ostream& input, String& word);
+    friend std::ostream& operator<<(std::ostream& output, const String& word);
     friend String strtok(const String& str, const String& sep){
         return strtok(str.string, sep.string);
     }

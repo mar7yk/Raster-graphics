@@ -12,7 +12,7 @@
 #include <stdio.h>
 
 #include "instructionsContainer.hpp"
-#include "imgContainer.h"
+#include "imgContainer.hpp"
 #include "file_Interpreter.hpp"
 
 #include "command.h"
@@ -43,6 +43,8 @@ public:
     bool save();
     
     bool add(const String& name);
+    
+    bool addCollage(const String& img1Name, const String& img2Name, const String& name, const command type);
     
     bool undo();
     

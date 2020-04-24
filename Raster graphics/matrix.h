@@ -78,6 +78,7 @@ public:
     PixelMatrix& operator()(size_t x, size_t y){
         width = x;
         hight = y;
+        del();
         set();
         return *this;
     }

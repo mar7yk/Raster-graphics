@@ -18,8 +18,11 @@
 #include "imgType.h"
 
 class FileInterpr {
+    static imgType strToType(const String& sType);
+    
 public:
-    static imgType readType(const String& name);
+    static imgType getType(const String& name);
+    static imgType getType(const String& name1, const String& name2);
     
     static ImagePPM readPPM(const String& name);
     static ImagePGM readPGM(const String& name);

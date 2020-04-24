@@ -46,6 +46,8 @@ class StrCommandInterpr {
     /// Показва информация за текущата сесия
     void _sessionInfo();
     
+    void _collage(const command type);
+    
 public:
     /// Изпълнява команда по подаден стринг
     bool execut(const String& commad);

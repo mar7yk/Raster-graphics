@@ -55,10 +55,8 @@ bool StrCommandInterpr::execut(const String& newCommand) {
             _sessionInfo();
             break;
         case command::collageVertical:
-            std::cout <<"Coming soon!!!" << std::endl;
-            break;
         case command::collageHorizontal:
-            std::cout <<"Coming soon!!!" << std::endl;
+            _collage(command);
             break;
     }
     std::cout << std::endl;
@@ -75,8 +73,9 @@ void StrCommandInterpr::_add() {
     String img = strtok(NULL, " ");
     
     while (img != NULL) {
-        sessions.current().add(img);
-        std::cout << "Image \""<< img << "\" added" << std::endl;
+        if(sessions.current().add(img)) {
+            std::cout << "Image \""<< img << "\" added" << std::endl;
+        }
         img = strtok(NULL, " ");
     }
 }
@@ -113,6 +112,17 @@ void StrCommandInterpr::_sessionInfo() {
     
     std::cout << "Name of images in the session: " << imgNames << std::endl;
     std::cout <<"Pending transformations: " << instNames << std::endl;
+}
+
+
+void StrCommandInterpr::_collage(const command type) {
+    String img1 = strtok(NULL, " ");
+    String img2 = strtok(NULL, " ");
+    String newimg = strtok(NULL, " ");
+    
+    if (sessions.current().addCollage(img1, img2, newimg, type)) {
+        std::cout << "Image \""<< newimg << "\" added" << std::endl;
+    }
 }
 
 command StrCommandInterpr::getCommand(const String& sCommad) {
@@ -202,3 +212,5 @@ size_t StrCommandInterpr::stringToNum(const String &sID) {
     }
     return num;
 }
+
+

@@ -23,7 +23,7 @@ bool Session::addCommand(const command command) {
 
 bool Session::add(const String &name) {
     
-    imgType type = FileInterpr::readType(name);
+    imgType type = FileInterpr::getType(name);
     
     switch (type) {
         case imgType::invalid:
@@ -43,6 +43,36 @@ bool Session::add(const String &name) {
             break;
     }
     return true;
+}
+
+bool Session::addCollage(const String &img1Name, const String &img2Name, const String &name, const command type) {
+    
+    imgType typeOfImgs = FileInterpr::getType(img1Name, img2Name);
+    
+    if (typeOfImgs == imgType::invalid) {
+        return false;
+    }
+    
+    Image *img1 = comtainer.getImg(img1Name);
+    Image *img2 = comtainer.getImg(img2Name);
+    
+    if (img1 && img2) {
+        switch (typeOfImgs) {
+            case imgType::PPM:
+                comtainer.add(new ImagePPM(img1, img2, name, type));
+                break;
+            case imgType::PGM:
+                comtainer.add(new ImagePGM(img1, img2, name, type));
+                break;
+            case imgType::PBM:
+                comtainer.add(new ImagePBM(img1, img2, name, type));
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
+    return false;
 }
 
 bool Session::undo() {
@@ -88,7 +118,7 @@ String Session::getNamesOfImgs() {
 String Session::getNamesOfInstr() {
     String mames;
     InstrContainer temp = instructions;
-    while (true) {
+    while (!temp.empty()) {
         command c = temp.front();
         temp.pop();
         switch (c) {
@@ -111,9 +141,7 @@ String Session::getNamesOfInstr() {
             default:
                 break;
         }
-        if(temp.empty()){
-            break;
-        } else {
+        if(!temp.empty()) {
             mames = mames + ", ";
         }
     }
@@ -121,6 +149,8 @@ String Session::getNamesOfInstr() {
     
     return mames;
 }
+
+
 
 
 

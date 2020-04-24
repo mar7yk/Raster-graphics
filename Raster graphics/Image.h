@@ -13,16 +13,18 @@
 
 #include "string.hpp"
 #include "matrix.h"
+#include "command.h"
 
 
 class Image {
 protected:
     String f_name;
 public:
-    Image(): f_name(""){
-
-    }
     Image(const String& name): f_name(name) {
+        
+    }
+    
+    Image(const Image* img1, const Image* img2, const String& name, const command type): f_name(name) {
         
     }
     

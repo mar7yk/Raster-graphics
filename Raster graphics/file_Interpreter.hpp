@@ -12,9 +12,7 @@
 #include <stdio.h>
 #include <fstream>
 
-#include "imagePPM.cpp"
-#include "imagePGM.cpp"
-#include "imagePBM.cpp"
+#include "string.hpp"
 #include "imgType.h"
 
 class FileInterpr {
@@ -23,10 +21,6 @@ class FileInterpr {
 public:
     static imgType getType(const String& name);
     static imgType getType(const String& name1, const String& name2);
-    
-    static ImagePPM readPPM(const String& name);
-    static ImagePGM readPGM(const String& name);
-    static ImagePBM readPBM(const String& name);
 };
 
 #endif /* file_Interpreter_hpp */

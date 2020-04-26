@@ -14,7 +14,6 @@
 
 #include "string.hpp"
 #include "command.h"
-
 #include "sessionContainer.hpp"
 
 

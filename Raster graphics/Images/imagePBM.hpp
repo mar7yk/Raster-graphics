@@ -14,6 +14,8 @@
 
 #include "Image.h"
 
+using MatrixPBM = Matrix<bool>;
+
 class ImagePBM: public Image {
     MatrixPBM pixels;
     

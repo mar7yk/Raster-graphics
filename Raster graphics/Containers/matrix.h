@@ -10,8 +10,6 @@
 #define matrix_h
 
 #include <stdio.h>
-#include "pixel_RGB.h"
-
 
 template<typename pixel>
 class Matrix {
@@ -93,10 +91,5 @@ public:
         return elements[y];
     }
 };
-
-
-using MatrixPPM = Matrix<pixel_RGB>;
-using MatrixPGM = Matrix<unsigned char>;
-using MatrixPBM = Matrix<bool>;
 
 #endif /* matrix_h */

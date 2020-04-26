@@ -94,16 +94,20 @@ bool Session::addCollage(const String &img1Name, const String &img2Name, const S
     Image *img1 = comtainer.getImg(img1Name);
     Image *img2 = comtainer.getImg(img2Name);
     
+    using PPM = ImagePPM*;
+    using PGM = ImagePGM*;
+    using PBM = ImagePBM*;
+    
     if (img1 && img2) {
         switch (typeOfImgs) {
             case imgType::PPM:
-                comtainer.add(new ImagePPM(*(ImagePPM*)img1, *(ImagePPM*)img2, name, type));
+                comtainer.add(new ImagePPM(*PPM(img1), *PPM(img2), name, type));
                 break;
             case imgType::PGM:
-                comtainer.add(new ImagePGM(*(ImagePGM*)img1, *(ImagePGM*)img2, name, type));
+                comtainer.add(new ImagePGM(*PGM(img1), *PGM(img2), name, type));
                 break;
             case imgType::PBM:
-                comtainer.add(new ImagePBM(*(ImagePBM*)img1, *(ImagePBM*)img2, name, type));
+                comtainer.add(new ImagePBM(*PBM(img1), *PBM(img2), name, type));
                 break;
             default:
                 return false;

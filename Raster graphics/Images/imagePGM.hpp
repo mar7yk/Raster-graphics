@@ -14,6 +14,8 @@
 
 #include "Image.h"
 
+using MatrixPGM = Matrix<unsigned char>;
+
 class ImagePGM: public Image {
     unsigned maxValForCalor;
     MatrixPGM pixels;

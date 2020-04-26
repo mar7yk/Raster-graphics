@@ -13,6 +13,9 @@
 #include <fstream>
 
 #include "Image.h"
+#include "pixel_RGB.h"
+
+using MatrixPPM = Matrix<pixel_RGB>;
 
 class ImagePPM: public Image {
     unsigned maxValForCalor;

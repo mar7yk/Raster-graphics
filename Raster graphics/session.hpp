@@ -11,11 +11,11 @@
 
 #include <stdio.h>
 
-#include "instructionsContainer.hpp"
 #include "imgContainer.hpp"
-#include "file_Interpreter.hpp"
-
+#include "instructionsContainer.hpp"
 #include "command.h"
+#include "file_Interpreter.hpp"
+#include "imgType.h"
 
 class Session {
     static size_t nextID;

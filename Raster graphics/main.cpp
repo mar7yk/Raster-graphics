@@ -16,6 +16,8 @@
 
 int main() {
     
+    int a;
+    
     StrCommandInterpr interpr;
     String command;
 

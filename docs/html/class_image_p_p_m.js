@@ -1,7 +1,7 @@
 var class_image_p_p_m =
 [
-    [ "ImagePPM", "class_image_p_p_m.html#a6775c5c781e6266207c48b6f6bac4a71", null ],
     [ "ImagePPM", "class_image_p_p_m.html#a7d5a6d84257e3b710867ab48ce7026af", null ],
+    [ "ImagePPM", "class_image_p_p_m.html#a4f6f90b3834a554c942892734167b28e", null ],
     [ "grayscale", "class_image_p_p_m.html#aebf2cd4c488b9b3e8627e1fb877a9e12", null ],
     [ "monochrome", "class_image_p_p_m.html#a5caa9a2482ab34348da52cf593906868", null ],
     [ "negative", "class_image_p_p_m.html#a02d3760af67bcb666c9ed0f3a6ef8fae", null ],

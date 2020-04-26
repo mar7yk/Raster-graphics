@@ -2,8 +2,8 @@ var class_session_container =
 [
     [ "Element", "struct_session_container_1_1_element.html", "struct_session_container_1_1_element" ],
     [ "SessionContainer", "class_session_container.html#a25509ea38909aae87a3b95c7ed8c56db", null ],
-    [ "SessionContainer", "class_session_container.html#a6e87bb7d65ededab72dcfef2d7ea7e14", null ],
     [ "~SessionContainer", "class_session_container.html#a79dbffb236f074495a258a1f8a4c5363", null ],
+    [ "SessionContainer", "class_session_container.html#a6e87bb7d65ededab72dcfef2d7ea7e14", null ],
     [ "current", "class_session_container.html#ab08765cc5cd440b3c97cfaa5d74d9e81", null ],
     [ "empty", "class_session_container.html#ad66ce93fc3a5e2d91fb69fc235b572d6", null ],
     [ "makeNew", "class_session_container.html#aaf2eaa22a1a31badfa16a8ad44fd0ab7", null ],

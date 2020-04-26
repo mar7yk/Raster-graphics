@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
-  0: "_efgips",
-  1: "efips",
+  0: "_efgimps",
+  1: "efimps",
   2: "_egs"
 };
 

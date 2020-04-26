@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: String Class Reference</title>
+<title>Raster graphics: String Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Raster graphics
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -121,6 +121,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e063c56a22d7a2d2295030a67beb373"><td class="memItemLeft" align="right" valign="top"><a id="a6e063c56a22d7a2d2295030a67beb373"></a>
 <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="class_string.html">String</a> &amp;other)</td></tr>
 <tr class="separator:a6e063c56a22d7a2d2295030a67beb373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84728b14cac3bc213351c8ae8fb3364"><td class="memItemLeft" align="right" valign="top"><a id="ab84728b14cac3bc213351c8ae8fb3364"></a>
+<a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const <a class="el" href="class_string.html">String</a> &amp;other)</td></tr>
+<tr class="separator:ab84728b14cac3bc213351c8ae8fb3364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9691d9b6cca3ca25ad8f1d066b5cb778"><td class="memItemLeft" align="right" valign="top"><a id="a9691d9b6cca3ca25ad8f1d066b5cb778"></a>
+<a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const char other)</td></tr>
+<tr class="separator:a9691d9b6cca3ca25ad8f1d066b5cb778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af522876691ac11f25d725a31f37961e4"><td class="memItemLeft" align="right" valign="top"><a id="af522876691ac11f25d725a31f37961e4"></a>
+<a class="el" href="class_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const char other)</td></tr>
+<tr class="separator:af522876691ac11f25d725a31f37961e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab72b23ee7dda1cb075cce5b6b27e083a"><td class="memItemLeft" align="right" valign="top"><a id="ab72b23ee7dda1cb075cce5b6b27e083a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="class_string.html">String</a> &amp;other) const</td></tr>
 <tr class="separator:ab72b23ee7dda1cb075cce5b6b27e083a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +175,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>changeSize</b>
 <tr class="memitem:a4eec716a41d7a1ffdadab952d01a6ffd"><td class="memItemLeft" align="right" valign="top"><a id="a4eec716a41d7a1ffdadab952d01a6ffd"></a>
 static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getfromStream</b> (std::istream &amp;input, <a class="el" href="class_string.html">String</a> &amp;word, size_t startFrom)</td></tr>
 <tr class="separator:a4eec716a41d7a1ffdadab952d01a6ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ecdb07f683392a066de2549b4dfe8c"><td class="memItemLeft" align="right" valign="top"><a id="a07ecdb07f683392a066de2549b4dfe8c"></a>
+static std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getfromStreamTo</b> (std::istream &amp;input, <a class="el" href="class_string.html">String</a> &amp;word, size_t startFrom, char to)</td></tr>
+<tr class="separator:a07ecdb07f683392a066de2549b4dfe8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -178,12 +190,15 @@ Friends</h2></td></tr>
 <tr class="memitem:a1a0290783b72b24a8e31648b058e5a31"><td class="memItemLeft" align="right" valign="top"><a id="a1a0290783b72b24a8e31648b058e5a31"></a>
 std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (std::istream &amp;input, <a class="el" href="class_string.html">String</a> &amp;word)</td></tr>
 <tr class="separator:a1a0290783b72b24a8e31648b058e5a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad042f5252c2de09cc55b5dd4d5525acf"><td class="memItemLeft" align="right" valign="top"><a id="ad042f5252c2de09cc55b5dd4d5525acf"></a>
+std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getline</b> (std::istream &amp;input, <a class="el" href="class_string.html">String</a> &amp;word)</td></tr>
+<tr class="separator:ad042f5252c2de09cc55b5dd4d5525acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8d2f1060b05bc5dbdc32233ef0c81c8"><td class="memItemLeft" align="right" valign="top"><a id="ab8d2f1060b05bc5dbdc32233ef0c81c8"></a>
 std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getline</b> (std::istream &amp;input, <a class="el" href="class_string.html">String</a> &amp;word, unsigned maxLenght)</td></tr>
 <tr class="separator:ab8d2f1060b05bc5dbdc32233ef0c81c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab32621876d90487d744116e3056b074c"><td class="memItemLeft" align="right" valign="top"><a id="ab32621876d90487d744116e3056b074c"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;input, <a class="el" href="class_string.html">String</a> &amp;word)</td></tr>
-<tr class="separator:ab32621876d90487d744116e3056b074c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7bc04a7234a47952e1607c24ba54d7"><td class="memItemLeft" align="right" valign="top"><a id="a1e7bc04a7234a47952e1607c24ba54d7"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;output, const <a class="el" href="class_string.html">String</a> &amp;word)</td></tr>
+<tr class="separator:a1e7bc04a7234a47952e1607c24ba54d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20b41aab198d591f95d6eb4f49b4ad66"><td class="memItemLeft" align="right" valign="top"><a id="a20b41aab198d591f95d6eb4f49b4ad66"></a>
 <a class="el" href="class_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>strtok</b> (const <a class="el" href="class_string.html">String</a> &amp;str, const <a class="el" href="class_string.html">String</a> &amp;sep)</td></tr>
 <tr class="separator:a20b41aab198d591f95d6eb4f49b4ad66"><td class="memSeparator" colspan="2">&#160;</td></tr>

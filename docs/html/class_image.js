@@ -1,7 +1,7 @@
 var class_image =
 [
-    [ "Image", "class_image.html#a58edd1c45b4faeb5f789b0d036d02313", null ],
     [ "Image", "class_image.html#ab474f1bc7796cb87394ab005a91e16f7", null ],
+    [ "Image", "class_image.html#a0a3d5719a17294a922c8ac67bac87f53", null ],
     [ "~Image", "class_image.html#a46561cd7dcf7e203e9579737e8ace4eb", null ],
     [ "getName", "class_image.html#a1adafa7d96166cded499b5dcdacebe65", null ],
     [ "grayscale", "class_image.html#af6d40be234c94a5d3d562c8475aedd6f", null ],

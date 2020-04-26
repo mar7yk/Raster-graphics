@@ -25,15 +25,19 @@ class SessionContainer {
     
 public:
     SessionContainer();
-    SessionContainer(const SessionContainer&) = delete;
-    SessionContainer& operator=(const SessionContainer &) = delete;
     ~SessionContainer();
     
-    void makeNew();
-    void pop();
     Session& current() const;
-    bool start(const size_t ID);
     bool empty() const;
+    
+    void makeNew();
+    
+    bool start(const size_t ID);
+    
+    void pop();
+    
+    SessionContainer(const SessionContainer&) = delete;
+    SessionContainer& operator=(const SessionContainer &) = delete;
 };
 
 #endif /* sessionContainer_hpp */

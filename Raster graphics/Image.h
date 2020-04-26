@@ -41,8 +41,9 @@ public:
     virtual void negative() = 0;
     virtual void rotateLeft() = 0;
     virtual void rotateRight() = 0;
-    virtual void saveAs(const String& name) = 0;
+    
     virtual void save() = 0;
+    virtual void saveAs(const String& name) = 0;
 };
 
 #endif /* Image_hpp */

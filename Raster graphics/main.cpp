@@ -8,7 +8,11 @@
 
 #include <iostream>
 
+#include "string.hpp"
+
 #include "string_Command_Interpreter.hpp"
+
+#include <vector>
 
 int main() {
     

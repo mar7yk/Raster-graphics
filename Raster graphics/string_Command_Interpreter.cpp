@@ -44,12 +44,12 @@ bool StrCommandInterpr::execut(const String& newCommand) {
         case command::negative:
         case command::rotateLeft:
         case command::rotateRight:
-            sessions.current().addCommand(command);
+            _addInstr(command);
             break;
         case command::undo:
-            sessions.current().undo();
+            _undo();
             break;
-        case command::switchSessin:
+        case command::switchSession:
             _switch();
         case command::sessionInfo:
             _sessionInfo();
@@ -66,14 +66,15 @@ bool StrCommandInterpr::execut(const String& newCommand) {
 
 void StrCommandInterpr::_load() {
     sessions.makeNew();
-    std::cout << "Session with ID: "<< sessions.current().getID() << " started" << std::endl;
+    Session& cSession = sessions.current();
+    std::cout << "Session with ID: "<< cSession.getID() << " started" << std::endl;
 }
 
 void StrCommandInterpr::_add() {
     String img = strtok(NULL, " ");
-    
+    Session& cSession = sessions.current();
     while (img != NULL) {
-        if(sessions.current().add(img)) {
+        if(cSession.add(img)) {
             std::cout << "Image \""<< img << "\" added" << std::endl;
         }
         img = strtok(NULL, " ");
@@ -81,34 +82,48 @@ void StrCommandInterpr::_add() {
 }
 
 void StrCommandInterpr::_close() {
-    size_t id = sessions.current().getID();
+    Session& cSession = sessions.current();
+    size_t id = cSession.getID();
     sessions.pop();
     std::cout << "Session with ID: "<< id << " is close" << std::endl;
 }
 
+void StrCommandInterpr::_save() {
+    Session& cSession = sessions.current();
+    cSession.save();
+    std::cout << "All changes was saved" << std::endl;
+}
+
+void StrCommandInterpr::_addInstr(const command instr) {
+    Session& cSession = sessions.current();
+    cSession.addCommand(instr);
+}
+
+void StrCommandInterpr::_undo() {
+    Session& cSession = sessions.current();
+    cSession.undo();
+}
+
+void StrCommandInterpr::_saveAs() {
+    String name = strtok(NULL, " ");
+    
+    Session& cSession = sessions.current();
+    cSession.saveAs(name);
+    std::cout << "Image was saved" << std::endl;
+}
 
 void StrCommandInterpr::_switch() {
     String sID = strtok(NULL, " ");
     size_t id = stringToNum(sID);
     sessions.start(id);
-    std::cout <<"You switched to session with ID: " << sessions.current().getID() << "!" << std::endl;
+    Session& cSession = sessions.current();
+    std::cout <<"You switched to session with ID: " << cSession.getID() << "!" << std::endl;
 }
 
-
-void StrCommandInterpr::_saveAs() {
-    String name = strtok(NULL, " ");
-    sessions.current().saveAs(name);
-    std::cout << "Image was saved" << std::endl;
-}
-
-void StrCommandInterpr::_save() {
-    sessions.current().save();
-    std::cout << "All changes was saved" << std::endl;
-}
-
-void StrCommandInterpr::_sessionInfo() {
-    String imgNames = sessions.current().getNamesOfImgs();
-    String instNames = sessions.current().getNamesOfInstr();
+void StrCommandInterpr::_sessionInfo() const {
+    Session& cSession = sessions.current();
+    String imgNames = cSession.getNamesOfImgs();
+    String instNames = cSession.getNamesOfInstr();
     
     std::cout << "Name of images in the session: " << imgNames << std::endl;
     std::cout <<"Pending transformations: " << instNames << std::endl;
@@ -120,53 +135,24 @@ void StrCommandInterpr::_collage(const command type) {
     String img2 = strtok(NULL, " ");
     String newimg = strtok(NULL, " ");
     
-    if (sessions.current().addCollage(img1, img2, newimg, type)) {
+    Session& cSession = sessions.current();
+    if (cSession.addCollage(img1, img2, newimg, type)) {
         std::cout << "Image \""<< newimg << "\" added" << std::endl;
     }
 }
 
-command StrCommandInterpr::getCommand(const String& sCommad) {
-    if (sCommad == "load") return command::load;
-    if (sCommad == "close") return command::close;
-    if (sCommad == "save") {
-        String word = strtok(NULL, " ");
-        if (word == "as") return command::saveAs;
-        else return command::save;
-    }
-    if (sCommad == "help") return command::help;
-    if (sCommad == "exit") return command::exit;
-    if (sCommad == "grayscale") return command::grayscale;
-    if (sCommad == "monochrome") return command::monochrome;
-    if (sCommad == "negative") return command::negative;
-    if (sCommad == "undo") return command::undo;
-    if (sCommad == "add") return command::add;
-    if (sCommad == "session" && !strcmp(strtok(NULL, " "), "info")) return command::sessionInfo;
-    if (sCommad == "switch") return command::switchSessin;
-    if (sCommad == "rotate") {
-        String direction = strtok(NULL, " ");
-        if(direction == "left")  return command::rotateLeft;
-        if(direction == "right")  return command::rotateRight;
-    }
-    if (sCommad == "collage") {
-        String direction = strtok(NULL, " ");
-        if(direction == "vertical") return command::collageVertical;
-        if(direction == "horizontal")  return command::collageHorizontal;
-    }
-    return command::invalid;
-}
-
-void StrCommandInterpr::_help() {
+void StrCommandInterpr::_help() const {
     std::cout << "load <image>:" << std::endl;
     std::cout << "\tstart new session" << std::endl;
     std::cout << std::endl;
     std::cout << "add <image>:" << std::endl;
-    std::cout << "\tadd image in sessin" << std::endl;
+    std::cout << "\tadd image in session" << std::endl;
     std::cout << std::endl;
     std::cout << "close:" << std::endl;
     std::cout << "\tclose current session" << std::endl;
     std::cout << std::endl;
     std::cout << "save:" << std::endl;
-    std::cout << "\tsave all changes in current sesino" << std::endl;
+    std::cout << "\tsave all changes in current session" << std::endl;
     std::cout << std::endl;
     std::cout << "save as <new-name>:" << std::endl;
     std::cout << "\tsave first image in current sesino whith new name" << std::endl;
@@ -199,6 +185,36 @@ void StrCommandInterpr::_help() {
     std::cout << "collage <direction> <image1> <image2> <outimage>:" << std::endl;
      std::cout << "\t<direction> is one of the horizontal and vertical" << std::endl;
     std::cout << "\tCreates a collage of two images <image1> and <image2> (in the same format and the same dimension) available in the current session. The result is saved to a new image <outimage>, which is added to the current session" << std::endl;
+}
+
+command StrCommandInterpr::getCommand(const String& sCommad) {
+    if (sCommad == "load") return command::load;
+    if (sCommad == "close") return command::close;
+    if (sCommad == "save") {
+        String word = strtok(NULL, " ");
+        if (word == "as") return command::saveAs;
+        else return command::save;
+    }
+    if (sCommad == "help") return command::help;
+    if (sCommad == "exit") return command::exit;
+    if (sCommad == "grayscale") return command::grayscale;
+    if (sCommad == "monochrome") return command::monochrome;
+    if (sCommad == "negative") return command::negative;
+    if (sCommad == "undo") return command::undo;
+    if (sCommad == "add") return command::add;
+    if (sCommad == "session" && !strcmp(strtok(NULL, " "), "info")) return command::sessionInfo;
+    if (sCommad == "switch") return command::switchSession;
+    if (sCommad == "rotate") {
+        String direction = strtok(NULL, " ");
+        if(direction == "left")  return command::rotateLeft;
+        if(direction == "right")  return command::rotateRight;
+    }
+    if (sCommad == "collage") {
+        String direction = strtok(NULL, " ");
+        if(direction == "vertical") return command::collageVertical;
+        if(direction == "horizontal")  return command::collageHorizontal;
+    }
+    return command::invalid;
 }
 
 size_t StrCommandInterpr::stringToNum(const String &sID) {

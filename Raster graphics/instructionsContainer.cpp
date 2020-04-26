@@ -9,11 +9,39 @@
 #include "instructionsContainer.hpp"
 
 
-InstrContainer::InstrContainer(): h(nullptr), n(nullptr) {
+InstrContainer::InstrContainer()
+    : h(nullptr), n(nullptr) {
     
 }
 
-void InstrContainer::push(const command newInst) {
+InstrContainer::InstrContainer(const InstrContainer &other)
+    : h(nullptr), n(nullptr) {
+    inst *temp = other.h;
+    while (temp) {
+        push_back(temp->data);
+        temp = temp->next;
+    }
+}
+
+InstrContainer::~InstrContainer() {
+    clear();
+}
+
+void InstrContainer::clear() {
+    while (!empty()) {
+        pop_front();
+    }
+}
+
+command &InstrContainer::front() const {
+    return h->data;
+}
+
+bool InstrContainer::empty() const  {
+    return !h;
+}
+
+void InstrContainer::push_back(const command newInst) {
     inst *temp = n;
     n = new inst;
     n->data = newInst;
@@ -24,19 +52,16 @@ void InstrContainer::push(const command newInst) {
         temp->next = n;
 }
 
-void InstrContainer::pop() {
+void InstrContainer::pop_front() {
     inst *temp = h->next;
     delete h;
     h = temp;
 }
 
-command &InstrContainer::front() const {
-    return h->data;
-}
 
-void InstrContainer::undo() {
+void InstrContainer::pop_back() {
     if(h == n){
-        pop();
+        pop_front();
         return;
     }
     inst *temp = h;
@@ -48,13 +73,7 @@ void InstrContainer::undo() {
     n->next = nullptr;
 }
 
-bool InstrContainer::empty() const  {
-    return !h;
-}
 
-InstrContainer::~InstrContainer() {
-    clear();
-}
 
 InstrContainer &InstrContainer::operator=(const InstrContainer &other) {
     if (this != &other) {
@@ -62,7 +81,7 @@ InstrContainer &InstrContainer::operator=(const InstrContainer &other) {
 //        h = n = nullptr;
         inst *temp = other.h;
         while (temp) {
-            push(temp->data);
+            push_back(temp->data);
             temp = temp->next;
         }
     }
@@ -70,20 +89,7 @@ InstrContainer &InstrContainer::operator=(const InstrContainer &other) {
     return *this;
 }
 
-void InstrContainer::clear() {
-    while (!empty()) {
-        pop();
-    }
-}
 
-InstrContainer::InstrContainer(const InstrContainer &other) {
-    h = n = nullptr;
-    inst *temp = other.h;
-    while (temp) {
-        push(temp->data);
-        temp = temp->next;
-    }
-}
 
 
 

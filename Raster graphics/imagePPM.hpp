@@ -33,8 +33,8 @@ public:
         img >> maxValForCalor;
         
         if (sType == "P3"){
-            for (size_t y = 0; y < pixels.getHight(); ++y) {
-                for (size_t x = 0; x < pixels.getWidth(); ++x) {
+            for (size_t y = 0; y < pixels.hight(); ++y) {
+                for (size_t x = 0; x < pixels.width(); ++x) {
                     unsigned char& r = pixels[y][x].r;
                     unsigned char& g = pixels[y][x].g;
                     unsigned char& b = pixels[y][x].b;
@@ -45,8 +45,8 @@ public:
         } else if (sType == "P6"){
             char buff;
             img.read((char*)&buff, sizeof(char));
-            for (size_t y = 0; y < pixels.getHight(); ++y) {
-                for (size_t x = 0; x < pixels.getWidth(); ++x) {
+            for (size_t y = 0; y < pixels.hight(); ++y) {
+                for (size_t x = 0; x < pixels.width(); ++x) {
                     unsigned char& r = pixels[y][x].r;
                     unsigned char& g = pixels[y][x].g;
                     unsigned char& b = pixels[y][x].b;
@@ -59,54 +59,52 @@ public:
         img.close();
     }
     
-    ImagePPM(const Image *img11, const Image *img22, const String& name, const command type) : Image(name) {
-        ImagePPM* img1 =(ImagePPM*)(img11);
-        ImagePPM* img2 =(ImagePPM*)(img22);
+    ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name, const command type) : Image(name) {
         
-        maxValForCalor = img1->maxValForCalor;
+        maxValForCalor = img1.maxValForCalor;
         
         if (type == command::collageVertical) {
-            size_t width = img1->pixels.getWidth();
-            size_t halfHighrt = img1->pixels.getHight();
+            size_t width = img1.pixels.width();
+            size_t halfHighrt = img1.pixels.hight();
             size_t hight = halfHighrt * 2;
             
             pixels(width, hight);
             for (size_t y = 0; y < halfHighrt; ++y) {
                 for (size_t x = 0; x < width; ++x) {
-                    pixels[y][x] = img1->pixels[y][x];
+                    pixels[y][x] = img1.pixels[y][x];
                 }
             }
 
             for (size_t y = halfHighrt; y < hight; ++y) {
                 for (size_t x = 0; x < width; ++x) {
-                    pixels[y][x] = img2->pixels[y - halfHighrt][x];
+                    pixels[y][x] = img2.pixels[y - halfHighrt][x];
                 }
             }
 
 
         } else if (type == command::collageHorizontal) {
-            size_t halfWidth = img1->pixels.getWidth();
+            size_t halfWidth = img1.pixels.width();
             size_t width = halfWidth * 2;
-            size_t hight = img1->pixels.getHight();
+            size_t hight = img1.pixels.hight();
             pixels(width, hight);
 
             for (size_t y = 0; y < hight; ++y) {
                 for (size_t x = 0; x < halfWidth; ++x) {
-                    pixels[y][x] = img1->pixels[y][x];
+                    pixels[y][x] = img1.pixels[y][x];
                 }
             }
 
             for (size_t y = 0; y < hight; ++y) {
                 for (size_t x = halfWidth; x < width; ++x) {
-                    pixels[y][x] = img2->pixels[y][x - halfWidth];
+                    pixels[y][x] = img2.pixels[y][x - halfWidth];
                 }
             }
         }
     }
     
     void grayscale() override {
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 unsigned char& r = pixels[y][x].r;
                 unsigned char& g = pixels[y][x].g;
                 unsigned char& b = pixels[y][x].b;
@@ -116,8 +114,8 @@ public:
     }
     
     void monochrome() override {
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 unsigned char& r = pixels[y][x].r;
                 unsigned char& g = pixels[y][x].g;
                 unsigned char& b = pixels[y][x].b;
@@ -127,8 +125,8 @@ public:
         maxValForCalor = 1;
     }
     void negative() override {
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 pixels[y][x].r = maxValForCalor - pixels[y][x].r;
                 pixels[y][x].g = maxValForCalor - pixels[y][x].g;
                 pixels[y][x].b = maxValForCalor - pixels[y][x].b;
@@ -137,22 +135,22 @@ public:
     }
     void rotateLeft() override {
         MatrixPPM temp = pixels;
-        size_t w = pixels.getHight();
-        size_t h = pixels.getWidth();
+        size_t w = pixels.hight();
+        size_t h = pixels.width();
         pixels(w, h);
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 pixels[y][x] = temp[x][h - 1 - y];
             }
         }
     }
     void rotateRight() override {
         MatrixPPM temp = pixels;
-        size_t w = pixels.getHight();
-        size_t h = pixels.getWidth();
+        size_t w = pixels.hight();
+        size_t h = pixels.width();
         pixels(w, h);
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 pixels[y][x] = temp[w - 1 - x][y];
             }
         }
@@ -167,11 +165,11 @@ public:
         std::ofstream oimg (f_name.get(), std::ios::binary);
         
         oimg << "P6" << std::endl;
-        oimg << pixels.getWidth() << " " << pixels.getHight() << std::endl;
+        oimg << pixels.width() << " " << pixels.hight() << std::endl;
         oimg << maxValForCalor << std::endl;
         
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 unsigned char& r = pixels[y][x].r;
                 unsigned char& g = pixels[y][x].g;
                 unsigned char& b = pixels[y][x].b;

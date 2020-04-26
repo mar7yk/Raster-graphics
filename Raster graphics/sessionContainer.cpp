@@ -9,8 +9,25 @@
 #include "sessionContainer.hpp"
 
 
-SessionContainer::SessionContainer(): h(nullptr), c(nullptr), n(nullptr) {
+SessionContainer::SessionContainer()
+    : h(nullptr), c(nullptr), n(nullptr) {
     
+}
+
+SessionContainer::~SessionContainer() {
+    while (!empty()) {
+        Element *temp = h->next;
+        delete h;
+        h = temp;
+    }
+}
+
+Session &SessionContainer::current() const {
+    return c->data;
+}
+
+bool SessionContainer::empty() const {
+    return !h;
 }
 
 void SessionContainer::makeNew() {
@@ -22,6 +39,17 @@ void SessionContainer::makeNew() {
         h = n;
     else
         temp->next = n;
+}
+
+bool SessionContainer::start(const size_t ID) {
+    Element *temp = h;
+    while (temp && temp->data.getID() != ID) {
+        temp = temp->next;
+    }
+    if(temp){
+        c = temp;
+    }
+    return temp;
 }
 
 void SessionContainer::pop() {
@@ -41,32 +69,7 @@ void SessionContainer::pop() {
     c = nullptr;
 }
 
-Session &SessionContainer::current() const {
-    return c->data;
-}
 
-bool SessionContainer::start(const size_t ID) {
-    Element *temp = h;
-    while (temp && temp->data.getID() != ID) {
-        temp = temp->next;
-    }
-    if(temp){
-        c = temp;
-    }
-    return temp;
-}
-
-bool SessionContainer::empty() const {
-    return !h;
-}
-
-SessionContainer::~SessionContainer() {
-    while (!empty()) {
-        Element *temp = h->next;
-        delete h;
-        h = temp;
-    }
-}
 
 
 

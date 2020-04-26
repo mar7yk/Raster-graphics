@@ -31,8 +31,8 @@ public:
         pixels(width, hight);
         
         if (sType == "P1"){
-            for (size_t y = 0; y < pixels.getHight(); ++y) {
-                for (size_t x = 0; x < pixels.getWidth(); ++x) {
+            for (size_t y = 0; y < pixels.hight(); ++y) {
+                for (size_t x = 0; x < pixels.width(); ++x) {
                     img >> pixels[y][x];
                 }
             }
@@ -40,15 +40,15 @@ public:
         } else if (sType == "P4"){
             char buff;
             img.read((char*)&buff, sizeof(char));
-            for (size_t y = 0; y < pixels.getHight(); ++y) {
+            for (size_t y = 0; y < pixels.hight(); ++y) {
                 size_t x = 0;
-                while (x < pixels.getWidth()) {
+                while (x < pixels.width()) {
                     unsigned byte;
                     img.read((char*)&byte, sizeof(char));
                     for (int i = 7; i >= 0; --i) {
                         unsigned char p = byte/(1<<(i));
                         pixels[y][x] = p%2;
-                        if (x == pixels.getWidth()) {
+                        if (x == pixels.width()) {
                             break;
                         } else {
                             ++x;
@@ -60,44 +60,42 @@ public:
     }
     
     
-    ImagePBM(const Image *img11, const Image *img22, const String& name, const command type) : Image(name) {
-        ImagePBM* img1 =(ImagePBM*)(img11);
-        ImagePBM* img2 =(ImagePBM*)(img22);
+    ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name, const command type) : Image(name) {
         
         if (type == command::collageVertical) {
-            size_t width = img1->pixels.getWidth();
-            size_t halfHighrt = img1->pixels.getHight();
+            size_t width = img1.pixels.width();
+            size_t halfHighrt = img1.pixels.hight();
             size_t hight = halfHighrt * 2;
             
             pixels(width, hight);
             for (size_t y = 0; y < halfHighrt; ++y) {
                 for (size_t x = 0; x < width; ++x) {
-                    pixels[y][x] = img1->pixels[y][x];
+                    pixels[y][x] = img1.pixels[y][x];
                 }
             }
 
             for (size_t y = halfHighrt; y < hight; ++y) {
                 for (size_t x = 0; x < width; ++x) {
-                    pixels[y][x] = img2->pixels[y - halfHighrt][x];
+                    pixels[y][x] = img2.pixels[y - halfHighrt][x];
                 }
             }
 
 
         } else if (type == command::collageHorizontal) {
-            size_t halfWidth = img1->pixels.getWidth();
+            size_t halfWidth = img1.pixels.width();
             size_t width = halfWidth * 2;
-            size_t hight = img1->pixels.getHight();
+            size_t hight = img1.pixels.hight();
             pixels(width, hight);
 
             for (size_t y = 0; y < hight; ++y) {
                 for (size_t x = 0; x < halfWidth; ++x) {
-                    pixels[y][x] = img1->pixels[y][x];
+                    pixels[y][x] = img1.pixels[y][x];
                 }
             }
 
             for (size_t y = 0; y < hight; ++y) {
                 for (size_t x = halfWidth; x < width; ++x) {
-                    pixels[y][x] = img2->pixels[y][x - halfWidth];
+                    pixels[y][x] = img2.pixels[y][x - halfWidth];
                 }
             }
         }
@@ -111,19 +109,19 @@ public:
         
     }
     void negative() override {
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 pixels[y][x] = !pixels[y][x];
             }
         }
     }
     void rotateLeft() override {
         MatrixPBM temp = pixels;
-        size_t w = pixels.getHight();
-        size_t h = pixels.getWidth();
+        size_t w = pixels.hight();
+        size_t h = pixels.width();
         pixels(w, h);
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 pixels[y][x] = temp[x][h - 1 - y];
             }
         }
@@ -131,11 +129,11 @@ public:
     
     void rotateRight() override {
         MatrixPBM temp = pixels;
-        size_t w = pixels.getHight();
-        size_t h = pixels.getWidth();
+        size_t w = pixels.hight();
+        size_t h = pixels.width();
         pixels(w, h);
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
-            for (size_t x = 0; x < pixels.getWidth(); ++x) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
+            for (size_t x = 0; x < pixels.width(); ++x) {
                 pixels[y][x] = temp[w - 1 - x][y];
             }
         }
@@ -163,7 +161,7 @@ public:
 //        }
         
         oimg << "P4" << std::endl;
-        oimg << pixels.getWidth() << " " << pixels.getHight() << std::endl;
+        oimg << pixels.width() << " " << pixels.hight() << std::endl;
         
 //        for (size_t y = 0; y < pixels.getHight(); ++y) {
 //
@@ -178,14 +176,14 @@ public:
 //            }
 //        }
         
-        for (size_t y = 0; y < pixels.getHight(); ++y) {
+        for (size_t y = 0; y < pixels.hight(); ++y) {
             size_t x = 0;
-            while (x < pixels.getWidth()) {
+            while (x < pixels.width()) {
                 unsigned byte = 0;
                 for (int i = 7; i >= 0; --i) {
                     unsigned p = pixels[y][x] * (1 << (i));
                     byte += p;
-                    if (x == pixels.getWidth()) {
+                    if (x == pixels.width()) {
                         break;
                     } else {
                         ++x;

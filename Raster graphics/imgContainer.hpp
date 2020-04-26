@@ -18,40 +18,31 @@
 #include "command.h"
 
 class ImageContainer {
-    size_t size;
-    size_t capacity;
+    size_t f_size;
+    size_t f_capacity;
     Image ** images;
     
     void resize(const size_t newCapacity);
     
 public:
     ImageContainer();
-    ImageContainer(const ImageContainer& other) = delete;
-    ImageContainer& operator=(const ImageContainer& other) = delete;
     ~ImageContainer();
+    
+    Image* getImg(const String& name) const;
+    size_t size() const;
     
     void add(Image*const img);
     
-    void add(const ImagePPM& img);
-    
-    void add(const ImagePGM& img);
-    
-    void add(const ImagePBM& img);
-    
-    Image* getImg(const String& name) const;
-    
-    Image*& operator[](const size_t n);
-    
-    size_t getSize();
-    
+    void doInst(const command c);
     void doInstForFirst(const command c);
     
-    void doInst(const command c);
-    
+    void save();
     void saveAs(const String& name);
     
+    Image*& operator[](const size_t n) const;
     
-    void save();
+    ImageContainer(const ImageContainer& other) = delete;
+    ImageContainer& operator=(const ImageContainer& other) = delete;
 };
 
 #endif /* imgContainer_hpp */

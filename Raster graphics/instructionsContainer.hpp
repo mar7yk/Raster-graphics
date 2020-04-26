@@ -29,13 +29,15 @@ public:
     InstrContainer(const InstrContainer& other);
     ~InstrContainer();
     
-    InstrContainer& operator=(const InstrContainer& other);
-    
-    void push(const command newImg);
-    void pop();
     command& front() const;
-    void undo();
     bool empty() const;
+    
+    void push_back(const command newImg);
+    
+    void pop_front();
+    void pop_back();
+    
+    InstrContainer& operator=(const InstrContainer& other);
 };
 
 #endif /* instructionsContainer_hpp */

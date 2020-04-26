@@ -18,39 +18,27 @@
 #include "command.h"
 
 class Session {
-    const size_t ID;
-    InstrContainer instructions;
-    ImageContainer comtainer;
-//    ImgContainer<ImagePPM> PPM_Comtainer;
-//    ImgContainer<ImagePGM> PGM_Comtainer;
-//    ImgContainer<ImagePBM> PBM_Comtainer;
-    
     static size_t nextID;
     
+    const size_t ID;
+    ImageContainer comtainer;
+    InstrContainer instructions;
+    
 public:
-    Session(): ID(nextID){
-        ++nextID;
-    }
+    Session();
     
-    size_t getID(){
-        return ID;
-    }
-    
-    bool addCommand(const command command);
-    
-    bool saveAs(const String name);
-    
-    bool save();
+    size_t getID() const;
+    String getNamesOfImgs() const;
+    String getNamesOfInstr() const;
     
     bool add(const String& name);
-    
     bool addCollage(const String& img1Name, const String& img2Name, const String& name, const command type);
+    bool addCommand(const command command);
+    
+    bool save();
+    bool saveAs(const String name);
     
     bool undo();
-    
-    String getNamesOfImgs();
-    
-    String getNamesOfInstr();
 };
 
 #endif /* session_hpp */

@@ -24,7 +24,7 @@ enum class command {
     rotateLeft,
     rotateRight,
     undo,
-    switchSessin,
+    switchSession,
     sessionInfo,
     collageHorizontal,
     collageVertical

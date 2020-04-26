@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <iostream>
-#include <string>
 
 #include "string.hpp"
 #include "command.h"
@@ -35,18 +34,23 @@ class StrCommandInterpr {
     void _add();
     /// Затваря текущата сесия
     void _close();
-    /// Сменя текущата сесия с друга
-    void _switch();
-    /// Показва списък с наличните команди
-    void _help();
-    /// Запазва първата снимка в текущата сесия под ново име
-    void _saveAs();
     /// Запазва всички промени в текущата сесия
     void _save();
+    /// Запазва първата снимка в текущата сесия под ново име
+    void _saveAs();
+    
+    void _addInstr(const command instr);
+    
+    void _undo();
+    
+    /// Сменя текущата сесия с друга
+    void _switch();
     /// Показва информация за текущата сесия
-    void _sessionInfo();
+    void _sessionInfo() const;
     
     void _collage(const command type);
+    /// Показва списък с наличните команди
+    void _help() const;
     
 public:
     /// Изпълнява команда по подаден стринг

@@ -19,8 +19,6 @@ using MatrixPBM = Matrix<bool>;
 class ImagePBM: public Image {
     MatrixPBM pixels;
     
-    friend class FileInterpr;
-    
 public:
     ImagePBM(const String& name): Image(name) {
         std::ifstream img(name.get() , std::ios::binary);

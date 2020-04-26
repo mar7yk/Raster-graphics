@@ -20,8 +20,6 @@ class ImagePGM: public Image {
     unsigned maxValForCalor;
     MatrixPGM pixels;
     
-    friend class FileInterpr;
-    
 public:
     ImagePGM(const String& name): Image(name) {
         std::ifstream img(name.get() , std::ios::binary);

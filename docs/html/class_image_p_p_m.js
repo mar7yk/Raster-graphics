@@ -9,7 +9,6 @@ var class_image_p_p_m =
     [ "rotateRight", "class_image_p_p_m.html#a4451ca1d97caa5536096d61b1aaecced", null ],
     [ "save", "class_image_p_p_m.html#a59ab2015ec4c4ed2e4a8d98118ad4dae", null ],
     [ "saveAs", "class_image_p_p_m.html#a3967684629e75b5b0962f450325a9eea", null ],
-    [ "FileInterpr", "class_image_p_p_m.html#a1e9b25e1ba0826ddbcc9cfc25672a151", null ],
     [ "maxValForCalor", "class_image_p_p_m.html#aa0484f36bdb8add052c04da278ee8c0a", null ],
     [ "pixels", "class_image_p_p_m.html#abb21ce5ff43a4b81cbf9a6cef173c2cc", null ]
 ];

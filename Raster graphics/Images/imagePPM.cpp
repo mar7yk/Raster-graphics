@@ -63,27 +63,27 @@ ImagePPM::ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name,
                 pixels[y][x] = img1.pixels[y][x];
             }
         }
-
+        
         for (size_t y = halfHighrt; y < hight; ++y) {
             for (size_t x = 0; x < width; ++x) {
                 pixels[y][x] = img2.pixels[y - halfHighrt][x];
             }
         }
-
-
+        
+        
     } else if (type == command::collageHorizontal) {
         size_t halfWidth = img1.pixels.width();
         size_t width = halfWidth * 2;
         size_t hight = img1.pixels.hight();
         
         pixels(width, hight);
-
+        
         for (size_t y = 0; y < hight; ++y) {
             for (size_t x = 0; x < halfWidth; ++x) {
                 pixels[y][x] = img1.pixels[y][x];
             }
         }
-
+        
         for (size_t y = 0; y < hight; ++y) {
             for (size_t x = halfWidth; x < width; ++x) {
                 pixels[y][x] = img2.pixels[y][x - halfWidth];
@@ -149,11 +149,6 @@ void ImagePPM::rotateRight() {
     }
 }
 
-void ImagePPM::saveAs(const String& name){
-    f_name =  name;
-    save();
-}
-
 void ImagePPM::save() {
     std::ofstream oimg (f_name.get(), std::ios::binary);
     
@@ -172,4 +167,9 @@ void ImagePPM::save() {
         }
     }
     oimg.close();
+}
+
+void ImagePPM::saveAs(const String& name){
+    f_name =  name;
+    save();
 }

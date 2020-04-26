@@ -22,7 +22,6 @@ class ImagePGM: public Image {
     
 public:
     ImagePGM(const String& name);
-    
     ImagePGM(const ImagePGM img1, const ImagePGM img2, const String& name, const command type);
     
     void grayscale() override;
@@ -30,10 +29,9 @@ public:
     void negative() override;
     void rotateLeft() override;
     void rotateRight() override;
-    void saveAs(const String& name) override;
-    
     
     void save() override;
+    void saveAs(const String& name) override;
 };
 
 #endif /* imagePGM_hpp */

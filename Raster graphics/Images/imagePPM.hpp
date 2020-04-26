@@ -23,18 +23,15 @@ class ImagePPM: public Image {
     
 public:
     ImagePPM(const String& name);
-    
     ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name, const command type);
     
     void grayscale() override;
-    
     void monochrome() override;
-    
     void negative() override;
     void rotateLeft() override;
     void rotateRight() override;
-    void saveAs(const String& name) override;
     
     void save() override;
+    void saveAs(const String& name) override;
 };
 #endif /* imagePPM_hpp */

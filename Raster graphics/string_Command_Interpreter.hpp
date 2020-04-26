@@ -1,6 +1,6 @@
 //
 //  string_Command_Interpreter.hpp
-//  dev
+//  Raster graphics
 //
 //  Created by Marty Kostov on 10.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.

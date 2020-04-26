@@ -1,6 +1,5 @@
 //
 //  string.cpp
-//  Raster graphics
 //
 //  Created by Marty Kostov on 5.03.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.

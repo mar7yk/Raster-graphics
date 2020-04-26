@@ -1,6 +1,6 @@
 //
 //  sessionContainer.cpp
-//  dev
+//  Raster graphics
 //
 //  Created by Marty Kostov on 12.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.

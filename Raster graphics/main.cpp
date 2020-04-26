@@ -12,7 +12,6 @@
 #include "string_Command_Interpreter.hpp"
 
 int main() {
-    
     StrCommandInterpr interpr;
     String command;
 

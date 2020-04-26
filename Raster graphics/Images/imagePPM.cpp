@@ -43,6 +43,7 @@ ImagePPM::ImagePPM(const String& name): Image(name) {
             }
         }
     }
+    
     img.close();
 }
 
@@ -56,6 +57,7 @@ ImagePPM::ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name,
         size_t hight = halfHighrt * 2;
         
         pixels(width, hight);
+        
         for (size_t y = 0; y < halfHighrt; ++y) {
             for (size_t x = 0; x < width; ++x) {
                 pixels[y][x] = img1.pixels[y][x];
@@ -73,6 +75,7 @@ ImagePPM::ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name,
         size_t halfWidth = img1.pixels.width();
         size_t width = halfWidth * 2;
         size_t hight = img1.pixels.hight();
+        
         pixels(width, hight);
 
         for (size_t y = 0; y < hight; ++y) {
@@ -111,6 +114,7 @@ void ImagePPM::monochrome() {
     }
     maxValForCalor = 1;
 }
+
 void ImagePPM::negative() {
     for (size_t y = 0; y < pixels.hight(); ++y) {
         for (size_t x = 0; x < pixels.width(); ++x) {
@@ -120,6 +124,7 @@ void ImagePPM::negative() {
         }
     }
 }
+
 void ImagePPM::rotateLeft() {
     MatrixPPM temp = pixels;
     size_t w = pixels.hight();
@@ -131,6 +136,7 @@ void ImagePPM::rotateLeft() {
         }
     }
 }
+
 void ImagePPM::rotateRight() {
     MatrixPPM temp = pixels;
     size_t w = pixels.hight();
@@ -142,6 +148,7 @@ void ImagePPM::rotateRight() {
         }
     }
 }
+
 void ImagePPM::saveAs(const String& name){
     f_name =  name;
     save();

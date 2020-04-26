@@ -19,14 +19,14 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
         img >> width >> hight;
         pixels(width, hight);
         
-        if (sType == "P1"){
+        if (sType == "P1") {
             for (size_t y = 0; y < pixels.hight(); ++y) {
                 for (size_t x = 0; x < pixels.width(); ++x) {
                     img >> pixels[y][x];
                 }
             }
             
-        } else if (sType == "P4"){
+        } else if (sType == "P4") {
             char buff;
             img.read((char*)&buff, sizeof(char));
             for (size_t y = 0; y < pixels.hight(); ++y) {
@@ -57,6 +57,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
             size_t hight = halfHighrt * 2;
             
             pixels(width, hight);
+            
             for (size_t y = 0; y < halfHighrt; ++y) {
                 for (size_t x = 0; x < width; ++x) {
                     pixels[y][x] = img1.pixels[y][x];
@@ -74,6 +75,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
             size_t halfWidth = img1.pixels.width();
             size_t width = halfWidth * 2;
             size_t hight = img1.pixels.hight();
+            
             pixels(width, hight);
 
             for (size_t y = 0; y < hight; ++y) {
@@ -97,6 +99,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
     void ImagePBM::monochrome() {
         
     }
+
     void ImagePBM::negative() {
         for (size_t y = 0; y < pixels.hight(); ++y) {
             for (size_t x = 0; x < pixels.width(); ++x) {
@@ -104,6 +107,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
             }
         }
     }
+
     void ImagePBM::rotateLeft() {
         MatrixPBM temp = pixels;
         size_t w = pixels.hight();
@@ -127,6 +131,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
             }
         }
     }
+
     void ImagePBM::saveAs(const String& name) {
         f_name = name;
         save();
@@ -136,34 +141,8 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
     void ImagePBM::save() {
         std::ofstream oimg (f_name.get(), std::ios::binary);
         
-//        oimg << "P4" << std::endl;
-//        oimg << pixels.getWidth() << " " << pixels.getHight() << std::endl;
-//
-//        for (size_t y = 0; y < pixels.getWidth(); ++y) {
-//            for (size_t x = 0; x < pixels.getHight(); ++x) {
-//                unsigned char p = pixels[y][x];
-//                oimg.write((char*)&p, sizeof(char));
-//                if(p == 1 && pixels[y][x]){
-//
-//                }
-//            }
-//        }
-        
         oimg << "P4" << std::endl;
         oimg << pixels.width() << " " << pixels.hight() << std::endl;
-        
-//        for (size_t y = 0; y < pixels.getHight(); ++y) {
-//
-//            for (size_t x = 0; x < pixels.getWidth(); ++x) {
-//                unsigned char p = pixels[y][x];
-////                for (unsigned i = 0; i <= 7; ++i) {
-////                    p = pixels[y][x]/(1<<(7 - i));
-////                    oimg << p%(2);
-////                }
-//                oimg.write((char*)&p, sizeof(char));
-////                oimg << (unsigned)p;
-//            }
-//        }
         
         for (size_t y = 0; y < pixels.hight(); ++y) {
             size_t x = 0;

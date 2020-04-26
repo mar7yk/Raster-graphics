@@ -48,6 +48,7 @@ ImagePGM::ImagePGM(const String& name): Image(name) {
             size_t hight = halfHighrt * 2;
             
             pixels(width, hight);
+            
             for (size_t y = 0; y < halfHighrt; ++y) {
                 for (size_t x = 0; x < width; ++x) {
                     pixels[y][x] = img1.pixels[y][x];
@@ -65,6 +66,7 @@ ImagePGM::ImagePGM(const String& name): Image(name) {
             size_t halfWidth = img1.pixels.width();
             size_t width = halfWidth * 2;
             size_t hight = img1.pixels.hight();
+            
             pixels(width, hight);
 
             for (size_t y = 0; y < hight; ++y) {
@@ -90,7 +92,6 @@ ImagePGM::ImagePGM(const String& name): Image(name) {
             for (size_t x = 0; x < pixels.width(); ++x) {
                 unsigned char& p = pixels[y][x];
                 p > maxValForCalor / 3 ? p = 255 : p = 0;
-//p = 15 * (unsigned char)(p > maxValForCalor / 2);
             }
         }
         maxValForCalor = 255;
@@ -102,6 +103,7 @@ ImagePGM::ImagePGM(const String& name): Image(name) {
             }
         }
     }
+
     void ImagePGM::rotateLeft() {
         MatrixPGM temp = pixels;
         size_t w = pixels.hight();
@@ -113,6 +115,7 @@ ImagePGM::ImagePGM(const String& name): Image(name) {
             }
         }
     }
+
     void ImagePGM::rotateRight() {
         MatrixPGM temp = pixels;
         size_t w = pixels.hight();
@@ -124,6 +127,7 @@ ImagePGM::ImagePGM(const String& name): Image(name) {
             }
         }
     }
+
     void ImagePGM::saveAs(const String& name) {
         f_name = name;
         save();

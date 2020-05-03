@@ -33,7 +33,7 @@ void InstrContainer::clear() {
     }
 }
 
-command &InstrContainer::front() const {
+Command &InstrContainer::front() const {
     return h->data;
 }
 
@@ -41,7 +41,7 @@ bool InstrContainer::empty() const  {
     return !h;
 }
 
-void InstrContainer::push_back(const command newInst) {
+void InstrContainer::push_back(const Command newInst) {
     inst *temp = n;
     n = new inst;
     n->data = newInst;

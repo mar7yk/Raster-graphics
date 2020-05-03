@@ -16,11 +16,11 @@
 #include "imgType.h"
 
 class FileInterpr {
-    static imgType strToType(const String& sType);
+    static ImgType strToType(const String& sType);
     
 public:
-    static imgType getType(const String& name);
-    static imgType getType(const String& name1, const String& name2);
+    static ImgType getType(const String& name);
+    static ImgType getType(const String& name1, const String& name2);
 };
 
 #endif /* file_Interpreter_hpp */

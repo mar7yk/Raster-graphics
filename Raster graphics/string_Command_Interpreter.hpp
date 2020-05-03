@@ -22,7 +22,7 @@ class StrCommandInterpr {
     SessionContainer sessions;
     
     /// Преобразува string команда в enum command
-    command getCommand(const String& sCommad);
+    Command getCommand(const String& sCommad);
     
     /// Преобразъва позитивно число от string в size_t
     size_t stringToNum(const String& sID);
@@ -38,7 +38,7 @@ class StrCommandInterpr {
     /// Запазва първата снимка в текущата сесия под ново име
     void _saveAs();
     
-    void _addInstr(const command instr);
+    void _addInstr(const Command instr);
     
     void _undo();
     
@@ -47,7 +47,7 @@ class StrCommandInterpr {
     /// Показва информация за текущата сесия
     void _sessionInfo() const;
     
-    void _collage(const command type);
+    void _collage(const Command type);
     /// Показва списък с наличните команди
     void _help() const;
     

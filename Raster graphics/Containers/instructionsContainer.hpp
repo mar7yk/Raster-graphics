@@ -15,7 +15,7 @@
 
 class InstrContainer {
     struct inst {
-        command data;
+        Command data;
         inst *next;
     };
     
@@ -29,10 +29,10 @@ public:
     InstrContainer(const InstrContainer& other);
     ~InstrContainer();
     
-    command& front() const;
+    Command& front() const;
     bool empty() const;
     
-    void push_back(const command newImg);
+    void push_back(const Command newImg);
     
     void pop_front();
     void pop_back();

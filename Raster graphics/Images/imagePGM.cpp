@@ -38,11 +38,11 @@ ImagePGM::ImagePGM(const String& name): Image(name) {
     img.close();
 }
 
-ImagePGM::ImagePGM(const ImagePGM img1, const ImagePGM img2, const String& name, const command type) : Image(name) {
+ImagePGM::ImagePGM(const ImagePGM img1, const ImagePGM img2, const String& name, const Command type) : Image(name) {
     
     maxValForCalor = img1.maxValForCalor;
     
-    if (type == command::CollageVertical) {
+    if (type == Command::CollageVertical) {
         size_t width = img1.pixels.width();
         size_t halfHighrt = img1.pixels.hight();
         size_t hight = halfHighrt * 2;
@@ -62,7 +62,7 @@ ImagePGM::ImagePGM(const ImagePGM img1, const ImagePGM img2, const String& name,
         }
         
         
-    } else if (type == command::CollageHorizontal) {
+    } else if (type == Command::CollageHorizontal) {
         size_t halfWidth = img1.pixels.width();
         size_t width = halfWidth * 2;
         size_t hight = img1.pixels.hight();

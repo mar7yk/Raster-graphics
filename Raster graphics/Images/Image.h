@@ -24,7 +24,7 @@ public:
         
     }
     
-    Image(const Image* img1, const Image* img2, const String& name, const command type): f_name(name) {
+    Image(const Image* img1, const Image* img2, const String& name, const Command type): f_name(name) {
         
     }
     

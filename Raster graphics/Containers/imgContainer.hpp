@@ -33,8 +33,8 @@ public:
     
     void add(Image*const img);
     
-    void doInst(const command c);
-    void doInstForFirst(const command c);
+    void doInst(const Command c);
+    void doInstForFirst(const Command c);
     
     void save();
     void saveAs(const String& name);

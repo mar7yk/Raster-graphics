@@ -22,7 +22,7 @@ class ImagePGM: public Image {
     
 public:
     ImagePGM(const String& name);
-    ImagePGM(const ImagePGM img1, const ImagePGM img2, const String& name, const command type);
+    ImagePGM(const ImagePGM img1, const ImagePGM img2, const String& name, const Command type);
     
     void grayscale() override;
     void monochrome() override;

@@ -52,25 +52,25 @@ void ImageContainer::resize(const size_t newCapacity) {
     images = new Image*[f_capacity];
 }
 
-void ImageContainer::doInst(const command c) {
+void ImageContainer::doInst(const Command c) {
     switch (c) {
-        case command::Grayscale:
+        case Command::Grayscale:
             for (size_t i = 0; i < f_size; ++i)
                 images[i]->grayscale();
             break;
-        case command::Monochrome:
+        case Command::Monochrome:
             for (size_t i = 0; i < f_size; ++i)
                 images[i]->monochrome();
             break;
-        case command::Negative:
+        case Command::Negative:
             for (size_t i = 0; i < f_size; ++i)
                 images[i]->negative();
             break;
-        case command::RotateLeft:
+        case Command::RotateLeft:
             for (size_t i = 0; i < f_size; ++i)
                 images[i]->rotateLeft();
             break;
-        case command::RotateRight:
+        case Command::RotateRight:
             for (size_t i = 0; i < f_size; ++i)
                 images[i]->rotateRight();
             break;
@@ -80,21 +80,21 @@ void ImageContainer::doInst(const command c) {
     }
 }
 
-void ImageContainer::doInstForFirst(const command c) {
+void ImageContainer::doInstForFirst(const Command c) {
     switch (c) {
-        case command::Grayscale:
+        case Command::Grayscale:
             images[0]->grayscale();
             break;
-        case command::Monochrome:
+        case Command::Monochrome:
             images[0]->monochrome();
             break;
-        case command::Negative:
+        case Command::Negative:
             images[0]->negative();
             break;
-        case command::RotateLeft:
+        case Command::RotateLeft:
             images[0]->rotateLeft();
             break;
-        case command::RotateRight:
+        case Command::RotateRight:
             images[0]->rotateRight();
             break;
             

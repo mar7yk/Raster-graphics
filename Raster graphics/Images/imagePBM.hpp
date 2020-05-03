@@ -21,7 +21,7 @@ class ImagePBM: public Image {
     
 public:
     ImagePBM(const String& name);
-    ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name, const command type);
+    ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name, const Command type);
     
     void grayscale() override;
     void monochrome() override;

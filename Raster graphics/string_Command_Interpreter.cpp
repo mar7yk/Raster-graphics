@@ -12,50 +12,50 @@
 bool StrCommandInterpr::execut(const String& newCommand) {
     bool toContinue = true;
     String sCommand = strtok(newCommand, " ");
-    command command = getCommand(sCommand);
+    Command command = getCommand(sCommand);
     
     switch (command) {
-        case command::Invalid:
+        case Command::Invalid:
             std::cout << "command not found: " << sCommand << std::endl;
             break;
-        case command::Load:
+        case Command::Load:
             _load();
-        case command::Add:
+        case Command::Add:
             _add();
             break;
-        case command::Close:
+        case Command::Close:
             _close();
             break;
-        case command::Save:
+        case Command::Save:
             _save();
             break;
-        case command::SaveAs:
+        case Command::SaveAs:
             _saveAs();
             break;
-        case command::Help:
+        case Command::Help:
             _help();
             break;
-        case command::Exit:
+        case Command::Exit:
             std::cout << "Exiting the program..." << std::endl;
             toContinue = false;
             break;
-        case command::Grayscale:
-        case command::Monochrome:
-        case command::Negative:
-        case command::RotateLeft:
-        case command::RotateRight:
+        case Command::Grayscale:
+        case Command::Monochrome:
+        case Command::Negative:
+        case Command::RotateLeft:
+        case Command::RotateRight:
             _addInstr(command);
             break;
-        case command::Undo:
+        case Command::Undo:
             _undo();
             break;
-        case command::SwitchSession:
+        case Command::SwitchSession:
             _switch();
-        case command::SessionInfo:
+        case Command::SessionInfo:
             _sessionInfo();
             break;
-        case command::CollageVertical:
-        case command::CollageHorizontal:
+        case Command::CollageVertical:
+        case Command::CollageHorizontal:
             _collage(command);
             break;
     }
@@ -94,7 +94,7 @@ void StrCommandInterpr::_save() {
     std::cout << "All changes was saved" << std::endl;
 }
 
-void StrCommandInterpr::_addInstr(const command instr) {
+void StrCommandInterpr::_addInstr(const Command instr) {
     Session& cSession = sessions.current();
     cSession.addCommand(instr);
 }
@@ -130,7 +130,7 @@ void StrCommandInterpr::_sessionInfo() const {
 }
 
 
-void StrCommandInterpr::_collage(const command type) {
+void StrCommandInterpr::_collage(const Command type) {
     String img1 = strtok(NULL, " ");
     String img2 = strtok(NULL, " ");
     String newimg = strtok(NULL, " ");
@@ -187,34 +187,34 @@ void StrCommandInterpr::_help() const {
     std::cout << "\tCreates a collage of two images <image1> and <image2> (in the same format and the same dimension) available in the current session. The result is saved to a new image <outimage>, which is added to the current session" << std::endl;
 }
 
-command StrCommandInterpr::getCommand(const String& sCommad) {
-    if (sCommad == "load") return command::Load;
-    if (sCommad == "close") return command::Close;
+Command StrCommandInterpr::getCommand(const String& sCommad) {
+    if (sCommad == "load") return Command::Load;
+    if (sCommad == "close") return Command::Close;
     if (sCommad == "save") {
         String word = strtok(NULL, " ");
-        if (word == "as") return command::SaveAs;
-        else return command::Save;
+        if (word == "as") return Command::SaveAs;
+        else return Command::Save;
     }
-    if (sCommad == "help") return command::Help;
-    if (sCommad == "exit") return command::Exit;
-    if (sCommad == "grayscale") return command::Grayscale;
-    if (sCommad == "monochrome") return command::Monochrome;
-    if (sCommad == "negative") return command::Negative;
-    if (sCommad == "undo") return command::Undo;
-    if (sCommad == "add") return command::Add;
-    if (sCommad == "session" && !strcmp(strtok(NULL, " "), "info")) return command::SessionInfo;
-    if (sCommad == "switch") return command::SwitchSession;
+    if (sCommad == "help") return Command::Help;
+    if (sCommad == "exit") return Command::Exit;
+    if (sCommad == "grayscale") return Command::Grayscale;
+    if (sCommad == "monochrome") return Command::Monochrome;
+    if (sCommad == "negative") return Command::Negative;
+    if (sCommad == "undo") return Command::Undo;
+    if (sCommad == "add") return Command::Add;
+    if (sCommad == "session" && !strcmp(strtok(NULL, " "), "info")) return Command::SessionInfo;
+    if (sCommad == "switch") return Command::SwitchSession;
     if (sCommad == "rotate") {
         String direction = strtok(NULL, " ");
-        if(direction == "left")  return command::RotateLeft;
-        if(direction == "right")  return command::RotateRight;
+        if(direction == "left")  return Command::RotateLeft;
+        if(direction == "right")  return Command::RotateRight;
     }
     if (sCommad == "collage") {
         String direction = strtok(NULL, " ");
-        if(direction == "vertical") return command::CollageVertical;
-        if(direction == "horizontal")  return command::CollageHorizontal;
+        if(direction == "vertical") return Command::CollageVertical;
+        if(direction == "horizontal")  return Command::CollageHorizontal;
     }
-    return command::Invalid;
+    return Command::Invalid;
 }
 
 size_t StrCommandInterpr::stringToNum(const String &sID) {

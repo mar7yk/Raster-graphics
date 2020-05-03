@@ -9,39 +9,39 @@
 #include "file_Interpreter.hpp"
 
 
-imgType FileInterpr::getType(const String& name) {
+ImgType FileInterpr::getType(const String& name) {
     std::ifstream img(name.get() , std::ios::binary);
     if (img.is_open()) {
         String sType;
         img >> sType;
         
-        imgType type = strToType(sType);
+        ImgType type = strToType(sType);
         
         img.close();
 
         return type;
     }
-    return imgType::Invalid;
+    return ImgType::Invalid;
 }
 
-imgType FileInterpr::getType(const String &name1, const String &name2) {
+ImgType FileInterpr::getType(const String &name1, const String &name2) {
     std::ifstream img1(name1.get() , std::ios::binary);
     std::ifstream img2(name2.get() , std::ios::binary);
     
     String sType1;
     img1 >> sType1;
-    imgType type1 = strToType(sType1);
-    if (type1 == imgType::Invalid) {
+    ImgType type1 = strToType(sType1);
+    if (type1 == ImgType::Invalid) {
         return type1;
     }
     String sType2;
     img2 >> sType2;
-    imgType type2 = strToType(sType2);
-    if (type2 == imgType::Invalid) {
+    ImgType type2 = strToType(sType2);
+    if (type2 == ImgType::Invalid) {
         return type2;
     }
     if (type1 != type2) {
-        return imgType::Invalid;
+        return ImgType::Invalid;
     }
     size_t width1, hight1;
     img1 >> width1 >> hight1;
@@ -50,28 +50,28 @@ imgType FileInterpr::getType(const String &name1, const String &name2) {
     img2 >> width2 >> hight2;
     
     if (width1 != width2 || hight1 != hight2) {
-        return imgType::Invalid;
+        return ImgType::Invalid;
     }
     
-    if (type1 != imgType::PBM) {
+    if (type1 != ImgType::PBM) {
         unsigned maxValForCalor1;
         img1 >> maxValForCalor1;
         unsigned maxValForCalor2;
         img2 >> maxValForCalor2;
         
         if (maxValForCalor1 != maxValForCalor2) {
-            return imgType::Invalid;
+            return ImgType::Invalid;
         }
     }
     
     return type1;
 }
 
-imgType FileInterpr::strToType(const String &sType) { 
-    if(sType == "P3" || sType == "P6") return imgType::PPM;
-    if(sType == "P2" || sType == "P5") return imgType::PGM;
-    if(sType == "P1" || sType == "P4") return imgType::PBM;
-    return imgType::Invalid;
+ImgType FileInterpr::strToType(const String &sType) {
+    if(sType == "P3" || sType == "P6") return ImgType::PPM;
+    if(sType == "P2" || sType == "P5") return ImgType::PGM;
+    if(sType == "P1" || sType == "P4") return ImgType::PBM;
+    return ImgType::Invalid;
 }
 
 

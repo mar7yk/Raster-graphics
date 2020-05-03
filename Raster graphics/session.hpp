@@ -32,8 +32,8 @@ public:
     String getNamesOfInstr() const;
     
     bool add(const String& name);
-    bool addCollage(const String& img1Name, const String& img2Name, const String& name, const command type);
-    bool addCommand(const command command);
+    bool addCollage(const String& img1Name, const String& img2Name, const String& name, const Command type);
+    bool addCommand(const Command command);
     
     bool save();
     bool saveAs(const String name);

@@ -9,7 +9,7 @@
 #ifndef imgType_h
 #define imgType_h
 
-enum class imgType {
+enum class ImgType {
     Invalid = -1,
     PPM = 0,
     PGM,

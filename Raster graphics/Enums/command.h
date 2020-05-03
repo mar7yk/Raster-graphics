@@ -9,7 +9,7 @@
 #ifndef command_h
 #define command_h
 
-enum class command {
+enum class Command {
     Invalid = -1,
     Load = 0,
     Add,

@@ -30,22 +30,22 @@ String Session::getNamesOfInstr() const{
     String mames;
     InstrContainer temp = instructions;
     while (!temp.empty()) {
-        command c = temp.front();
+        Command c = temp.front();
         temp.pop_front();
         switch (c) {
-            case command::Grayscale:
+            case Command::Grayscale:
                 mames = mames + "grayscale";
                 break;
-            case command::Monochrome:
+            case Command::Monochrome:
                 mames = mames + "monochrome";
                 break;
-            case command::Negative:
+            case Command::Negative:
                 mames = mames + "negative";
                 break;
-            case command::RotateLeft:
+            case Command::RotateLeft:
                 mames = mames + "rotate left";
                 break;
-            case command::RotateRight:
+            case Command::RotateRight:
                 mames = mames + "rotate right";
                 break;
 
@@ -63,31 +63,31 @@ String Session::getNamesOfInstr() const{
 
 bool Session::add(const String &name) {
     
-    imgType type = FileInterpr::getType(name);
+    ImgType type = FileInterpr::getType(name);
     
     switch (type) {
-        case imgType::Invalid:
+        case ImgType::Invalid:
             return false;
-        case imgType::PPM:
+        case ImgType::PPM:
             
             comtainer.add(new ImagePPM(name));
             break;
-        case imgType::PGM:
+        case ImgType::PGM:
             comtainer.add(new ImagePGM(name));
 
             break;
-        case imgType::PBM:
+        case ImgType::PBM:
             comtainer.add(new ImagePBM(name));
             break;
     }
     return true;
 }
 
-bool Session::addCollage(const String &img1Name, const String &img2Name, const String &name, const command type) {
+bool Session::addCollage(const String &img1Name, const String &img2Name, const String &name, const Command type) {
     
-    imgType typeOfImgs = FileInterpr::getType(img1Name, img2Name);
+    ImgType typeOfImgs = FileInterpr::getType(img1Name, img2Name);
     
-    if (typeOfImgs == imgType::Invalid) {
+    if (typeOfImgs == ImgType::Invalid) {
         return false;
     }
     
@@ -100,13 +100,13 @@ bool Session::addCollage(const String &img1Name, const String &img2Name, const S
     
     if (img1 && img2) {
         switch (typeOfImgs) {
-            case imgType::PPM:
+            case ImgType::PPM:
                 comtainer.add(new ImagePPM(*PPM(img1), *PPM(img2), name, type));
                 break;
-            case imgType::PGM:
+            case ImgType::PGM:
                 comtainer.add(new ImagePGM(*PGM(img1), *PGM(img2), name, type));
                 break;
-            case imgType::PBM:
+            case ImgType::PBM:
                 comtainer.add(new ImagePBM(*PBM(img1), *PBM(img2), name, type));
                 break;
             default:
@@ -117,8 +117,8 @@ bool Session::addCollage(const String &img1Name, const String &img2Name, const S
     return false;
 }
 
-bool Session::addCommand(const command command) {
-    if (command == command::Invalid) {
+bool Session::addCommand(const Command command) {
+    if (command == Command::Invalid) {
         return false;
     }
     instructions.push_back(command);

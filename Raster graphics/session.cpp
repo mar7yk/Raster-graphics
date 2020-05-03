@@ -33,19 +33,19 @@ String Session::getNamesOfInstr() const{
         command c = temp.front();
         temp.pop_front();
         switch (c) {
-            case command::grayscale:
+            case command::Grayscale:
                 mames = mames + "grayscale";
                 break;
-            case command::monochrome:
+            case command::Monochrome:
                 mames = mames + "monochrome";
                 break;
-            case command::negative:
+            case command::Negative:
                 mames = mames + "negative";
                 break;
-            case command::rotateLeft:
+            case command::RotateLeft:
                 mames = mames + "rotate left";
                 break;
-            case command::rotateRight:
+            case command::RotateRight:
                 mames = mames + "rotate right";
                 break;
 
@@ -66,7 +66,7 @@ bool Session::add(const String &name) {
     imgType type = FileInterpr::getType(name);
     
     switch (type) {
-        case imgType::invalid:
+        case imgType::Invalid:
             return false;
         case imgType::PPM:
             
@@ -87,7 +87,7 @@ bool Session::addCollage(const String &img1Name, const String &img2Name, const S
     
     imgType typeOfImgs = FileInterpr::getType(img1Name, img2Name);
     
-    if (typeOfImgs == imgType::invalid) {
+    if (typeOfImgs == imgType::Invalid) {
         return false;
     }
     
@@ -118,7 +118,7 @@ bool Session::addCollage(const String &img1Name, const String &img2Name, const S
 }
 
 bool Session::addCommand(const command command) {
-    if (command == command::invalid) {
+    if (command == command::Invalid) {
         return false;
     }
     instructions.push_back(command);

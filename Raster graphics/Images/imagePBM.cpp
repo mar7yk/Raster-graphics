@@ -51,7 +51,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
 
 ImagePBM::ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name, const command type) : Image(name) {
     
-    if (type == command::collageVertical) {
+    if (type == command::CollageVertical) {
         size_t width = img1.pixels.width();
         size_t halfHighrt = img1.pixels.hight();
         size_t hight = halfHighrt * 2;
@@ -71,7 +71,7 @@ ImagePBM::ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name,
         }
         
         
-    } else if (type == command::collageHorizontal) {
+    } else if (type == command::CollageHorizontal) {
         size_t halfWidth = img1.pixels.width();
         size_t width = halfWidth * 2;
         size_t hight = img1.pixels.hight();

@@ -10,24 +10,24 @@
 #define command_h
 
 enum class command {
-    invalid = -1,
-    load = 0,
-    add,
-    close,
-    save,
-    saveAs,
-    help,
-    exit,
-    grayscale,
-    monochrome,
-    negative,
-    rotateLeft,
-    rotateRight,
-    undo,
-    switchSession,
-    sessionInfo,
-    collageHorizontal,
-    collageVertical
+    Invalid = -1,
+    Load = 0,
+    Add,
+    Close,
+    Save,
+    SaveAs,
+    Help,
+    Exit,
+    Grayscale,
+    Monochrome,
+    Negative,
+    RotateLeft,
+    RotateRight,
+    Undo,
+    SwitchSession,
+    SessionInfo,
+    CollageHorizontal,
+    CollageVertical
 };
 
 #endif /* command_h */

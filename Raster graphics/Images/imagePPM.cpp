@@ -51,7 +51,7 @@ ImagePPM::ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name,
     
     maxValForCalor = img1.maxValForCalor;
     
-    if (type == command::collageVertical) {
+    if (type == command::CollageVertical) {
         size_t width = img1.pixels.width();
         size_t halfHighrt = img1.pixels.hight();
         size_t hight = halfHighrt * 2;
@@ -71,7 +71,7 @@ ImagePPM::ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name,
         }
         
         
-    } else if (type == command::collageHorizontal) {
+    } else if (type == command::CollageHorizontal) {
         size_t halfWidth = img1.pixels.width();
         size_t width = halfWidth * 2;
         size_t hight = img1.pixels.hight();

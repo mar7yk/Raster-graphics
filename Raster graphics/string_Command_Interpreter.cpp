@@ -15,47 +15,47 @@ bool StrCommandInterpr::execut(const String& newCommand) {
     command command = getCommand(sCommand);
     
     switch (command) {
-        case command::invalid:
+        case command::Invalid:
             std::cout << "command not found: " << sCommand << std::endl;
             break;
-        case command::load:
+        case command::Load:
             _load();
-        case command::add:
+        case command::Add:
             _add();
             break;
-        case command::close:
+        case command::Close:
             _close();
             break;
-        case command::save:
+        case command::Save:
             _save();
             break;
-        case command::saveAs:
+        case command::SaveAs:
             _saveAs();
             break;
-        case command::help:
+        case command::Help:
             _help();
             break;
-        case command::exit:
+        case command::Exit:
             std::cout << "Exiting the program..." << std::endl;
             toContinue = false;
             break;
-        case command::grayscale:
-        case command::monochrome:
-        case command::negative:
-        case command::rotateLeft:
-        case command::rotateRight:
+        case command::Grayscale:
+        case command::Monochrome:
+        case command::Negative:
+        case command::RotateLeft:
+        case command::RotateRight:
             _addInstr(command);
             break;
-        case command::undo:
+        case command::Undo:
             _undo();
             break;
-        case command::switchSession:
+        case command::SwitchSession:
             _switch();
-        case command::sessionInfo:
+        case command::SessionInfo:
             _sessionInfo();
             break;
-        case command::collageVertical:
-        case command::collageHorizontal:
+        case command::CollageVertical:
+        case command::CollageHorizontal:
             _collage(command);
             break;
     }
@@ -188,33 +188,33 @@ void StrCommandInterpr::_help() const {
 }
 
 command StrCommandInterpr::getCommand(const String& sCommad) {
-    if (sCommad == "load") return command::load;
-    if (sCommad == "close") return command::close;
+    if (sCommad == "load") return command::Load;
+    if (sCommad == "close") return command::Close;
     if (sCommad == "save") {
         String word = strtok(NULL, " ");
-        if (word == "as") return command::saveAs;
-        else return command::save;
+        if (word == "as") return command::SaveAs;
+        else return command::Save;
     }
-    if (sCommad == "help") return command::help;
-    if (sCommad == "exit") return command::exit;
-    if (sCommad == "grayscale") return command::grayscale;
-    if (sCommad == "monochrome") return command::monochrome;
-    if (sCommad == "negative") return command::negative;
-    if (sCommad == "undo") return command::undo;
-    if (sCommad == "add") return command::add;
-    if (sCommad == "session" && !strcmp(strtok(NULL, " "), "info")) return command::sessionInfo;
-    if (sCommad == "switch") return command::switchSession;
+    if (sCommad == "help") return command::Help;
+    if (sCommad == "exit") return command::Exit;
+    if (sCommad == "grayscale") return command::Grayscale;
+    if (sCommad == "monochrome") return command::Monochrome;
+    if (sCommad == "negative") return command::Negative;
+    if (sCommad == "undo") return command::Undo;
+    if (sCommad == "add") return command::Add;
+    if (sCommad == "session" && !strcmp(strtok(NULL, " "), "info")) return command::SessionInfo;
+    if (sCommad == "switch") return command::SwitchSession;
     if (sCommad == "rotate") {
         String direction = strtok(NULL, " ");
-        if(direction == "left")  return command::rotateLeft;
-        if(direction == "right")  return command::rotateRight;
+        if(direction == "left")  return command::RotateLeft;
+        if(direction == "right")  return command::RotateRight;
     }
     if (sCommad == "collage") {
         String direction = strtok(NULL, " ");
-        if(direction == "vertical") return command::collageVertical;
-        if(direction == "horizontal")  return command::collageHorizontal;
+        if(direction == "vertical") return command::CollageVertical;
+        if(direction == "horizontal")  return command::CollageHorizontal;
     }
-    return command::invalid;
+    return command::Invalid;
 }
 
 size_t StrCommandInterpr::stringToNum(const String &sID) {

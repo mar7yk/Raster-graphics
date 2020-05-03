@@ -21,7 +21,7 @@ imgType FileInterpr::getType(const String& name) {
 
         return type;
     }
-    return imgType::invalid;
+    return imgType::Invalid;
 }
 
 imgType FileInterpr::getType(const String &name1, const String &name2) {
@@ -31,17 +31,17 @@ imgType FileInterpr::getType(const String &name1, const String &name2) {
     String sType1;
     img1 >> sType1;
     imgType type1 = strToType(sType1);
-    if (type1 == imgType::invalid) {
+    if (type1 == imgType::Invalid) {
         return type1;
     }
     String sType2;
     img2 >> sType2;
     imgType type2 = strToType(sType2);
-    if (type2 == imgType::invalid) {
+    if (type2 == imgType::Invalid) {
         return type2;
     }
     if (type1 != type2) {
-        return imgType::invalid;
+        return imgType::Invalid;
     }
     size_t width1, hight1;
     img1 >> width1 >> hight1;
@@ -50,7 +50,7 @@ imgType FileInterpr::getType(const String &name1, const String &name2) {
     img2 >> width2 >> hight2;
     
     if (width1 != width2 || hight1 != hight2) {
-        return imgType::invalid;
+        return imgType::Invalid;
     }
     
     if (type1 != imgType::PBM) {
@@ -60,7 +60,7 @@ imgType FileInterpr::getType(const String &name1, const String &name2) {
         img2 >> maxValForCalor2;
         
         if (maxValForCalor1 != maxValForCalor2) {
-            return imgType::invalid;
+            return imgType::Invalid;
         }
     }
     
@@ -71,7 +71,7 @@ imgType FileInterpr::strToType(const String &sType) {
     if(sType == "P3" || sType == "P6") return imgType::PPM;
     if(sType == "P2" || sType == "P5") return imgType::PGM;
     if(sType == "P1" || sType == "P4") return imgType::PBM;
-    return imgType::invalid;
+    return imgType::Invalid;
 }
 
 

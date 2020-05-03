@@ -113,7 +113,11 @@ void ImageContainer::saveAs(const String& name) {
     images[0]->saveAs(name);
 }
 
-Image*& ImageContainer::operator[](const size_t n) const {
+Image* &ImageContainer::operator[](const size_t n) {
     return images[n];
 }
 
+const Image *const &ImageContainer::operator[](const size_t n) const {
+    const Image *const *const &arr = images;
+    return arr[n];
+}

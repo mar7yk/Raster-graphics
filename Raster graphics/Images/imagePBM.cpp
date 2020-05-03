@@ -20,7 +20,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
     pixels(width, hight);
     
     if (sType == "P1") {
-        for (size_t y = 0; y < pixels.hight(); ++y) {
+        for (size_t y = 0; y < pixels.height(); ++y) {
             for (size_t x = 0; x < pixels.width(); ++x) {
                 img >> pixels[y][x];
             }
@@ -29,7 +29,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
     } else if (sType == "P4") {
         char buff;
         img.read((char*)&buff, sizeof(char));
-        for (size_t y = 0; y < pixels.hight(); ++y) {
+        for (size_t y = 0; y < pixels.height(); ++y) {
             size_t x = 0;
             while (x < pixels.width()) {
                 unsigned byte;
@@ -53,7 +53,7 @@ ImagePBM::ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name,
     
     if (type == Command::CollageVertical) {
         size_t width = img1.pixels.width();
-        size_t halfHighrt = img1.pixels.hight();
+        size_t halfHighrt = img1.pixels.height();
         size_t hight = halfHighrt * 2;
         
         pixels(width, hight);
@@ -74,7 +74,7 @@ ImagePBM::ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name,
     } else if (type == Command::CollageHorizontal) {
         size_t halfWidth = img1.pixels.width();
         size_t width = halfWidth * 2;
-        size_t hight = img1.pixels.hight();
+        size_t hight = img1.pixels.height();
         
         pixels(width, hight);
         
@@ -101,7 +101,7 @@ void ImagePBM::monochrome() {
 }
 
 void ImagePBM::negative() {
-    for (size_t y = 0; y < pixels.hight(); ++y) {
+    for (size_t y = 0; y < pixels.height(); ++y) {
         for (size_t x = 0; x < pixels.width(); ++x) {
             pixels[y][x] = !pixels[y][x];
         }
@@ -110,10 +110,10 @@ void ImagePBM::negative() {
 
 void ImagePBM::rotateLeft() {
     MatrixPBM temp = pixels;
-    size_t w = pixels.hight();
+    size_t w = pixels.height();
     size_t h = pixels.width();
     pixels(w, h);
-    for (size_t y = 0; y < pixels.hight(); ++y) {
+    for (size_t y = 0; y < pixels.height(); ++y) {
         for (size_t x = 0; x < pixels.width(); ++x) {
             pixels[y][x] = temp[x][h - 1 - y];
         }
@@ -122,10 +122,10 @@ void ImagePBM::rotateLeft() {
 
 void ImagePBM::rotateRight() {
     MatrixPBM temp = pixels;
-    size_t w = pixels.hight();
+    size_t w = pixels.height();
     size_t h = pixels.width();
     pixels(w, h);
-    for (size_t y = 0; y < pixels.hight(); ++y) {
+    for (size_t y = 0; y < pixels.height(); ++y) {
         for (size_t x = 0; x < pixels.width(); ++x) {
             pixels[y][x] = temp[w - 1 - x][y];
         }
@@ -136,9 +136,9 @@ void ImagePBM::save() {
     std::ofstream oimg (f_name.get(), std::ios::binary);
     
     oimg << "P4" << std::endl;
-    oimg << pixels.width() << " " << pixels.hight() << std::endl;
+    oimg << pixels.width() << " " << pixels.height() << std::endl;
     
-    for (size_t y = 0; y < pixels.hight(); ++y) {
+    for (size_t y = 0; y < pixels.height(); ++y) {
         size_t x = 0;
         while (x < pixels.width()) {
             unsigned byte = 0;

@@ -69,8 +69,8 @@ bool Session::add(const String &name) {
         case ImgType::Invalid:
             return false;
         case ImgType::PPM:
-            
             comtainer.add(new ImagePPM(name));
+            
             break;
         case ImgType::PGM:
             comtainer.add(new ImagePGM(name));

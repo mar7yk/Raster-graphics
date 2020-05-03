@@ -39,7 +39,8 @@ public:
     void save();
     void saveAs(const String& name);
     
-    Image*& operator[](const size_t n) const;
+    Image*& operator[](const size_t n);
+    const Image *const& operator[](const size_t n) const;
     
     ImageContainer(const ImageContainer& other) = delete;
     ImageContainer& operator=(const ImageContainer& other) = delete;

@@ -32,7 +32,7 @@ public:
         
     }
     
-    virtual String getName() {
+    String getName() const {
         return f_name;
     }
     

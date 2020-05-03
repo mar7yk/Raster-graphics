@@ -53,7 +53,6 @@
 		C1E2CAA5244745550034D198 /* instructionsContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = instructionsContainer.cpp; sourceTree = "<group>"; };
 		C1E2CAA7244745550034D198 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
 		C1E2CAA8244745550034D198 /* imagePPM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = imagePPM.hpp; sourceTree = "<group>"; };
-		C1E2CAA9244745550034D198 /* imgType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgType.h; sourceTree = "<group>"; };
 		C1E2CAAA244745560034D198 /* instructionsContainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = instructionsContainer.hpp; sourceTree = "<group>"; };
 		C1E2CAAB244745560034D198 /* imagePPM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imagePPM.cpp; sourceTree = "<group>"; };
 		C1E2CAAC244745560034D198 /* sessionContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sessionContainer.cpp; sourceTree = "<group>"; };
@@ -114,7 +113,6 @@
 		C19426F1245EBAF6001B3288 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				C1E2CAA9244745550034D198 /* imgType.h */,
 				C146DF58245EBC07009AD0DE /* command.h */,
 			);
 			path = Enums;

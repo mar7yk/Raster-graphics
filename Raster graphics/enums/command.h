@@ -11,7 +11,7 @@
 
 enum class command {
     Invalid = -1,
-    Load = 0,
+    Load = 0,s
     Add,
     Close,
     Save,

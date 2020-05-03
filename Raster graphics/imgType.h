@@ -10,7 +10,7 @@
 #define imgType_h
 
 enum class imgType {
-    invalid = -1,
+    Invalid = -1,
     PPM = 0,
     PGM,
     PBM

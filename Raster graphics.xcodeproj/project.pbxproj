@@ -148,9 +148,9 @@
 				C1E2CAAD244745560034D198 /* file_Interpreter.cpp */,
 				C1E2CA9E244745550034D198 /* file_Interpreter.hpp */,
 				C1E2CAA1244745550034D198 /* pixel_RGB.h */,
-				C19426F1245EBAF6001B3288 /* Enums */,
 				C124EFBE24555E4E00529A69 /* Images */,
 				C124EFC024555F3F00529A69 /* Containers */,
+				C19426F1245EBAF6001B3288 /* Enums */,
 				C124EFBF24555ECB00529A69 /* Common */,
 			);
 			path = "Raster graphics";

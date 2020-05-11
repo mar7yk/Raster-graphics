@@ -11,48 +11,49 @@
 
 #include <stdio.h>
 
-template<typename pixel>
+template<typename Element>
 class Matrix {
     size_t f_width;
     size_t f_height;
-    pixel** elements;
+    Element** elements;
     
     void del() {
         delete [] *elements;
         delete [] elements;
     }
     
-    void set() {
+    void init() {
         if(f_height == 0 || f_width == 0){
-            elements = new pixel*;
-            *elements = new pixel;
+            elements = new Element*;
+            *elements = new Element;
             return;
         }
-        elements = new pixel*[f_height];
-        *elements = new pixel[f_width*f_height];
+        elements = new Element*[f_height];
+        *elements = new Element[f_width * f_height];
         for (size_t i = 1; i < f_height; ++i)
             elements[i] = elements[i-1] + f_width;
     }
     
-    void init(const Matrix& other) {
+    void copyFrom(const Matrix& other) {
         for (size_t y = 0; y < f_height; ++y) {
             for (size_t x = 0; x < f_width; ++x) {
                 elements[y][x] = other.elements[y][x];
             }
         }
     }
+    
 public:
     Matrix(): f_width(0), f_height(0) {
-        set();
+        init();
     }
     
     Matrix(size_t x, size_t y): f_width(x), f_height(y) {
-        set();
+        init();
     }
     
     Matrix(const Matrix& other): f_width(other.f_width), f_height(other.f_height) {
-        set();
-        init(other);
+        init();
+        copyFrom(other);
     }
     
     ~Matrix(){
@@ -73,8 +74,8 @@ public:
             del();
             f_width = other.width;
             f_height = other.hight;
-            set();
-            init(other);
+            init();
+            copyFrom(other);
         }
         return *this;
     }
@@ -83,16 +84,16 @@ public:
         del();
         f_width = width;
         f_height = hight;
-        set();
+        init();
         return *this;
     }
     
-    pixel* &operator[](const size_t y) {
+    Element* &operator[](const size_t y) {
         return elements[y];
     }
     
-    const pixel *const &operator[](const size_t y) const {
-        const pixel *const *const &Matrix = elements;
+    const Element *const &operator[](const size_t y) const {
+        const Element *const *const &Matrix = elements;
         return Matrix[y];
     }
 };

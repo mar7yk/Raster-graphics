@@ -19,11 +19,11 @@ size_t Session::getID() const {
 }
 
 String Session::getNamesOfImgs() const {
-    String mames;
+    String names;
     for (size_t i = 0; i < comtainer.size(); ++i) {
-        mames = mames + comtainer[i]->getName() + " ";
+        names = names + comtainer[i]->getName() + " ";
     }
-    return mames;
+    return names;
 }
 
 String Session::getNamesOfInstr() const{

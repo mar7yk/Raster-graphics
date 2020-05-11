@@ -31,9 +31,9 @@ public:
     ~String();
     String& operator=(const String& other);
     String(const String& other);
-    String operator+(const String& other);
+    const String operator+(const String& other) const;
     String& operator+=(const String& other);
-    String operator+(const char other);
+    const String operator+(const char other) const;
     String& operator+=(const char other);
     bool operator<(const String& other) const;
     bool operator>(const String& other) const;

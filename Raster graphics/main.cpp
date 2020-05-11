@@ -12,9 +12,6 @@
 #include "string_Command_Interpreter.hpp"
 
 int main() {
-    const Matrix<int> a(3, 5);
-    
-    std::cout << a[0][0];
     
 //    StrCommandInterpr interpr;
 //    String command;

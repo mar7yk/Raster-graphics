@@ -52,7 +52,7 @@ void String::copyFrom(const String &other) {
     strcpy(string, other.string);
 }
 
-String String::operator+(const String &other) {
+const String String::operator+(const String &other) const {
     String result;
     result.lenght = lenght + other.lenght;
     delete [] result.string;
@@ -73,7 +73,7 @@ String &String::operator+=(const String &other) {
     return *this;
 }
 
-String String::operator+(const char other) {
+const String String::operator+(const char other) const {
     String result;
     result.lenght = lenght + 1;
     delete [] result.string;

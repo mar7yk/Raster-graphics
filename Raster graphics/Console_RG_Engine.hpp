@@ -1,31 +1,30 @@
 //
-//  string_Command_Interpreter.hpp
+//  Console_RG_Engine.hpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 10.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#ifndef string_Command_Interpreter
-#define string_Command_Interpreter
+#ifndef Console_RG_Engine_hpp
+#define Console_RG_Engine_hpp
 
 #include <stdio.h>
 #include <iostream>
 
 #include "string.hpp"
-#include "command.h"
-#include "sessionContainer.hpp"
+
+#include "SessionList.hpp"
+
+#include "Command.h"
 
 
 /// Служи за комуникация между конзолата и SessionContainer
-class StrCommandInterpr {
-    SessionContainer sessions;
+class Console_RG_Engine {
+    SessionList sessions;
     
     /// Преобразува string команда в enum command
     Command getCommand(const String& sCommad);
-    
-    /// Преобразъва позитивно число от string в size_t
-    size_t stringToNum(const String& sID);
     
     /// Изпълнява зареждане на сесия
     void _load();
@@ -54,6 +53,8 @@ class StrCommandInterpr {
 public:
     /// Изпълнява команда по подаден стринг
     bool execut(const String& commad);
+    
+    void run();
 };
 
-#endif /* string_Command_Interpreter_hpp */
+#endif /* Console_RG_Engine_hpp */

@@ -7,8 +7,33 @@
 
 #include "string.hpp"
 
+
+String::String() {
+    lenght = 0;
+    string = new char[1];
+    strcpy(string, "");
+}
+
 String::String(const char *str) {
     setVal(str);
+}
+
+String::String(const String &other) {
+    copyFrom(other);
+}
+
+String::String(String &&other) {
+    lenght = other.lenght;
+    string = other.string;
+    
+    other.lenght = 0;
+    other.string = nullptr;
+}
+
+void String::copyFrom(const String &other) {
+    lenght = other.lenght;
+    string = new char[lenght + 1];
+    strcpy(string, other.string);
 }
 
 String &String::operator=(const char *str) {
@@ -42,17 +67,9 @@ String &String::operator=(const String &other) {
 }
 
 
-String::String(const String &other) {
-    copyFrom(other);
-}
 
-void String::copyFrom(const String &other) {
-    lenght = other.lenght;
-    string = new char[lenght + 1];
-    strcpy(string, other.string);
-}
 
-const String String::operator+(const String &other) const {
+String String::operator+(const String &other) {
     String result;
     result.lenght = lenght + other.lenght;
     delete [] result.string;
@@ -73,7 +90,7 @@ String &String::operator+=(const String &other) {
     return *this;
 }
 
-const String String::operator+(const char other) const {
+String String::operator+(const char other) {
     String result;
     result.lenght = lenght + 1;
     delete [] result.string;
@@ -94,14 +111,6 @@ String &String::operator+=(const char other) {
     string = buff;
     return *this;
 }
-
-String::String() {
-    lenght = 0;
-    string = new char[1];
-    strcpy(string, "");
-}
-
-
 
 bool String::operator<(const String &other) const{
     return strcmp(string, other.string) < 0 ? true: false;
@@ -133,33 +142,26 @@ bool String::operator!=(const String &other) const {
     return strcmp(string, other.string);
 }
 
-String *String::split(const String flag) const{
-    size_t size = 0;
-    size_t capacity = 4;
-    String * tokens = new String[capacity];
-    
+Vector<String> String::split(const String flag) const{
+
+    Vector<String> tokens;
+
     String token = strtok(string, flag.string);
-    
+
     while (token != NULL)
     {
-        tokens[size] = token;
-        size++;
-        if (size == capacity) {
-            capacity *= 2;
-            String * buff = new String[capacity];
-            delete [] tokens;
-            tokens = buff;
-        }
+        tokens.push_back(token);
         token = strtok(NULL, flag.string);
     }
-    capacity = size;
-    String * buff = new String[capacity];
-    delete [] tokens;
-    tokens = buff;
+
     return tokens;
 }
 
-char String::operator[](const size_t i) const {
+const char String::operator[](const size_t i) const {
+    return string[i];
+}
+
+char String::operator[](const size_t i) {
     return string[i];
 }
 
@@ -199,6 +201,7 @@ std::istream& String::getfromStreamTo(std::istream& input, String& word, size_t 
     return getfromStreamTo(input, word, i, to);
 }
 
+
 std::istream& operator>>(std::istream& input, String& word) {
     if(word.lenght < 10){
         word.lenght = 10;
@@ -230,3 +233,67 @@ std::ostream& operator<<(std::ostream& output, const String& word) {
     output << word.string;
     return output;
 }
+
+String strtok(const String& str, const String& sep){
+    if (str == NULL) {
+        return strtok(NULL, sep.string);
+    }
+    return strtok(str.string, sep.string);
+}
+
+Vector<String> split(const String& str, const String& delimiter) {
+    
+    Vector<String> tokens;
+    
+    String token = strtok(str.string, delimiter.string);
+    
+    while (token != NULL)
+    {
+        tokens.push_back(token);
+        token = strtok(NULL, delimiter.string);
+    }
+    
+    return tokens;
+}
+
+int stoi(const String& str) {
+    
+    int num = std::stoi(str.string);
+    
+    return num;
+}
+
+unsigned long long stoull(const String& str) {
+    
+    unsigned long long num = std::stoull(str.string);
+    
+    return num;
+}
+
+String to_string(int num) {
+    String str;
+    unsigned i = 0;
+    
+    
+    if (num < 0) {
+        num *= -1;
+        str += '-';
+        ++i;
+    }
+    
+    Vector<char> chars;
+    
+    while (num) {
+        int n = num % 10;
+        chars.push_back(n + '0');
+        num /= 10;
+    }
+    
+    for (long j = chars.size() - 1; j >= 0; --j) {
+        str += chars[j];
+        ++i;
+    }
+    
+    return str;
+}
+

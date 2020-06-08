@@ -1,20 +1,20 @@
 //
-//  instructionsContainer.cpp
+//  InstructionList.cpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 12.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#include "instructionsContainer.hpp"
+#include "InstructionList.hpp"
 
 
-InstrContainer::InstrContainer()
+InstructionList::InstructionList()
     : h(nullptr), n(nullptr) {
     
 }
 
-InstrContainer::InstrContainer(const InstrContainer &other)
+InstructionList::InstructionList(const InstructionList &other)
     : h(nullptr), n(nullptr) {
     inst *temp = other.h;
     while (temp) {
@@ -23,25 +23,29 @@ InstrContainer::InstrContainer(const InstrContainer &other)
     }
 }
 
-InstrContainer::~InstrContainer() {
+InstructionList::~InstructionList() {
     clear();
 }
 
-void InstrContainer::clear() {
+void InstructionList::clear() {
     while (!empty()) {
         pop_front();
     }
 }
 
-Command &InstrContainer::front() const {
+Command &InstructionList::front() const {
     return h->data;
 }
 
-bool InstrContainer::empty() const  {
+Command &InstructionList::back() const {
+    return n->data;
+}
+
+bool InstructionList::empty() const  {
     return !h;
 }
 
-void InstrContainer::push_back(const Command newInst) {
+void InstructionList::push_back(const Command newInst) {
     inst *temp = n;
     n = new inst;
     n->data = newInst;
@@ -52,14 +56,14 @@ void InstrContainer::push_back(const Command newInst) {
         temp->next = n;
 }
 
-void InstrContainer::pop_front() {
+void InstructionList::pop_front() {
     inst *temp = h->next;
     delete h;
     h = temp;
 }
 
 
-void InstrContainer::pop_back() {
+void InstructionList::pop_back() {
     if(h == n){
         pop_front();
         return;
@@ -75,7 +79,7 @@ void InstrContainer::pop_back() {
 
 
 
-InstrContainer &InstrContainer::operator=(const InstrContainer &other) {
+InstructionList &InstructionList::operator=(const InstructionList &other) {
     if (this != &other) {
         clear();
 //        h = n = nullptr;
@@ -88,6 +92,9 @@ InstrContainer &InstrContainer::operator=(const InstrContainer &other) {
     
     return *this;
 }
+
+
+
 
 
 

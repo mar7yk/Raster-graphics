@@ -1,76 +1,81 @@
 //
-//  string_Command_Interpreter.cpp
+//  Console_RG_Engine.cpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 10.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#include "string_Command_Interpreter.hpp"
+#include "Console_RG_Engine.hpp"
 
 
-bool StrCommandInterpr::execut(const String& newCommand) {
+bool Console_RG_Engine::execut(const String& newCommand) {
     bool toContinue = true;
     String sCommand = strtok(newCommand, " ");
     Command command = getCommand(sCommand);
     
-    switch (command) {
-        case Command::Invalid:
-            std::cout << "command not found: " << sCommand << std::endl;
-            break;
-        case Command::Load:
-            _load();
-        case Command::Add:
-            _add();
-            break;
-        case Command::Close:
-            _close();
-            break;
-        case Command::Save:
-            _save();
-            break;
-        case Command::SaveAs:
-            _saveAs();
-            break;
-        case Command::Help:
-            _help();
-            break;
-        case Command::Exit:
-            std::cout << "Exiting the program..." << std::endl;
-            toContinue = false;
-            break;
-        case Command::Grayscale:
-        case Command::Monochrome:
-        case Command::Negative:
-        case Command::RotateLeft:
-        case Command::RotateRight:
-            _addInstr(command);
-            break;
-        case Command::Undo:
-            _undo();
-            break;
-        case Command::SwitchSession:
-            _switch();
-        case Command::SessionInfo:
-            _sessionInfo();
-            break;
-        case Command::CollageVertical:
-        case Command::CollageHorizontal:
-            _collage(command);
-            break;
+    try {
+        switch (command) {
+            case Command::Invalid:
+                std::cout << "command not found: " << sCommand << std::endl;
+                break;
+            case Command::Load:
+                _load();
+            case Command::Add:
+                _add();
+                break;
+            case Command::Close:
+                _close();
+                break;
+            case Command::Save:
+                _save();
+                break;
+            case Command::SaveAs:
+                _saveAs();
+                break;
+            case Command::Help:
+                _help();
+                break;
+            case Command::Exit:
+                std::cout << "Exiting the program..." << std::endl;
+                toContinue = false;
+                break;
+            case Command::Grayscale:
+            case Command::Monochrome:
+            case Command::Negative:
+            case Command::RotateLeft:
+            case Command::RotateRight:
+                _addInstr(command);
+                break;
+            case Command::Undo:
+                _undo();
+                break;
+            case Command::SwitchSession:
+                _switch();
+            case Command::SessionInfo:
+                _sessionInfo();
+                break;
+            case Command::CollageVertical:
+            case Command::CollageHorizontal:
+                _collage(command);
+                break;
+        }
+    } catch (std::exception e) {
+        std::cout << e.what() << std::endl;
     }
+   
     std::cout << std::endl;
     
     return toContinue;
 }
 
-void StrCommandInterpr::_load() {
+void Console_RG_Engine::_load() {
     sessions.makeNew();
     Session& cSession = sessions.current();
     std::cout << "Session with ID: "<< cSession.getID() << " started" << std::endl;
 }
 
-void StrCommandInterpr::_add() {
+void Console_RG_Engine::_add() {
     String img = strtok(NULL, " ");
     Session& cSession = sessions.current();
     while (img != NULL) {
@@ -81,30 +86,30 @@ void StrCommandInterpr::_add() {
     }
 }
 
-void StrCommandInterpr::_close() {
+void Console_RG_Engine::_close() {
     Session& cSession = sessions.current();
     size_t id = cSession.getID();
-    sessions.pop();
+    sessions.pop_current();
     std::cout << "Session with ID: "<< id << " is close" << std::endl;
 }
 
-void StrCommandInterpr::_save() {
+void Console_RG_Engine::_save() {
     Session& cSession = sessions.current();
     cSession.save();
     std::cout << "All changes was saved" << std::endl;
 }
 
-void StrCommandInterpr::_addInstr(const Command instr) {
+void Console_RG_Engine::_addInstr(const Command instr) {
     Session& cSession = sessions.current();
     cSession.addCommand(instr);
 }
 
-void StrCommandInterpr::_undo() {
+void Console_RG_Engine::_undo() {
     Session& cSession = sessions.current();
     cSession.undo();
 }
 
-void StrCommandInterpr::_saveAs() {
+void Console_RG_Engine::_saveAs() {
     String name = strtok(NULL, " ");
     
     Session& cSession = sessions.current();
@@ -112,36 +117,47 @@ void StrCommandInterpr::_saveAs() {
     std::cout << "Image was saved" << std::endl;
 }
 
-void StrCommandInterpr::_switch() {
+void Console_RG_Engine::_switch() {
     String sID = strtok(NULL, " ");
-    size_t id = stringToNum(sID);
+    size_t id = stoull(sID);
     sessions.start(id);
     Session& cSession = sessions.current();
     std::cout <<"You switched to session with ID: " << cSession.getID() << "!" << std::endl;
 }
 
-void StrCommandInterpr::_sessionInfo() const {
+void Console_RG_Engine::_sessionInfo() const {
     Session& cSession = sessions.current();
-    String imgNames = cSession.getNamesOfImgs();
-    String instNames = cSession.getNamesOfInstr();
+    Vector<String> imgNames = cSession.getNamesOfImgs();
+    Vector<String> instNames = cSession.getNamesOfInstr();
     
-    std::cout << "Name of images in the session: " << imgNames << std::endl;
-    std::cout <<"Pending transformations: " << instNames << std::endl;
+    std::cout << "Name of images in the session: ";
+    for (size_t i = 0; i < imgNames.size(); ++i) {
+        std::cout << imgNames[i] << " ";
+    }
+    std::cout << std::endl;
+    
+    std::cout << "Pending transformations: ";
+    for (size_t i = 0; i < instNames.size(); ++i) {
+        std::cout << instNames[i];
+        if (i + 1 < instNames.size()) {
+            std::cout << ", ";
+        }
+    }
+    std::cout << std::endl;
 }
 
 
-void StrCommandInterpr::_collage(const Command type) {
+void Console_RG_Engine::_collage(const Command type) {
     String img1 = strtok(NULL, " ");
     String img2 = strtok(NULL, " ");
-    String newimg = strtok(NULL, " ");
+    String newImg = strtok(NULL, " ");
     
     Session& cSession = sessions.current();
-    if (cSession.addCollage(img1, img2, newimg, type)) {
-        std::cout << "Image \""<< newimg << "\" added" << std::endl;
-    }
+    cSession.addCollage(img1, img2, newImg, type);
+    std::cout << "Image \""<< newImg << "\" added" << std::endl;
 }
 
-void StrCommandInterpr::_help() const {
+void Console_RG_Engine::_help() const {
     std::cout << "load <image>:" << std::endl;
     std::cout << "\tstart new session" << std::endl;
     std::cout << std::endl;
@@ -187,7 +203,7 @@ void StrCommandInterpr::_help() const {
     std::cout << "\tCreates a collage of two images <image1> and <image2> (in the same format and the same dimension) available in the current session. The result is saved to a new image <outimage>, which is added to the current session" << std::endl;
 }
 
-Command StrCommandInterpr::getCommand(const String& sCommad) {
+Command Console_RG_Engine::getCommand(const String& sCommad) {
     if (sCommad == "load") return Command::Load;
     if (sCommad == "close") return Command::Close;
     if (sCommad == "save") {
@@ -217,16 +233,15 @@ Command StrCommandInterpr::getCommand(const String& sCommad) {
     return Command::Invalid;
 }
 
-size_t StrCommandInterpr::stringToNum(const String &sID) {
-    size_t num = 0;
-    for (size_t i = 0; i < sID.lenght; ++i) {
-        if (sID[i] < '0' || sID[i] > '9') {
-            return 0;
-        }
-        size_t n = sID[i] - '0';
-        num = (num*10) + n;
-    }
-    return num;
+void Console_RG_Engine::run() { 
+    String command;
+
+    do {
+        std::cout << "> ";
+        getline(std::cin, command, 1000);
+
+    } while (execut(command));
 }
+
 
 

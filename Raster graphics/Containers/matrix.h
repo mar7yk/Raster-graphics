@@ -1,13 +1,13 @@
 //
-//  matrix.h
+//  Matrix.h
 //  Raster graphics
 //
 //  Created by Marty Kostov on 10.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#ifndef matrix_h
-#define matrix_h
+#ifndef Matrix_h
+#define Matrix_h
 
 #include <stdio.h>
 
@@ -98,4 +98,4 @@ public:
     }
 };
 
-#endif /* matrix_h */
+#endif /* Matrix_h */

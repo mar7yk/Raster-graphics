@@ -1,12 +1,12 @@
 //
-//  imagePGM.cpp
+//  ImagePGM.cpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 10.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#include "imagePGM.hpp"
+#include "ImagePGM.hpp"
 
 ImagePGM::ImagePGM(const String& name): Image(name) {
     std::ifstream img(name.get() , std::ios::binary);

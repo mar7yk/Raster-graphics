@@ -1,19 +1,19 @@
 //
-//  sessionContainer.hpp
+//  SessionList.hpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 12.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#ifndef sessionContainer_hpp
-#define sessionContainer_hpp
+#ifndef SessionList_hpp
+#define SessionList_hpp
 
 #include <stdio.h>
 
-#include "session.hpp"
+#include "Session.hpp"
 
-class SessionContainer {
+class SessionList {
     struct Element {
         Session data;
         Element *next;
@@ -24,20 +24,20 @@ class SessionContainer {
     Element *n;
     
 public:
-    SessionContainer();
-    ~SessionContainer();
+    SessionList();
+    ~SessionList();
     
     Session& current() const;
     bool empty() const;
     
     void makeNew();
     
-    bool start(const size_t ID);
+    void start(const size_t ID);
     
-    void pop();
+    void pop_current();
     
-    SessionContainer(const SessionContainer&) = delete;
-    SessionContainer& operator=(const SessionContainer &) = delete;
+    SessionList(const SessionList&) = delete;
+    SessionList& operator=(const SessionList &) = delete;
 };
 
-#endif /* sessionContainer_hpp */
+#endif /* SessionList_hpp */

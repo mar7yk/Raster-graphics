@@ -12,8 +12,7 @@
 #include <stdio.h>
 
 #include "string.hpp"
-#include "matrix.h"
-#include "command.h"
+#include "Command.h"
 
 
 class Image {

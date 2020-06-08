@@ -9,18 +9,14 @@
 #include <iostream>
 
 #include "string.hpp"
-#include "string_Command_Interpreter.hpp"
+
+#include "Console_RG_Engine.hpp"
 
 int main() {
     
-//    StrCommandInterpr interpr;
-//    String command;
-//
-//    do {
-//        std::cout << "> ";
-//        getline(std::cin, command, 1000);
-//
-//    } while (interpr.execut(command));
-//
-//    return 0;
+    Console_RG_Engine engine;
+    
+    engine.run();
+
+    return 0;
 }

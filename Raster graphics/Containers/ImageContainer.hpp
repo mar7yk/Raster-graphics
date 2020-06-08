@@ -1,31 +1,29 @@
 //
-//  imgContainer.hpp
+//  ImageContainer.hpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 24.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#ifndef imgContainer_hpp
-#define imgContainer_hpp
+#ifndef ImageContainer_hpp
+#define ImageContainer_hpp
 
 #include <stdio.h>
+
+#include "vector.h"
 
 #include "imagePPM.hpp"
 #include "imagePGM.hpp"
 #include "imagePBM.hpp"
 
-#include "command.h"
+#include "Command.h"
 
 class ImageContainer {
-    size_t f_size;
-    size_t f_capacity;
-    Image ** images;
-    
-    void resize(const size_t newCapacity);
+    Vector<Image*> images;
     
 public:
-    ImageContainer();
+    ImageContainer() = default;
     ~ImageContainer();
     
     Image* getImg(const String& name) const;
@@ -46,4 +44,4 @@ public:
     ImageContainer& operator=(const ImageContainer& other) = delete;
 };
 
-#endif /* imgContainer_hpp */
+#endif /* ImageContainer_hpp */

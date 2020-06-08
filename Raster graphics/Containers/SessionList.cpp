@@ -1,20 +1,20 @@
 //
-//  sessionContainer.cpp
+//  SessionList.cpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 12.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#include "sessionContainer.hpp"
+#include "SessionList.hpp"
 
 
-SessionContainer::SessionContainer()
+SessionList::SessionList()
     : h(nullptr), c(nullptr), n(nullptr) {
     
 }
 
-SessionContainer::~SessionContainer() {
+SessionList::~SessionList() {
     while (!empty()) {
         Element *temp = h->next;
         delete h;
@@ -22,15 +22,18 @@ SessionContainer::~SessionContainer() {
     }
 }
 
-Session &SessionContainer::current() const {
+Session &SessionList::current() const {
+    if (!c) {
+        throw std::runtime_error("There isn't started session");
+    }
     return c->data;
 }
 
-bool SessionContainer::empty() const {
+bool SessionList::empty() const {
     return !h;
 }
 
-void SessionContainer::makeNew() {
+void SessionList::makeNew() {
     Element *temp = n;
     n = new Element;
     n->next = nullptr;
@@ -41,18 +44,21 @@ void SessionContainer::makeNew() {
         temp->next = n;
 }
 
-bool SessionContainer::start(const size_t ID) {
+void SessionList::start(const size_t ID) {
     Element *temp = h;
     while (temp && temp->data.getID() != ID) {
         temp = temp->next;
     }
     if(temp){
         c = temp;
+        
+    } else {
+        throw std::runtime_error("There isn't a session with that id!");
+        
     }
-    return temp;
 }
 
-void SessionContainer::pop() {
+void SessionList::pop_current() {
     if (h == c) {
         Element *temp = h->next;
         delete h;

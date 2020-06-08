@@ -1,12 +1,12 @@
 //
-//  imagePPM.cpp
+//  ImagePPM.cpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 10.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#include "imagePPM.hpp"
+#include "ImagePPM.hpp"
 
 ImagePPM::ImagePPM(const String& name): Image(name) {
     std::ifstream img(name.get() , std::ios::binary);

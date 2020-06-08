@@ -6,11 +6,11 @@
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#ifndef RGBpixel_h
-#define RGBpixel_h
+#ifndef pixel_RGB_h
+#define pixel_RGB_h
 
 struct pixel_RGB {
     unsigned char r, g ,b;
 };
 
-#endif /* RGBpixel_h */
+#endif /* pixel_RGB_h */

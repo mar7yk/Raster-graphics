@@ -1,12 +1,12 @@
 //
-//  session.cpp
+//  Session.cpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 11.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#include "session.hpp"
+#include "Session.hpp"
 
 size_t Session::nextID = 1;
 
@@ -18,77 +18,74 @@ size_t Session::getID() const {
     return ID;
 }
 
-String Session::getNamesOfImgs() const {
-    String names;
+Vector<String> Session::getNamesOfImgs() const {
+    Vector<String> names;
+    names.resize(comtainer.size());
     for (size_t i = 0; i < comtainer.size(); ++i) {
-        names = names + comtainer[i]->getName() + " ";
+        names[i] = comtainer[i]->getName();
     }
     return names;
 }
 
-String Session::getNamesOfInstr() const{
-    String mames;
-    InstrContainer temp = instructions;
+Vector<String> Session::getNamesOfInstr() const{
+    Vector<String> mames;
+    InstructionList temp = instructions;
     while (!temp.empty()) {
         Command c = temp.front();
-        temp.pop_front();
         switch (c) {
             case Command::Grayscale:
-                mames = mames + "grayscale";
+                mames.push_back("grayscale");
                 break;
             case Command::Monochrome:
-                mames = mames + "monochrome";
+                mames.push_back("monochrome");
                 break;
             case Command::Negative:
-                mames = mames + "negative";
+                mames.push_back("negative");
                 break;
             case Command::RotateLeft:
-                mames = mames + "rotate left";
+                mames.push_back("rotate left");
                 break;
             case Command::RotateRight:
-                mames = mames + "rotate right";
+                mames.push_back("rotate right");
                 break;
 
             default:
                 break;
         }
-        if(!temp.empty()) {
-            mames = mames + ", ";
-        }
+        temp.pop_front();
     }
-    
     
     return mames;
 }
 
 bool Session::add(const String &name) {
     
-    ImgType type = FileInterpr::getType(name);
+    ImageType type = FileInterpreter::getType(name);
     
     switch (type) {
-        case ImgType::Invalid:
+        case ImageType::Invalid:
             return false;
-        case ImgType::PPM:
+        case ImageType::PPM:
             comtainer.add(new ImagePPM(name));
             
             break;
-        case ImgType::PGM:
+        case ImageType::PGM:
             comtainer.add(new ImagePGM(name));
 
             break;
-        case ImgType::PBM:
+        case ImageType::PBM:
             comtainer.add(new ImagePBM(name));
             break;
     }
     return true;
 }
 
-bool Session::addCollage(const String &img1Name, const String &img2Name, const String &name, const Command type) {
+void Session::addCollage(const String &img1Name, const String &img2Name, const String &name, const Command type) {
     
-    ImgType typeOfImgs = FileInterpr::getType(img1Name, img2Name);
+    ImageType typeOfImgs = FileInterpreter::getType(img1Name, img2Name);
     
-    if (typeOfImgs == ImgType::Invalid) {
-        return false;
+    if (typeOfImgs == ImageType::Invalid) {
+        throw std::runtime_error("Can't make a collage with these images!");
     }
     
     Image *img1 = comtainer.getImg(img1Name);
@@ -98,62 +95,51 @@ bool Session::addCollage(const String &img1Name, const String &img2Name, const S
     using PGM = ImagePGM*;
     using PBM = ImagePBM*;
     
-    if (img1 && img2) {
-        switch (typeOfImgs) {
-            case ImgType::PPM:
-                comtainer.add(new ImagePPM(*PPM(img1), *PPM(img2), name, type));
-                break;
-            case ImgType::PGM:
-                comtainer.add(new ImagePGM(*PGM(img1), *PGM(img2), name, type));
-                break;
-            case ImgType::PBM:
-                comtainer.add(new ImagePBM(*PBM(img1), *PBM(img2), name, type));
-                break;
-            default:
-                return false;
-        }
-        return true;
+    if (!img1 || !img2) {
+        throw std::runtime_error("These images are not in this session!");
     }
-    return false;
+    
+    switch (typeOfImgs) {
+        case ImageType::PPM:
+            comtainer.add(new ImagePPM(*PPM(img1), *PPM(img2), name, type));
+            break;
+        case ImageType::PGM:
+            comtainer.add(new ImagePGM(*PGM(img1), *PGM(img2), name, type));
+            break;
+        case ImageType::PBM:
+            comtainer.add(new ImagePBM(*PBM(img1), *PBM(img2), name, type));
+            break;
+        default:
+            break;
+    }
 }
 
-bool Session::addCommand(const Command command) {
+void Session::addCommand(const Command command) {
     if (command == Command::Invalid) {
-        return false;
+        return;
     }
     instructions.push_back(command);
-    return true;
 }
 
 
-bool Session::save() {
-    if(!comtainer.size())
-        return false;
+void Session::save() {
     while (!instructions.empty()) {
         comtainer.doInst(instructions.front());
         instructions.pop_front();
     }
     comtainer.save();
-    
-    return true;
 }
 
-bool Session::saveAs(const String name) {
-    if(!comtainer.size())
-        return false;
-    
+void Session::saveAs(const String name) {
     while (!instructions.empty()) {
         comtainer.doInstForFirst(instructions.front());
         instructions.pop_front();
     }
     comtainer.saveAs(name);
-    return true;
 }
 
-bool Session::undo() {
+void Session::undo() {
     if(!instructions.empty()){
         instructions.pop_back();
-        return true;
     }
-    return false;
 }

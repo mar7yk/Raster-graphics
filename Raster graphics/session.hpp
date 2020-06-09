@@ -25,7 +25,7 @@ class Session {
     static size_t nextID;
     
     const size_t ID;
-    ImageContainer comtainer;
+    ImageContainer images;
     InstructionList instructions;
     
 public:

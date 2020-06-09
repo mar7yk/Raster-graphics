@@ -20,9 +20,9 @@ size_t Session::getID() const {
 
 Vector<String> Session::getNamesOfImgs() const {
     Vector<String> names;
-    names.resize(comtainer.size());
-    for (size_t i = 0; i < comtainer.size(); ++i) {
-        names[i] = comtainer[i]->getName();
+    names.resize(images.size());
+    for (size_t i = 0; i < images.size(); ++i) {
+        names[i] = images[i]->getName();
     }
     return names;
 }
@@ -66,15 +66,15 @@ bool Session::add(const String &name) {
         case ImageType::Invalid:
             return false;
         case ImageType::PPM:
-            comtainer.add(new ImagePPM(name));
+            images.add(new ImagePPM(name));
             
             break;
         case ImageType::PGM:
-            comtainer.add(new ImagePGM(name));
+            images.add(new ImagePGM(name));
 
             break;
         case ImageType::PBM:
-            comtainer.add(new ImagePBM(name));
+            images.add(new ImagePBM(name));
             break;
     }
     return true;
@@ -88,8 +88,8 @@ void Session::addCollage(const String &img1Name, const String &img2Name, const S
         throw std::runtime_error("Can't make a collage with these images!");
     }
     
-    Image *img1 = comtainer.getImg(img1Name);
-    Image *img2 = comtainer.getImg(img2Name);
+    Image *img1 = images.getImg(img1Name);
+    Image *img2 = images.getImg(img2Name);
     
     using PPM = ImagePPM*;
     using PGM = ImagePGM*;
@@ -101,13 +101,13 @@ void Session::addCollage(const String &img1Name, const String &img2Name, const S
     
     switch (typeOfImgs) {
         case ImageType::PPM:
-            comtainer.add(new ImagePPM(*PPM(img1), *PPM(img2), name, type));
+            images.add(new ImagePPM(*PPM(img1), *PPM(img2), name, type));
             break;
         case ImageType::PGM:
-            comtainer.add(new ImagePGM(*PGM(img1), *PGM(img2), name, type));
+            images.add(new ImagePGM(*PGM(img1), *PGM(img2), name, type));
             break;
         case ImageType::PBM:
-            comtainer.add(new ImagePBM(*PBM(img1), *PBM(img2), name, type));
+            images.add(new ImagePBM(*PBM(img1), *PBM(img2), name, type));
             break;
         default:
             break;
@@ -124,18 +124,18 @@ void Session::addCommand(const Command command) {
 
 void Session::save() {
     while (!instructions.empty()) {
-        comtainer.doInst(instructions.front());
+        images.doInst(instructions.front());
         instructions.pop_front();
     }
-    comtainer.save();
+    images.save();
 }
 
 void Session::saveAs(const String name) {
     while (!instructions.empty()) {
-        comtainer.doInstForFirst(instructions.front());
+        images.doInstForFirst(instructions.front());
         instructions.pop_front();
     }
-    comtainer.saveAs(name);
+    images.saveAs(name);
 }
 
 void Session::undo() {

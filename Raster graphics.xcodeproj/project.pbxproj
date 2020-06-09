@@ -42,6 +42,7 @@
 		C1551918248D36B8000CA8D0 /* string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string.cpp; sourceTree = "<group>"; };
 		C1551919248D36B8000CA8D0 /* string.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = string.hpp; sourceTree = "<group>"; };
 		C155191A248D36B8000CA8D0 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		C155191C248FBE37000CA8D0 /* Session.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Session.hpp; sourceTree = "<group>"; };
 		C1A6EA22244740E600103667 /* Raster graphics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Raster graphics"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E2CA95244745550034D198 /* ImagePBM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImagePBM.cpp; sourceTree = "<group>"; };
 		C1E2CA96244745550034D198 /* Console_RG_Engine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Console_RG_Engine.hpp; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		C1E2CA9F244745550034D198 /* Console_RG_Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console_RG_Engine.cpp; sourceTree = "<group>"; };
 		C1E2CAA0244745550034D198 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		C1E2CAA1244745550034D198 /* pixel_RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixel_RGB.h; sourceTree = "<group>"; };
-		C1E2CAA4244745550034D198 /* Session.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Session.hpp; sourceTree = "<group>"; };
 		C1E2CAA5244745550034D198 /* InstructionList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstructionList.cpp; sourceTree = "<group>"; };
 		C1E2CAA7244745550034D198 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		C1E2CAA8244745550034D198 /* ImagePPM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ImagePPM.hpp; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				C1E2CA9F244745550034D198 /* Console_RG_Engine.cpp */,
 				C1E2CA96244745550034D198 /* Console_RG_Engine.hpp */,
 				C1E2CA99244745550034D198 /* Session.cpp */,
-				C1E2CAA4244745550034D198 /* Session.hpp */,
+				C155191C248FBE37000CA8D0 /* Session.hpp */,
 				C1E2CAAD244745560034D198 /* FileInterpreter.cpp */,
 				C1E2CA9E244745550034D198 /* FileInterpreter.hpp */,
 				C1E2CAA1244745550034D198 /* pixel_RGB.h */,

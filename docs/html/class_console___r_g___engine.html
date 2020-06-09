@@ -51,6 +51,8 @@ $(document).ready(function(){initNavTree('class_console___r_g___engine.html','')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_console___r_g___engine-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Console_RG_Engine Class Reference</div>  </div>
@@ -64,11 +66,439 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73ba953d900bcac76ecf0dae8bcb3acd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a73ba953d900bcac76ecf0dae8bcb3acd">run</a> ()</td></tr>
 <tr class="memdesc:a73ba953d900bcac76ecf0dae8bcb3acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стартира приложението.  <a href="class_console___r_g___engine.html#a73ba953d900bcac76ecf0dae8bcb3acd">More...</a><br /></td></tr>
 <tr class="separator:a73ba953d900bcac76ecf0dae8bcb3acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a635929973395a91be7591813b39a0d7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_command_8h.html#a2afce0a47a93eee73a314d53e4890153">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a635929973395a91be7591813b39a0d7c">getCommand</a> (const <a class="el" href="class_string.html">String</a> &amp;sCommad)</td></tr>
+<tr class="memdesc:a635929973395a91be7591813b39a0d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразува string команда в enum command.  <a href="class_console___r_g___engine.html#a635929973395a91be7591813b39a0d7c">More...</a><br /></td></tr>
+<tr class="separator:a635929973395a91be7591813b39a0d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ca54a3e91201ff57b439e41015037a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#ae4ca54a3e91201ff57b439e41015037a">_load</a> ()</td></tr>
+<tr class="memdesc:ae4ca54a3e91201ff57b439e41015037a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Изпълнява зареждане на сесия.  <a href="class_console___r_g___engine.html#ae4ca54a3e91201ff57b439e41015037a">More...</a><br /></td></tr>
+<tr class="separator:ae4ca54a3e91201ff57b439e41015037a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d8cca0b383fe4f8a66f05dc029ef3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#af3d8cca0b383fe4f8a66f05dc029ef3e">_add</a> ()</td></tr>
+<tr class="memdesc:af3d8cca0b383fe4f8a66f05dc029ef3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавя снимка към текущата сесия.  <a href="class_console___r_g___engine.html#af3d8cca0b383fe4f8a66f05dc029ef3e">More...</a><br /></td></tr>
+<tr class="separator:af3d8cca0b383fe4f8a66f05dc029ef3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f5bba6f64645866603a751ecd7b8cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a15f5bba6f64645866603a751ecd7b8cb">_close</a> ()</td></tr>
+<tr class="memdesc:a15f5bba6f64645866603a751ecd7b8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Затваря текущата сесия.  <a href="class_console___r_g___engine.html#a15f5bba6f64645866603a751ecd7b8cb">More...</a><br /></td></tr>
+<tr class="separator:a15f5bba6f64645866603a751ecd7b8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4dcf25dcb4c2a3fc23932568b59242a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#ac4dcf25dcb4c2a3fc23932568b59242a">_save</a> ()</td></tr>
+<tr class="memdesc:ac4dcf25dcb4c2a3fc23932568b59242a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запазва всички промени в текущата сесия.  <a href="class_console___r_g___engine.html#ac4dcf25dcb4c2a3fc23932568b59242a">More...</a><br /></td></tr>
+<tr class="separator:ac4dcf25dcb4c2a3fc23932568b59242a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397d314796f19a06e09cfbb1c2062636"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a397d314796f19a06e09cfbb1c2062636">_saveAs</a> ()</td></tr>
+<tr class="memdesc:a397d314796f19a06e09cfbb1c2062636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запазва първата снимка в текущата сесия под ново име.  <a href="class_console___r_g___engine.html#a397d314796f19a06e09cfbb1c2062636">More...</a><br /></td></tr>
+<tr class="separator:a397d314796f19a06e09cfbb1c2062636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab8abce9ebdfc3378caa995c1a038db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a8ab8abce9ebdfc3378caa995c1a038db">_addInstr</a> (const <a class="el" href="_command_8h.html#a2afce0a47a93eee73a314d53e4890153">Command</a> instr)</td></tr>
+<tr class="memdesc:a8ab8abce9ebdfc3378caa995c1a038db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавя команда към листа с команди на текущата сесия.  <a href="class_console___r_g___engine.html#a8ab8abce9ebdfc3378caa995c1a038db">More...</a><br /></td></tr>
+<tr class="separator:a8ab8abce9ebdfc3378caa995c1a038db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dea5f3795d7af9f6925945aa0102e49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a8dea5f3795d7af9f6925945aa0102e49">_undo</a> ()</td></tr>
+<tr class="memdesc:a8dea5f3795d7af9f6925945aa0102e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Премахва последно добавената команда в листа с команди на текущата сесия.  <a href="class_console___r_g___engine.html#a8dea5f3795d7af9f6925945aa0102e49">More...</a><br /></td></tr>
+<tr class="separator:a8dea5f3795d7af9f6925945aa0102e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622f828b8c8213669468b3af049c5328"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a622f828b8c8213669468b3af049c5328">_switch</a> ()</td></tr>
+<tr class="memdesc:a622f828b8c8213669468b3af049c5328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сменя текущата сесия с друга.  <a href="class_console___r_g___engine.html#a622f828b8c8213669468b3af049c5328">More...</a><br /></td></tr>
+<tr class="separator:a622f828b8c8213669468b3af049c5328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2180c88cab9ea0835c94ee84930a8d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#ae2180c88cab9ea0835c94ee84930a8d5">_sessionInfo</a> () const</td></tr>
+<tr class="memdesc:ae2180c88cab9ea0835c94ee84930a8d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показва информация за текущата сесия.  <a href="class_console___r_g___engine.html#ae2180c88cab9ea0835c94ee84930a8d5">More...</a><br /></td></tr>
+<tr class="separator:ae2180c88cab9ea0835c94ee84930a8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc769dae043df05e49d30ead59f4c045"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#adc769dae043df05e49d30ead59f4c045">_collage</a> (const <a class="el" href="_command_8h.html#a2afce0a47a93eee73a314d53e4890153">Command</a> type)</td></tr>
+<tr class="memdesc:adc769dae043df05e49d30ead59f4c045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавя нова снимка колаж към снимките в текущата сесия.  <a href="class_console___r_g___engine.html#adc769dae043df05e49d30ead59f4c045">More...</a><br /></td></tr>
+<tr class="separator:adc769dae043df05e49d30ead59f4c045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54c7ea0e84d8c68d8b3dedcbfd5a6f80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a54c7ea0e84d8c68d8b3dedcbfd5a6f80">_help</a> () const</td></tr>
+<tr class="memdesc:a54c7ea0e84d8c68d8b3dedcbfd5a6f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показва списък с наличните команди.  <a href="class_console___r_g___engine.html#a54c7ea0e84d8c68d8b3dedcbfd5a6f80">More...</a><br /></td></tr>
+<tr class="separator:a54c7ea0e84d8c68d8b3dedcbfd5a6f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02f9dc564654ea01c7fb6feb8ee958e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a02f9dc564654ea01c7fb6feb8ee958e4">execut</a> (const <a class="el" href="class_string.html">String</a> &amp;commad)</td></tr>
+<tr class="memdesc:a02f9dc564654ea01c7fb6feb8ee958e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Изпълнява команда по подаден стринг.  <a href="class_console___r_g___engine.html#a02f9dc564654ea01c7fb6feb8ee958e4">More...</a><br /></td></tr>
+<tr class="separator:a02f9dc564654ea01c7fb6feb8ee958e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9f38705af2466bb4284c6ce60c65b60d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_session_list.html">SessionList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console___r_g___engine.html#a9f38705af2466bb4284c6ce60c65b60d">sessions</a></td></tr>
+<tr class="separator:a9f38705af2466bb4284c6ce60c65b60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8hpp_source.html#l00022">22</a> of file <a class="el" href="_console___r_g___engine_8hpp_source.html">Console_RG_Engine.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af3d8cca0b383fe4f8a66f05dc029ef3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d8cca0b383fe4f8a66f05dc029ef3e">&#9670;&nbsp;</a></span>_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_add </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Добавя снимка към текущата сесия. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00078">78</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8ab8abce9ebdfc3378caa995c1a038db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab8abce9ebdfc3378caa995c1a038db">&#9670;&nbsp;</a></span>_addInstr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_addInstr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_command_8h.html#a2afce0a47a93eee73a314d53e4890153">Command</a>&#160;</td>
+          <td class="paramname"><em>instr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Добавя команда към листа с команди на текущата сесия. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00102">102</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a15f5bba6f64645866603a751ecd7b8cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f5bba6f64645866603a751ecd7b8cb">&#9670;&nbsp;</a></span>_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Затваря текущата сесия. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00089">89</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adc769dae043df05e49d30ead59f4c045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc769dae043df05e49d30ead59f4c045">&#9670;&nbsp;</a></span>_collage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_collage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_command_8h.html#a2afce0a47a93eee73a314d53e4890153">Command</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Добавя нова снимка колаж към снимките в текущата сесия. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00150">150</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a54c7ea0e84d8c68d8b3dedcbfd5a6f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c7ea0e84d8c68d8b3dedcbfd5a6f80">&#9670;&nbsp;</a></span>_help()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_help </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Показва списък с наличните команди. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00160">160</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4ca54a3e91201ff57b439e41015037a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ca54a3e91201ff57b439e41015037a">&#9670;&nbsp;</a></span>_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_load </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Изпълнява зареждане на сесия. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00072">72</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac4dcf25dcb4c2a3fc23932568b59242a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4dcf25dcb4c2a3fc23932568b59242a">&#9670;&nbsp;</a></span>_save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_save </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запазва всички промени в текущата сесия. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00096">96</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a397d314796f19a06e09cfbb1c2062636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397d314796f19a06e09cfbb1c2062636">&#9670;&nbsp;</a></span>_saveAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_saveAs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запазва първата снимка в текущата сесия под ново име. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00112">112</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2180c88cab9ea0835c94ee84930a8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2180c88cab9ea0835c94ee84930a8d5">&#9670;&nbsp;</a></span>_sessionInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_sessionInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Показва информация за текущата сесия. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00128">128</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a622f828b8c8213669468b3af049c5328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622f828b8c8213669468b3af049c5328">&#9670;&nbsp;</a></span>_switch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_switch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сменя текущата сесия с друга. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00120">120</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8dea5f3795d7af9f6925945aa0102e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dea5f3795d7af9f6925945aa0102e49">&#9670;&nbsp;</a></span>_undo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_RG_Engine::_undo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Премахва последно добавената команда в листа с команди на текущата сесия. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00107">107</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a02f9dc564654ea01c7fb6feb8ee958e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02f9dc564654ea01c7fb6feb8ee958e4">&#9670;&nbsp;</a></span>execut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Console_RG_Engine::execut </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>commad</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Изпълнява команда по подаден стринг. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00012">12</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a635929973395a91be7591813b39a0d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a635929973395a91be7591813b39a0d7c">&#9670;&nbsp;</a></span>getCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_command_8h.html#a2afce0a47a93eee73a314d53e4890153">Command</a> Console_RG_Engine::getCommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_string.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>sCommad</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Преобразува string команда в enum command. </p>
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00206">206</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a73ba953d900bcac76ecf0dae8bcb3acd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73ba953d900bcac76ecf0dae8bcb3acd">&#9670;&nbsp;</a></span>run()</h2>
 
@@ -87,6 +517,31 @@ Public Member Functions</h2></td></tr>
 <p>Стартира приложението. </p>
 
 <p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8cpp_source.html#l00236">236</a> of file <a class="el" href="_console___r_g___engine_8cpp_source.html">Console_RG_Engine.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9f38705af2466bb4284c6ce60c65b60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f38705af2466bb4284c6ce60c65b60d">&#9670;&nbsp;</a></span>sessions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_session_list.html">SessionList</a> Console_RG_Engine::sessions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_console___r_g___engine_8hpp_source.html#l00023">23</a> of file <a class="el" href="_console___r_g___engine_8hpp_source.html">Console_RG_Engine.hpp</a>.</p>
 
 </div>
 </div>

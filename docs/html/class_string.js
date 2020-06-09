@@ -5,6 +5,8 @@ var class_string =
     [ "String", "class_string.html#afc158dffcdf56e601bd640cbacdfcd3c", null ],
     [ "String", "class_string.html#a553fcc11563b3d0f5c020309e8b68843", null ],
     [ "~String", "class_string.html#ac40b2a3fb58c2d8556f5e6ff73510036", null ],
+    [ "_to_string", "class_string.html#a67a3ee1c190eae2c12db8365fa6952f3", null ],
+    [ "copyFrom", "class_string.html#a603a8da5a69ea6dfc86070c7107f48ec", null ],
     [ "get", "class_string.html#a5d05517bcc8df58bc5eff312e3926b61", null ],
     [ "operator!=", "class_string.html#ae78b95bd3eb92f98cbca720266661a79", null ],
     [ "operator+", "class_string.html#a9691d9b6cca3ca25ad8f1d066b5cb778", null ],
@@ -18,6 +20,7 @@ var class_string =
     [ "operator>", "class_string.html#a50d0915591f7c91fae7bb856b31061c3", null ],
     [ "operator[]", "class_string.html#ab922de4319ff0f322d097c7f3b0071cc", null ],
     [ "operator[]", "class_string.html#af87c64ec2eb936d1faf877bfcbe9c04a", null ],
+    [ "setVal", "class_string.html#a14c4348a0138c3e8227e7406e33e8bc3", null ],
     [ "split", "class_string.html#a4a61c3e84eb69c51c99fb791bbd6d42a", null ],
     [ "getline", "class_string.html#ad042f5252c2de09cc55b5dd4d5525acf", null ],
     [ "getline", "class_string.html#ab8d2f1060b05bc5dbdc32233ef0c81c8", null ],
@@ -27,5 +30,6 @@ var class_string =
     [ "stoi", "class_string.html#ad6c1e4e71b0db829d771e8fc13f4eaca", null ],
     [ "stoull", "class_string.html#acb02d6e76326edf22218e4b4ac338f55", null ],
     [ "strtok", "class_string.html#a20b41aab198d591f95d6eb4f49b4ad66", null ],
-    [ "lenght", "class_string.html#a0bfc8aea244f3285e2b90d806fc82a87", null ]
+    [ "lenght", "class_string.html#a0bfc8aea244f3285e2b90d806fc82a87", null ],
+    [ "string", "class_string.html#af7f7c03caa6a42b9b758df72b271e3e9", null ]
 ];

@@ -9,6 +9,8 @@ var class_vector =
     [ "begin", "class_vector.html#a790b0fff909e8799c059c374ce3762e4", null ],
     [ "capacity", "class_vector.html#a85c39fed5822d2a03a3250336039c933", null ],
     [ "clear", "class_vector.html#a32ad98b135472b0ebc5d6cb3ae5d0085", null ],
+    [ "copy", "class_vector.html#af814b039cfa44e866e7bd4b1100149b8", null ],
+    [ "del", "class_vector.html#a466ca7da1c0dcc2aaa61ceab5b725930", null ],
     [ "empty", "class_vector.html#abc020404c26eb6bf465cda91ad543c17", null ],
     [ "end", "class_vector.html#a7b8b8655aa04ee8141fe3fdac7343619", null ],
     [ "front", "class_vector.html#a7f7dceaa3b9b0a479470b5577f6f9118", null ],
@@ -19,5 +21,8 @@ var class_vector =
     [ "push_back", "class_vector.html#aafe4fd2dc987ac473b52ef757aa7a202", null ],
     [ "reserve", "class_vector.html#aed257c114bbde70c9c424d41dbfa7b6e", null ],
     [ "resize", "class_vector.html#ac2cbe796e03c440c4bf2844a01dd12e8", null ],
-    [ "size", "class_vector.html#a9b439586cd10cb45d002ca9d6e3db43c", null ]
+    [ "size", "class_vector.html#a9b439586cd10cb45d002ca9d6e3db43c", null ],
+    [ "arr", "class_vector.html#a5b5e87f375e0c36856eff6bb242fe378", null ],
+    [ "f_capacity", "class_vector.html#a6c64154ed81bea5b895a15c60925cc7c", null ],
+    [ "f_size", "class_vector.html#a11656ff0bcd122e43b2fb1178ec7431f", null ]
 ];

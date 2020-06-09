@@ -51,6 +51,8 @@ $(document).ready(function(){initNavTree('class_session.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_session-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Session Class Reference</div>  </div>
@@ -87,6 +89,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3775cf47da8f5bdd929816d6d1e2d2c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#a3775cf47da8f5bdd929816d6d1e2d2c3">undo</a> ()</td></tr>
 <tr class="memdesc:a3775cf47da8f5bdd929816d6d1e2d2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Истрива поскедната команда от списъка с команди  <a href="class_session.html#a3775cf47da8f5bdd929816d6d1e2d2c3">More...</a><br /></td></tr>
 <tr class="separator:a3775cf47da8f5bdd929816d6d1e2d2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a599e926a8969dbac494bf1eb6ef351d0"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#a599e926a8969dbac494bf1eb6ef351d0">ID</a></td></tr>
+<tr class="separator:a599e926a8969dbac494bf1eb6ef351d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a9997adb3c4222cafce466a7535e26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_image_container.html">ImageContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#ac4a9997adb3c4222cafce466a7535e26">images</a></td></tr>
+<tr class="separator:ac4a9997adb3c4222cafce466a7535e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a87751a8e90165534eea49263257972"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_instruction_list.html">InstructionList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#a2a87751a8e90165534eea49263257972">instructions</a></td></tr>
+<tr class="separator:a2a87751a8e90165534eea49263257972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a5be752a9dc09f777cf134f192e8adea1"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_session.html#a5be752a9dc09f777cf134f192e8adea1">nextID</a> = 1</td></tr>
+<tr class="separator:a5be752a9dc09f777cf134f192e8adea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -337,6 +353,103 @@ Public Member Functions</h2></td></tr>
 <p>Истрива поскедната команда от списъка с команди </p>
 
 <p class="definition">Definition at line <a class="el" href="_session_8cpp_source.html#l00141">141</a> of file <a class="el" href="_session_8cpp_source.html">Session.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a599e926a8969dbac494bf1eb6ef351d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599e926a8969dbac494bf1eb6ef351d0">&#9670;&nbsp;</a></span>ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t Session::ID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_session_8hpp_source.html#l00027">27</a> of file <a class="el" href="_session_8hpp_source.html">Session.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac4a9997adb3c4222cafce466a7535e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a9997adb3c4222cafce466a7535e26">&#9670;&nbsp;</a></span>images</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_image_container.html">ImageContainer</a> Session::images</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_session_8hpp_source.html#l00028">28</a> of file <a class="el" href="_session_8hpp_source.html">Session.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2a87751a8e90165534eea49263257972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a87751a8e90165534eea49263257972">&#9670;&nbsp;</a></span>instructions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_instruction_list.html">InstructionList</a> Session::instructions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_session_8hpp_source.html#l00029">29</a> of file <a class="el" href="_session_8hpp_source.html">Session.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5be752a9dc09f777cf134f192e8adea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be752a9dc09f777cf134f192e8adea1">&#9670;&nbsp;</a></span>nextID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Session::nextID = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_session_8hpp_source.html#l00025">25</a> of file <a class="el" href="_session_8hpp_source.html">Session.hpp</a>.</p>
 
 </div>
 </div>

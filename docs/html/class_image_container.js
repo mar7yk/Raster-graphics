@@ -12,5 +12,6 @@ var class_image_container =
     [ "operator[]", "class_image_container.html#a89703f7258ccd78fcfb8d8d7bd49017a", null ],
     [ "save", "class_image_container.html#aa19246f6e8f6f292961deb63803efc7f", null ],
     [ "saveAs", "class_image_container.html#aa73a54919870b6dfa234c0a48509a13b", null ],
-    [ "size", "class_image_container.html#a18ec5dad960af0b59039179f4f001591", null ]
+    [ "size", "class_image_container.html#a18ec5dad960af0b59039179f4f001591", null ],
+    [ "images", "class_image_container.html#a763e8a43e528090d0fd3a549d5ebcf12", null ]
 ];

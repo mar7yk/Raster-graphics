@@ -9,5 +9,8 @@ var class_session =
     [ "getNamesOfInstr", "class_session.html#a045a864e6d5ca8ae14df9517002ea902", null ],
     [ "save", "class_session.html#aec0dc9e097213458c68d32d7f09d8cfc", null ],
     [ "saveAs", "class_session.html#ac5d56045b33d879fed72bf8e7447510f", null ],
-    [ "undo", "class_session.html#a3775cf47da8f5bdd929816d6d1e2d2c3", null ]
+    [ "undo", "class_session.html#a3775cf47da8f5bdd929816d6d1e2d2c3", null ],
+    [ "ID", "class_session.html#a599e926a8969dbac494bf1eb6ef351d0", null ],
+    [ "images", "class_session.html#ac4a9997adb3c4222cafce466a7535e26", null ],
+    [ "instructions", "class_session.html#a2a87751a8e90165534eea49263257972", null ]
 ];

@@ -51,6 +51,8 @@ $(document).ready(function(){initNavTree('class_vector.html',''); initResizable(
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_vector-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Vector&lt; T &gt; Class Template Reference</div>  </div>
@@ -101,6 +103,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac67f5e22236ad36ff9db3a4580606ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a620f40593577792b4fa9546da39eb9da"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a620f40593577792b4fa9546da39eb9da">operator[]</a> (size_t i)</td></tr>
 <tr class="separator:a620f40593577792b4fa9546da39eb9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af814b039cfa44e866e7bd4b1100149b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#af814b039cfa44e866e7bd4b1100149b8">copy</a> (const <a class="el" href="class_vector.html">Vector</a> &amp;other)</td></tr>
+<tr class="separator:af814b039cfa44e866e7bd4b1100149b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a466ca7da1c0dcc2aaa61ceab5b725930"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a466ca7da1c0dcc2aaa61ceab5b725930">del</a> ()</td></tr>
+<tr class="separator:a466ca7da1c0dcc2aaa61ceab5b725930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5b5e87f375e0c36856eff6bb242fe378"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a5b5e87f375e0c36856eff6bb242fe378">arr</a></td></tr>
+<tr class="separator:a5b5e87f375e0c36856eff6bb242fe378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11656ff0bcd122e43b2fb1178ec7431f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a11656ff0bcd122e43b2fb1178ec7431f">f_size</a></td></tr>
+<tr class="separator:a11656ff0bcd122e43b2fb1178ec7431f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c64154ed81bea5b895a15c60925cc7c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vector.html#a6c64154ed81bea5b895a15c60925cc7c">f_capacity</a></td></tr>
+<tr class="separator:a6c64154ed81bea5b895a15c60925cc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -371,6 +389,65 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l00131">131</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+
+</div>
+</div>
+<a id="af814b039cfa44e866e7bd4b1100149b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af814b039cfa44e866e7bd4b1100149b8">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_vector.html">Vector</a>&lt; T &gt;::copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l00020">20</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+
+</div>
+</div>
+<a id="a466ca7da1c0dcc2aaa61ceab5b725930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a466ca7da1c0dcc2aaa61ceab5b725930">&#9670;&nbsp;</a></span>del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_vector.html">Vector</a>&lt; T &gt;::del </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l00029">29</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>
@@ -696,6 +773,85 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l00068">68</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5b5e87f375e0c36856eff6bb242fe378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b5e87f375e0c36856eff6bb242fe378">&#9670;&nbsp;</a></span>arr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="class_vector.html">Vector</a>&lt; T &gt;::arr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l00014">14</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+
+</div>
+</div>
+<a id="a6c64154ed81bea5b895a15c60925cc7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c64154ed81bea5b895a15c60925cc7c">&#9670;&nbsp;</a></span>f_capacity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_vector.html">Vector</a>&lt; T &gt;::f_capacity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l00016">16</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+
+</div>
+</div>
+<a id="a11656ff0bcd122e43b2fb1178ec7431f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11656ff0bcd122e43b2fb1178ec7431f">&#9670;&nbsp;</a></span>f_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_vector.html">Vector</a>&lt; T &gt;::f_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l00015">15</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>

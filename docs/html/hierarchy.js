@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Console_RG_Engine", "class_console___r_g___engine.html", null ],
+    [ "SessionList::Element", "struct_session_list_1_1_element.html", null ],
     [ "Image", "class_image.html", [
       [ "ImagePBM", "class_image_p_b_m.html", null ],
       [ "ImagePGM", "class_image_p_g_m.html", null ],
@@ -8,6 +9,7 @@ var hierarchy =
     ] ],
     [ "ImageContainer", "class_image_container.html", null ],
     [ "ImageFileInterpreter", "class_image_file_interpreter.html", null ],
+    [ "InstructionList::inst", "struct_instruction_list_1_1inst.html", null ],
     [ "InstructionList", "class_instruction_list.html", null ],
     [ "Matrix< Element >", "class_matrix.html", null ],
     [ "Matrix< bool >", "class_matrix.html", null ],

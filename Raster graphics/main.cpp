@@ -6,8 +6,6 @@
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#include <iostream>
-
 #include "string.hpp"
 
 #include "Console_RG_Engine.hpp"

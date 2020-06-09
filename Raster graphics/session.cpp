@@ -10,7 +10,7 @@
 
 size_t Session::nextID = 1;
 
-Session::Session(): ID(nextID){
+Session::Session(): ID(nextID) {
     ++nextID;
 }
 
@@ -60,7 +60,7 @@ Vector<String> Session::getNamesOfInstr() const{
 
 bool Session::add(const String &name) {
     
-    ImageType type = FileInterpreter::getType(name);
+    ImageType type = ImageFileInterpreter::getType(name);
     
     switch (type) {
         case ImageType::Invalid:
@@ -82,7 +82,7 @@ bool Session::add(const String &name) {
 
 void Session::addCollage(const String &img1Name, const String &img2Name, const String &name, const Command type) {
     
-    ImageType typeOfImgs = FileInterpreter::getType(img1Name, img2Name);
+    ImageType typeOfImgs = ImageFileInterpreter::getType(img1Name, img2Name);
     
     if (typeOfImgs == ImageType::Invalid) {
         throw std::runtime_error("Can't make a collage with these images!");
@@ -124,7 +124,7 @@ void Session::addCommand(const Command command) {
 
 void Session::save() {
     while (!instructions.empty()) {
-        images.doInst(instructions.front());
+        images.doInstructions(instructions.front());
         instructions.pop_front();
     }
     images.save();
@@ -132,7 +132,7 @@ void Session::save() {
 
 void Session::saveAs(const String name) {
     while (!instructions.empty()) {
-        images.doInstForFirst(instructions.front());
+        images.doInstructionsForFirst(instructions.front());
         instructions.pop_front();
     }
     images.saveAs(name);

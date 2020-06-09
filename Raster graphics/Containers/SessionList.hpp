@@ -27,13 +27,21 @@ public:
     SessionList();
     ~SessionList();
     
+    /// @return текуща сесия
     Session& current() const;
+    
     bool empty() const;
     
+    
+    /// Създава нова сесия и я добавя към списъка
     void makeNew();
     
+    
+    /// Отбелязва сесия с дадено ID като текуща
     void start(const size_t ID);
     
+    
+    /// Премахва текущата сесия от списъка
     void pop_current();
     
     SessionList(const SessionList&) = delete;

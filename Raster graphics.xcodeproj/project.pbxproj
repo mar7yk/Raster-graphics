@@ -17,7 +17,7 @@
 		C1E2CAB6244745560034D198 /* InstructionList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1E2CAA5244745550034D198 /* InstructionList.cpp */; };
 		C1E2CAB7244745560034D198 /* imagePPM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1E2CAAB244745560034D198 /* imagePPM.cpp */; };
 		C1E2CAB8244745560034D198 /* SessionList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1E2CAAC244745560034D198 /* SessionList.cpp */; };
-		C1E2CAB9244745560034D198 /* FileInterpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1E2CAAD244745560034D198 /* FileInterpreter.cpp */; };
+		C1E2CAB9244745560034D198 /* ImageFileInterpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1E2CAAD244745560034D198 /* ImageFileInterpreter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,7 +50,7 @@
 		C1E2CA99244745550034D198 /* Session.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Session.cpp; sourceTree = "<group>"; };
 		C1E2CA9C244745550034D198 /* ImagePGM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImagePGM.cpp; sourceTree = "<group>"; };
 		C1E2CA9D244745550034D198 /* SessionList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SessionList.hpp; sourceTree = "<group>"; };
-		C1E2CA9E244745550034D198 /* FileInterpreter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileInterpreter.hpp; sourceTree = "<group>"; };
+		C1E2CA9E244745550034D198 /* ImageFileInterpreter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ImageFileInterpreter.hpp; sourceTree = "<group>"; };
 		C1E2CA9F244745550034D198 /* Console_RG_Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console_RG_Engine.cpp; sourceTree = "<group>"; };
 		C1E2CAA0244745550034D198 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		C1E2CAA1244745550034D198 /* pixel_RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixel_RGB.h; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		C1E2CAAA244745560034D198 /* InstructionList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InstructionList.hpp; sourceTree = "<group>"; };
 		C1E2CAAB244745560034D198 /* imagePPM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imagePPM.cpp; sourceTree = "<group>"; };
 		C1E2CAAC244745560034D198 /* SessionList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SessionList.cpp; sourceTree = "<group>"; };
-		C1E2CAAD244745560034D198 /* FileInterpreter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileInterpreter.cpp; sourceTree = "<group>"; };
+		C1E2CAAD244745560034D198 /* ImageFileInterpreter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageFileInterpreter.cpp; sourceTree = "<group>"; };
 		C1E2CAAE244745560034D198 /* ImagePBM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ImagePBM.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,8 +147,8 @@
 				C1E2CA96244745550034D198 /* Console_RG_Engine.hpp */,
 				C1E2CA99244745550034D198 /* Session.cpp */,
 				C155191C248FBE37000CA8D0 /* Session.hpp */,
-				C1E2CAAD244745560034D198 /* FileInterpreter.cpp */,
-				C1E2CA9E244745550034D198 /* FileInterpreter.hpp */,
+				C1E2CAAD244745560034D198 /* ImageFileInterpreter.cpp */,
+				C1E2CA9E244745550034D198 /* ImageFileInterpreter.hpp */,
 				C1E2CAA1244745550034D198 /* pixel_RGB.h */,
 				C124EFBE24555E4E00529A69 /* Images */,
 				C124EFC024555F3F00529A69 /* Containers */,
@@ -216,7 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1E2CAB7244745560034D198 /* imagePPM.cpp in Sources */,
-				C1E2CAB9244745560034D198 /* FileInterpreter.cpp in Sources */,
+				C1E2CAB9244745560034D198 /* ImageFileInterpreter.cpp in Sources */,
 				C1E2CAB6244745560034D198 /* InstructionList.cpp in Sources */,
 				C155191B248D36B8000CA8D0 /* string.cpp in Sources */,
 				C1E2CAAF244745560034D198 /* ImagePBM.cpp in Sources */,

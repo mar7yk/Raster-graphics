@@ -34,7 +34,7 @@ void ImageContainer::add(Image*const img) {
     images.push_back(img);
 }
 
-void ImageContainer::doInst(const Command c) {
+void ImageContainer::doInstructions(const Command c) {
     switch (c) {
         case Command::Grayscale:
             for (size_t i = 0; i < images.size(); ++i)
@@ -62,7 +62,7 @@ void ImageContainer::doInst(const Command c) {
     }
 }
 
-void ImageContainer::doInstForFirst(const Command c) {
+void ImageContainer::doInstructionsForFirst(const Command c) {
     switch (c) {
         case Command::Grayscale:
             images[0]->grayscale();

@@ -51,7 +51,7 @@ public:
         init();
     }
     
-    Matrix(const Matrix& other): f_width(other.f_width), f_height(other.f_height) {
+    Matrix(const Matrix& other) : f_width(other.f_width), f_height(other.f_height) {
         init();
         copyFrom(other);
     }
@@ -80,6 +80,9 @@ public:
         return *this;
     }
     
+    /// Задава нови параметри на матрицата
+    ///
+    /// @attention елементите в матрицата се изтриват
     Matrix& operator()(size_t width, size_t hight){
         del();
         f_width = width;

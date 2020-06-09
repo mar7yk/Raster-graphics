@@ -1,15 +1,15 @@
 //
-//  FileInterpreter.cpp
+//  ImageFileInterpreter.cpp
 //  Raster graphics
 //
 //  Created by Marty Kostov on 10.04.20.
 //  Copyright © 2020 Marty Kostov. All rights reserved.
 //
 
-#include "FileInterpreter.hpp"
+#include "ImageFileInterpreter.hpp"
 
 
-ImageType FileInterpreter::getType(const String& name) {
+ImageType ImageFileInterpreter::getType(const String& name) {
     std::ifstream img(name.get() , std::ios::binary);
     if (img.is_open()) {
         String sType;
@@ -24,7 +24,7 @@ ImageType FileInterpreter::getType(const String& name) {
     return ImageType::Invalid;
 }
 
-ImageType FileInterpreter::getType(const String &name1, const String &name2) {
+ImageType ImageFileInterpreter::getType(const String &name1, const String &name2) {
     std::ifstream img1(name1.get() , std::ios::binary);
     std::ifstream img2(name2.get() , std::ios::binary);
     
@@ -67,7 +67,7 @@ ImageType FileInterpreter::getType(const String &name1, const String &name2) {
     return type1;
 }
 
-ImageType FileInterpreter::strToType(const String &sType) {
+ImageType ImageFileInterpreter::strToType(const String &sType) {
     if(sType == "P3" || sType == "P6") return ImageType::PPM;
     if(sType == "P2" || sType == "P5") return ImageType::PGM;
     if(sType == "P1" || sType == "P4") return ImageType::PBM;

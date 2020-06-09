@@ -31,10 +31,14 @@ public:
     
     void add(Image*const img);
     
-    void doInst(const Command c);
-    void doInstForFirst(const Command c);
+    /// Изпълнява команда вурху всички снимки в сесията.
+    void doInstructions(const Command c);
+    /// Изпълнява команда вурху всички първата снимка.
+    void doInstructionsForFirst(const Command c);
     
+    /// Запазва всички снимки
     void save();
+    /// Запазва първата снимка под ново име
     void saveAs(const String& name);
     
     Image*& operator[](const size_t n);

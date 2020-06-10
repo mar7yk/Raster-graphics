@@ -20,7 +20,7 @@
 using MatrixPPM = Matrix<pixel_RGB>;
 
 class ImagePPM: public Image {
-    unsigned maxValForColor;
+    unsigned maxValueForColor;
     MatrixPPM pixels;
     
     void load(const String& name) override;

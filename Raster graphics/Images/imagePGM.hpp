@@ -19,7 +19,7 @@
 using MatrixPGM = Matrix<unsigned char>;
 
 class ImagePGM: public Image {
-    unsigned maxValForColor;
+    unsigned maxValueForColor;
     MatrixPGM pixels;
     
     void load(const String& name) override;

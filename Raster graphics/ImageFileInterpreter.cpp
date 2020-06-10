@@ -54,12 +54,12 @@ ImageType ImageFileInterpreter::getType(const String &name1, const String &name2
     }
     
     if (type1 != ImageType::PBM) {
-        unsigned maxValForCalor1;
-        img1 >> maxValForCalor1;
-        unsigned maxValForCalor2;
-        img2 >> maxValForCalor2;
+        unsigned maxValForColor1;
+        img1 >> maxValForColor1;
+        unsigned maxValForColor2;
+        img2 >> maxValForColor2;
         
-        if (maxValForCalor1 != maxValForCalor2) {
+        if (maxValForColor1 != maxValForColor2) {
             return ImageType::Invalid;
         }
     }

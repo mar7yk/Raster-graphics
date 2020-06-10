@@ -21,7 +21,7 @@ void ImagePPM::load(const String &name) {
     size_t width, hight;
     img >> width >> hight;
     pixels(width, hight);
-    img >> maxValForCalor;
+    img >> maxValForColor;
     
     if (sType == "P3"){
         for (size_t y = 0; y < pixels.height(); ++y) {
@@ -54,7 +54,7 @@ void ImagePPM::load(const String &name) {
 
 ImagePPM::ImagePPM(const ImagePPM& img1, const ImagePPM& img2, const String& name, const Command type) : Image(name) {
     
-    maxValForCalor = img1.maxValForCalor;
+    maxValForColor = img1.maxValForColor;
     
     if (type == Command::CollageVertical) {
         size_t width = img1.pixels.width();
@@ -114,18 +114,18 @@ void ImagePPM::monochrome() {
             unsigned char& r = pixels[y][x].r;
             unsigned char& g = pixels[y][x].g;
             unsigned char& b = pixels[y][x].b;
-            r = g = b = ((r + g + b)/3 > maxValForCalor / 3);
+            r = g = b = ((r + g + b)/3 > maxValForColor / 3);
         }
     }
-    maxValForCalor = 1;
+    maxValForColor = 1;
 }
 
 void ImagePPM::negative() {
     for (size_t y = 0; y < pixels.height(); ++y) {
         for (size_t x = 0; x < pixels.width(); ++x) {
-            pixels[y][x].r = maxValForCalor - pixels[y][x].r;
-            pixels[y][x].g = maxValForCalor - pixels[y][x].g;
-            pixels[y][x].b = maxValForCalor - pixels[y][x].b;
+            pixels[y][x].r = maxValForColor - pixels[y][x].r;
+            pixels[y][x].g = maxValForColor - pixels[y][x].g;
+            pixels[y][x].b = maxValForColor - pixels[y][x].b;
         }
     }
 }
@@ -159,7 +159,7 @@ void ImagePPM::save() {
     
     oimg << "P6" << std::endl;
     oimg << pixels.width() << " " << pixels.height() << std::endl;
-    oimg << maxValForCalor << std::endl;
+    oimg << maxValForColor << std::endl;
     
     for (size_t y = 0; y < pixels.height(); ++y) {
         for (size_t x = 0; x < pixels.width(); ++x) {

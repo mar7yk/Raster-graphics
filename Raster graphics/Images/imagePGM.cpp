@@ -9,6 +9,11 @@
 #include "ImagePGM.hpp"
 
 ImagePGM::ImagePGM(const String& name): Image(name) {
+    load(name);
+}
+
+
+void ImagePGM::load(const String &name) {
     std::ifstream img(name.get() , std::ios::binary);
     
     String sType;
@@ -38,7 +43,8 @@ ImagePGM::ImagePGM(const String& name): Image(name) {
     img.close();
 }
 
-ImagePGM::ImagePGM(const ImagePGM img1, const ImagePGM img2, const String& name, const Command type) : Image(name) {
+
+ImagePGM::ImagePGM(const ImagePGM& img1, const ImagePGM& img2, const String& name, const Command type) : Image(name) {
     
     maxValForCalor = img1.maxValForCalor;
     
@@ -147,3 +153,4 @@ void ImagePGM::saveAs(const String& name) {
     f_name = name;
     save();
 }
+

@@ -22,9 +22,18 @@ class ImagePGM: public Image {
     unsigned maxValForCalor;
     MatrixPGM pixels;
     
+    void load(const String& name) override;
+    
 public:
     ImagePGM(const String& name);
-    ImagePGM(const ImagePGM img1, const ImagePGM img2, const String& name, const Command type);
+    
+    /// Създава колаж от две снимки
+    ///
+    /// @param img1 първа снима
+    /// @param img2 втора снимка
+    /// @param name име на колажа
+    /// @param type тип на колажа (CollageHorizontal или CollageVertical)
+    ImagePGM(const ImagePGM& img1, const ImagePGM& img2, const String& name, const Command type);
     
     void grayscale() override;
     void monochrome() override;

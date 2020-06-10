@@ -9,6 +9,10 @@
 #include "ImagePPM.hpp"
 
 ImagePPM::ImagePPM(const String& name): Image(name) {
+    load(name);
+}
+
+void ImagePPM::load(const String &name) {
     std::ifstream img(name.get() , std::ios::binary);
     
     String sType;
@@ -45,9 +49,10 @@ ImagePPM::ImagePPM(const String& name): Image(name) {
     }
     
     img.close();
+
 }
 
-ImagePPM::ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name, const Command type) : Image(name) {
+ImagePPM::ImagePPM(const ImagePPM& img1, const ImagePPM& img2, const String& name, const Command type) : Image(name) {
     
     maxValForCalor = img1.maxValForCalor;
     
@@ -173,3 +178,4 @@ void ImagePPM::saveAs(const String& name){
     f_name =  name;
     save();
 }
+

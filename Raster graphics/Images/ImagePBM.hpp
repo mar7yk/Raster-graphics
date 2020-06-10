@@ -21,9 +21,19 @@ using MatrixPBM = Matrix<bool>;
 class ImagePBM: public Image {
     MatrixPBM pixels;
     
+    void load(const String& name) override;
+    
 public:
     ImagePBM(const String& name);
-    ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name, const Command type);
+    
+    
+    /// Създава колаж от две снимки
+    ///
+    /// @param img1 първа снима
+    /// @param img2 втора снимка
+    /// @param name име на колажа
+    /// @param type тип на колажа (CollageHorizontal или CollageVertical)
+    ImagePBM(const ImagePBM& img1, const ImagePBM& img2, const String& name, const Command type);
     
     void grayscale() override;
     void monochrome() override;

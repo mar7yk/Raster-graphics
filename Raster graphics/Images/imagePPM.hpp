@@ -23,9 +23,18 @@ class ImagePPM: public Image {
     unsigned maxValForCalor;
     MatrixPPM pixels;
     
+    void load(const String& name) override;
+    
 public:
     ImagePPM(const String& name);
-    ImagePPM(const ImagePPM img1, const ImagePPM img2, const String& name, const Command type);
+    
+    /// Създава колаж от две снимки
+    ///
+    /// @param img1 първа снима
+    /// @param img2 втора снимка
+    /// @param name име на колажа
+    /// @param type тип на колажа (CollageHorizontal или CollageVertical)
+    ImagePPM(const ImagePPM& img1, const ImagePPM& img2, const String& name, const Command type);
     
     void grayscale() override;
     void monochrome() override;

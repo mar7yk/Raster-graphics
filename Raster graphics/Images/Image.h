@@ -19,31 +19,26 @@
 class Image {
 protected:
     String f_name;
-public:
+    
+    
+    
     /// Десериализира сника по подаден път на сниката
     ///
     /// @param name път на сника, които се задава за име на сниката.
+    virtual void load(const String& name) = 0;
+    
+public:
     Image(const String& name): f_name(name) {
         
     }
     
+    virtual ~Image() {}
     
-    /// Създава колаж от две снимки
-    ///
-    /// @param img1 първа снима
-    /// @param img2 втора снимка
-    /// @param name име на колажа
-    /// @param type тип на колажа (CollageHorizontal или CollageVertical)
-    Image(const Image* img1, const Image* img2, const String& name, const Command type): f_name(name) {
-        
-    }
     
-    virtual ~Image(){}
-    
-    /// @return име на снимка
     String getName() const {
         return f_name;
     }
+    
     
     /// Пави снимката чено-бяла
     virtual void grayscale() = 0;

@@ -10,6 +10,11 @@
 
 
 ImagePBM::ImagePBM(const String& name): Image(name) {
+    load(name);
+}
+
+
+void ImagePBM::load(const String &name) {
     std::ifstream img(name.get() , std::ios::binary);
     
     String sType;
@@ -48,8 +53,7 @@ ImagePBM::ImagePBM(const String& name): Image(name) {
     }
 }
 
-
-ImagePBM::ImagePBM(const ImagePBM img1, const ImagePBM img2, const String& name, const Command type) : Image(name) {
+ImagePBM::ImagePBM(const ImagePBM& img1, const ImagePBM& img2, const String& name, const Command type) : Image(name) {
     
     if (type == Command::CollageVertical) {
         size_t width = img1.pixels.width();
@@ -162,3 +166,4 @@ void ImagePBM::saveAs(const String& name) {
     f_name = name;
     save();
 }
+

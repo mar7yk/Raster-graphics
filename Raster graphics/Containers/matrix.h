@@ -24,8 +24,8 @@ class Matrix {
     
     void init() {
         if(f_height == 0 || f_width == 0){
-            elements = new Element*;
-            *elements = new Element;
+            elements = new Element*[1];
+            *elements = new Element[1];
             return;
         }
         elements = new Element*[f_height];

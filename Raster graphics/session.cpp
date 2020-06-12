@@ -91,13 +91,13 @@ void Session::addCollage(const String &img1Name, const String &img2Name, const S
     Image *img1 = images.getImg(img1Name);
     Image *img2 = images.getImg(img2Name);
     
-    using PPM = ImagePPM*;
-    using PGM = ImagePGM*;
-    using PBM = ImagePBM*;
-    
     if (!img1 || !img2) {
         throw std::runtime_error("These images are not in this session!");
     }
+    
+    using PPM = ImagePPM*;
+    using PGM = ImagePGM*;
+    using PBM = ImagePBM*;
     
     switch (typeOfImgs) {
         case ImageType::PPM:

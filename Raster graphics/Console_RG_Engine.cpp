@@ -154,7 +154,7 @@ void Console_RG_Engine::_collage(const Command type) {
     
     Session& cSession = sessions.current();
     cSession.addCollage(img1, img2, newImg, type);
-    std::cout << "Image \""<< newImg << "\" added" << std::endl;
+    std::cout << "New collage \""<< newImg << "\" created" << std::endl;
 }
 
 void Console_RG_Engine::_help() const {
@@ -162,32 +162,32 @@ void Console_RG_Engine::_help() const {
     std::cout << "\tstart new session" << std::endl;
     std::cout << std::endl;
     std::cout << "add <image>:" << std::endl;
-    std::cout << "\tadd image in session" << std::endl;
+    std::cout << "\tadd image to session" << std::endl;
     std::cout << std::endl;
     std::cout << "close:" << std::endl;
     std::cout << "\tclose current session" << std::endl;
     std::cout << std::endl;
     std::cout << "save:" << std::endl;
-    std::cout << "\tsave all changes in current session" << std::endl;
+    std::cout << "\tsave all changes to the images in the current session" << std::endl;
     std::cout << std::endl;
     std::cout << "save as <new-name>:" << std::endl;
-    std::cout << "\tsave first image in current sesino whith new name" << std::endl;
+    std::cout << "\tsave all changes to the first image in the current session" << std::endl;
     std::cout << std::endl;
     std::cout << "exit:" << std::endl;
-    std::cout << "\texit of program" << std::endl;
+    std::cout << "\texit the program" << std::endl;
     std::cout << std::endl;
     std::cout << "grayscale:" << std::endl;
-    std::cout << "\tmake all images grayscale" << std::endl;
+    std::cout << "\tmake an image grayscale" << std::endl;
     std::cout << std::endl;
     std::cout << "monochrome:" << std::endl;
-    std::cout << "\tmake all images monochrome" << std::endl;
+    std::cout << "\tmake an image monochrome" << std::endl;
     std::cout << std::endl;
     std::cout << "negative:" << std::endl;
-    std::cout << "\tmake all images negative" << std::endl;
+    std::cout << "\tmake an image negative" << std::endl;
     std::cout << std::endl;
     std::cout << "rotate <direction>:" << std::endl;
-    std::cout << "<direction> is one of the left and right" << std::endl;
-    std::cout << "\trotate 90 degrees in the corresponding direction" << std::endl;
+    std::cout << "\t<direction> is one of the left and right" << std::endl;
+    std::cout << "\trotate an image 90 degrees in the corresponding direction" << std::endl;
     std::cout << std::endl;
     std::cout << "undo:" << std::endl;
     std::cout << "\tundo last change" << std::endl;
@@ -200,7 +200,7 @@ void Console_RG_Engine::_help() const {
     std::cout << std::endl;
     std::cout << "collage <direction> <image1> <image2> <outimage>:" << std::endl;
      std::cout << "\t<direction> is one of the horizontal and vertical" << std::endl;
-    std::cout << "\tCreates a collage of two images <image1> and <image2> (in the same format and the same dimension) available in the current session. The result is saved to a new image <outimage>, which is added to the current session" << std::endl;
+    std::cout << "\tCreates a collage of two images <image1> and <image2> (in the same format and the same dimension) available in the current session. The result is saved to a new image <outimage>, which is added to the current session." << std::endl;
 }
 
 Command Console_RG_Engine::getCommand(const String& sCommad) {

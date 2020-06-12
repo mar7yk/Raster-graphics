@@ -209,7 +209,7 @@ $(document).ready(function(){initNavTree('_console___r_g___engine_8cpp_source.ht
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    </div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="class_session.html">Session</a>&amp; cSession = <a class="code" href="class_console___r_g___engine.html#a9f38705af2466bb4284c6ce60c65b60d">sessions</a>.<a class="code" href="class_session_list.html#a8abf838ba6790eb745e822af2f858fa9">current</a>();</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    cSession.<a class="code" href="class_session.html#a97b7eee83b8a422e3d8ef6016dc5b20e">addCollage</a>(img1, img2, newImg, type);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Image \&quot;&quot;</span>&lt;&lt; newImg &lt;&lt; <span class="stringliteral">&quot;\&quot; added&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;New collage \&quot;&quot;</span>&lt;&lt; newImg &lt;&lt; <span class="stringliteral">&quot;\&quot; created&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_console___r_g___engine.html#a54c7ea0e84d8c68d8b3dedcbfd5a6f80">  160</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_console___r_g___engine.html#a54c7ea0e84d8c68d8b3dedcbfd5a6f80">Console_RG_Engine::_help</a>()<span class="keyword"> const </span>{</div>
@@ -217,32 +217,32 @@ $(document).ready(function(){initNavTree('_console___r_g___engine_8cpp_source.ht
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tstart new session&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;add &lt;image&gt;:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tadd image in session&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tadd image to session&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;close:&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tclose current session&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;save:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tsave all changes in current session&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tsave all changes to the images in the current session&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;save as &lt;new-name&gt;:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tsave first image in current sesino whith new name&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tsave all changes to the first image in the current session&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;exit:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\texit of program&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\texit the program&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;grayscale:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tmake all images grayscale&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tmake an image grayscale&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;monochrome:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tmake all images monochrome&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tmake an image monochrome&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;negative:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tmake all images negative&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tmake an image negative&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;rotate &lt;direction&gt;:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;&lt;direction&gt; is one of the left and right&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\trotate 90 degrees in the corresponding direction&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\t&lt;direction&gt; is one of the left and right&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\trotate an image 90 degrees in the corresponding direction&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;undo:&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tundo last change&quot;</span> &lt;&lt; std::endl;</div>
@@ -255,7 +255,7 @@ $(document).ready(function(){initNavTree('_console___r_g___engine_8cpp_source.ht
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;collage &lt;direction&gt; &lt;image1&gt; &lt;image2&gt; &lt;outimage&gt;:&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;     std::cout &lt;&lt; <span class="stringliteral">&quot;\t&lt;direction&gt; is one of the horizontal and vertical&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tCreates a collage of two images &lt;image1&gt; and &lt;image2&gt; (in the same format and the same dimension) available in the current session. The result is saved to a new image &lt;outimage&gt;, which is added to the current session&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;\tCreates a collage of two images &lt;image1&gt; and &lt;image2&gt; (in the same format and the same dimension) available in the current session. The result is saved to a new image &lt;outimage&gt;, which is added to the current session.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
 <div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="class_console___r_g___engine.html#a635929973395a91be7591813b39a0d7c">  206</a></span>&#160;<a class="code" href="_command_8h.html#a2afce0a47a93eee73a314d53e4890153">Command</a> <a class="code" href="class_console___r_g___engine.html#a635929973395a91be7591813b39a0d7c">Console_RG_Engine::getCommand</a>(<span class="keyword">const</span> <a class="code" href="class_string.html">String</a>&amp; sCommad) {</div>

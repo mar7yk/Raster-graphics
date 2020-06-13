@@ -99,7 +99,6 @@ Image* &ImageContainer::operator[](const size_t n) {
     return images[n];
 }
 
-const Image *const &ImageContainer::operator[](const size_t n) const {
-    const Image *const *const arr = &images.front();
-    return arr[n];
+const Image *const ImageContainer::operator[](const size_t n) const {
+    return images[n];
 }

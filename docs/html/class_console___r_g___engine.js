@@ -12,7 +12,7 @@ var class_console___r_g___engine =
     [ "_switch", "class_console___r_g___engine.html#a622f828b8c8213669468b3af049c5328", null ],
     [ "_undo", "class_console___r_g___engine.html#a8dea5f3795d7af9f6925945aa0102e49", null ],
     [ "execut", "class_console___r_g___engine.html#a02f9dc564654ea01c7fb6feb8ee958e4", null ],
-    [ "getCommand", "class_console___r_g___engine.html#a635929973395a91be7591813b39a0d7c", null ],
+    [ "getCommand", "class_console___r_g___engine.html#a5e8761a9fd096ea472d5421cd7c73319", null ],
     [ "run", "class_console___r_g___engine.html#a73ba953d900bcac76ecf0dae8bcb3acd", null ],
     [ "sessions", "class_console___r_g___engine.html#a9f38705af2466bb4284c6ce60c65b60d", null ]
 ];

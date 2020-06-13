@@ -82,6 +82,10 @@ bool Session::add(const String &name) {
 
 void Session::addCollage(const String &img1Name, const String &img2Name, const String &name, const Command type) {
     
+    if (name == "") {
+        throw std::invalid_argument("Invalid argument");
+    }
+    
     ImageType typeOfImgs = ImageFileInterpreter::getType(img1Name, img2Name);
     
     if (typeOfImgs == ImageType::Invalid) {
@@ -131,6 +135,9 @@ void Session::save() {
 }
 
 void Session::saveAs(const String name) {
+    if (name == "") {
+        throw std::invalid_argument("Invalid argument");
+    }
     while (!instructions.empty()) {
         images.doInstructionsForFirst(instructions.front());
         instructions.pop_front();

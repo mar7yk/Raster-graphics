@@ -23,7 +23,7 @@ class Console_RG_Engine {
     SessionList sessions;
     
     /// Преобразува string команда в enum command.
-    Command getCommand(const String& sCommad);
+    Command getCommand(const String& sCommad) const;
     
     /// Изпълнява зареждане на сесия.
     void _load();

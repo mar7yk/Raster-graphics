@@ -203,7 +203,7 @@ void Console_RG_Engine::_help() const {
     std::cout << "\tCreates a collage of two images <image1> and <image2> (in the same format and the same dimension) available in the current session. The result is saved to a new image <outimage>, which is added to the current session." << std::endl;
 }
 
-Command Console_RG_Engine::getCommand(const String& sCommad) {
+Command Console_RG_Engine::getCommand(const String& sCommad) const {
     if (sCommad == "load") return Command::Load;
     if (sCommad == "close") return Command::Close;
     if (sCommad == "save") {

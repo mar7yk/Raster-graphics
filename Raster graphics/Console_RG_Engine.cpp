@@ -60,8 +60,15 @@ bool Console_RG_Engine::execut(const String& newCommand) {
                 _collage(command);
                 break;
         }
-    } catch (std::exception e) {
+    } catch (std::invalid_argument& e) {
+        std::cout << "Invalid input! " << std::endl;
+        
+    } catch (std::runtime_error& e) {
         std::cout << e.what() << std::endl;
+        
+    } catch (std::exception& e) {
+        std::cout << "Error: unknown error" << std::endl;
+        
     }
    
     std::cout << std::endl;

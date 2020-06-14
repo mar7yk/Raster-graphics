@@ -97,10 +97,9 @@ void ImagePGM::monochrome() {
     for (size_t y = 0; y < pixels.height(); ++y) {
         for (size_t x = 0; x < pixels.width(); ++x) {
             unsigned char& p = pixels[y][x];
-            p > maxValueForColor / 3 ? p = 255 : p = 0;
+            p > maxValueForColor / 3 ? p = maxValueForColor : p = 0;
         }
     }
-    maxValueForColor = 255;
 }
 void ImagePGM::negative() {
     for (size_t y = 0; y < pixels.height(); ++y) {

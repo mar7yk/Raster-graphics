@@ -114,10 +114,14 @@ void ImagePPM::monochrome() {
             unsigned char& r = pixels[y][x].r;
             unsigned char& g = pixels[y][x].g;
             unsigned char& b = pixels[y][x].b;
-            r = g = b = ((r + g + b)/3 > maxValueForColor / 3);
+            
+            if((r + g + b)/3 > maxValueForColor / 3) {
+                r = g = b = maxValueForColor;
+            } else {
+                r = g = b = 0;
+            }
         }
     }
-    maxValueForColor = 1;
 }
 
 void ImagePPM::negative() {

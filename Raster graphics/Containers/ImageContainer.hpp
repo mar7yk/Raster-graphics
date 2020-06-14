@@ -13,9 +13,9 @@
 
 #include "vector.h"
 
-#include "imagePPM.hpp"
-#include "imagePGM.hpp"
-#include "imagePBM.hpp"
+#include "ImagePPM.hpp"
+#include "ImagePGM.hpp"
+#include "ImagePBM.hpp"
 
 #include "Command.h"
 

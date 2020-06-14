@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Raster graphics", "index.html", [
+    [ "Raster graphics Documentation", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
